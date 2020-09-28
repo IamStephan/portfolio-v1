@@ -1,3 +1,3 @@
 // Normalization
 
-import moduleName from 'sanitize.css'
+import 'sanitize.css'
