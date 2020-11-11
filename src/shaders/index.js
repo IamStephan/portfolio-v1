@@ -1,8 +1,5 @@
-import fragment from './shaders/fragment.glsl';
-import vertex from './shaders/vertex.glsl';
-
-import GyroNorm from './lib/gyronorm';
-const gn = new GyroNorm.GyroNorm();
+import fragment from './fragment.glsl';
+import vertex from './vertex.glsl';
 
 export default class Sketch {
   constructor() {
@@ -19,10 +16,10 @@ export default class Sketch {
     this.mouseTargetX = 0;
     this.mouseTargetY = 0;
 
-    this.imageOriginal = this.container.getAttribute('data-imageOriginal');
-    this.imageDepth = this.container.getAttribute('data-imageDepth');
-    this.vth = this.container.getAttribute('data-verticalThreshold');
-    this.hth = this.container.getAttribute('data-horizontalThreshold');
+    this.imageOriginal = this.container.getAttribute('data-image-original');
+    this.imageDepth = this.container.getAttribute('data-image-depth');
+    this.vth = this.container.getAttribute('data-vertical-threshold');
+    this.hth = this.container.getAttribute('data-horizontal-threshold');
 
     this.imageURLs = [
       this.imageOriginal,
@@ -36,7 +33,6 @@ export default class Sketch {
     this.createScene();
     this.addTexture();
     this.mouseMove();
-    this.gyro();
   }
 
   addShader( source, type ) {
@@ -80,7 +76,6 @@ export default class Sketch {
   }
 
   createScene() {
-
     this.program = this.gl.createProgram();
 
     this.addShader( vertex, this.gl.VERTEX_SHADER );
@@ -150,33 +145,6 @@ export default class Sketch {
     this.render();
   }
 
-
-  gyro() {
-
-    let that = this;
-
-    this.maxTilt = 15;
-    
-
-    const rotationCoef = 0.15;
-
-    gn.init({ gravityNormalized: true }).then(function() {
-      gn.start(function(data) {
-
-        let y = data.do.gamma;
-        let x = data.do.beta;
-
-        that.mouseTargetY = clamp(x,-that.maxTilt, that.maxTilt)/that.maxTilt;
-        that.mouseTargetX = -clamp(y,-that.maxTilt, that.maxTilt)/that.maxTilt;
-
-      });
-    }).catch(function(e) {
-      console.log('not supported');
-
-    });
-
-  }
-
   mouseMove() {
   	let that = this;
   	document.addEventListener('mousemove', function(e) {
@@ -214,6 +182,7 @@ function loadImage(url, callback) {
   image.onload = callback;
   return image;
 }
+
 function loadImages(urls, callback) {
   var images = [];
   var imagesToLoad = urls.length;
@@ -276,4 +245,6 @@ function clamp(number, lower, upper) {
   return number;
 }
 
-new Sketch();
+export {
+  Sketch
+}
