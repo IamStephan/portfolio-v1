@@ -1,0 +1,11 @@
+@import '../spacing/spacing';
+@import '../colors/colors';
+
+$border-radius-round: $spacing-40;
+$border-radius-pill: 99999;
+
+$border-width: 1;
+$border-color: $grey-scale-40;
+$border-style: solid;
+
+$border-general: #{$border-width}px $border-style $border-color
