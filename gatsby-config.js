@@ -34,6 +34,7 @@ module.exports = {
       options: {
         pathToConfigModule: "src/foundation/typography"
       }
-    }
+    },
+    `gatsby-plugin-glslify`,
   ],
 }
