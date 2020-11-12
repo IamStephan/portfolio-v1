@@ -5,9 +5,7 @@ module.exports = {
     title: "I am Stephan",
     titleTemplate: "%s | Fullstack Engineer",
     description: "I am Stephan, a fullstack engineer.",
-    url: "https:iamstephan.dev",
-    image: "", // Path to your image you placed in the 'static' folder
-    // twitterUsername: "",
+    url: "https://iamstephan.dev"
   },
   plugins: [
     {
@@ -21,21 +19,41 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: "gatsby-plugin-react-svg",
-    //   options: {
-    //     rule: {
-    //       include: /assets/
-    //     }
-    //   }
-    // },
     {
-      resolve: "gatsby-plugin-typography",
+      resolve: "gatsby-plugin-react-svg",
       options: {
-        pathToConfigModule: "src/foundation/typography"
+        rule: {
+          include: /assets/
+        }
       }
     },
-    `gatsby-plugin-glslify`,
-    `gatsby-plugin-less`
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `I Am Stephan`,
+        short_name: `iamStephan`,
+        start_url: `/`,
+        background_color: `#C0392B`,
+        theme_color: `#C0392B`,
+        display: `minimal-ui`,
+        icon: `src/assets/images/site/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `#C0392B`,
+      },
+    },
+    '@bumped-inc/gatsby-plugin-optional-chaining',
+    `gatsby-plugin-glslify`
   ],
 }
