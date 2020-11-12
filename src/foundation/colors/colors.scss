@@ -1,8 +1,10 @@
+@import './channel_values';
+
 /**
       MAIN
   =============
 */
-$main-10: hsl(360, 67%, 51%);
+$main-10: hsl(6, 63%, 46%);
 $main-20: hsl(0, 0%, 19%);
 $main-30: hsl(0, 0%, 89%);
 
@@ -11,32 +13,32 @@ $main-30: hsl(0, 0%, 89%);
   ===============
 */
 // Red
-$accent-red-10: hsl(5, 65%, 44%);
-$accent-red-20: hsl(360, 67%, 51%);
-$accent-red-30: hsl(358, 81%, 51%);
-$accent-red-40: hsl(4, 76%, 55%);
-$accent-red-50: hsl(0, 78%, 58%);
+$accent-red-10: hsl(6, 63%, 30%);
+$accent-red-20: hsl(6, 63%, 37%);
+$accent-red-30: hsl(6, 63%, 46%);
+$accent-red-40: hsl(6, 63%, 53%);
+$accent-red-50: hsl(5, 64%, 62%);
 
 // Green
-$accent-red-10: hsl(165, 83%, 36%);
-$accent-red-20: hsl(146, 63%, 49%);
-$accent-red-30: hsl(164, 76%, 45%);
-$accent-red-40: hsl(133, 58%, 66%);
-$accent-red-50: hsl(165, 69%, 60%);
+$accent-green-10: hsl(146, 64%, 26%);
+$accent-green-20: hsl(145, 63%, 35%);
+$accent-green-30: hsl(145, 63%, 42%);
+$accent-green-40: hsl(145, 63%, 54%);
+$accent-green-50: hsl(145, 63%, 70%);
 
 // Blue
-$accent-red-10: hsl(205, 66%, 42%);
-$accent-red-20: hsl(247, 73%, 54%);
-$accent-red-30: hsl(209, 91%, 46%);
-$accent-red-40: hsl(204, 70%, 53%);
-$accent-red-50: hsl(210, 10%, 73%);
+$accent-blue-10: hsl(168, 76%, 21%);
+$accent-blue-20: hsl(168, 76%, 26%);
+$accent-blue-30: hsl(168, 76%, 36%);
+$accent-blue-40: hsl(169, 76%, 42%);
+$accent-blue-50: hsl(168, 75%, 60%);
 
 // Yellow
-$accent-red-10: hsl(44, 74%, 52%);
-$accent-red-20: hsl(48, 87%, 50%);
-$accent-red-30: hsl(47, 90%, 55%);
-$accent-red-40: hsl(39, 88%, 69%);
-$accent-red-50: hsl(50, 78%, 74%);
+$accent-yellow-10: hsl(37, 91%, 30%);
+$accent-yellow-20: hsl(37, 90%, 40%);
+$accent-yellow-30: hsl(37, 90%, 51%);
+$accent-yellow-40: hsl(37, 90%, 60%);
+$accent-yellow-50: hsl(37, 91%, 70%);
 
 /**
       Gray Scale
@@ -48,3 +50,54 @@ $grey-scale-30: hsl(0, 0%, 54%);
 $grey-scale-40: hsl(0, 0%, 67%);
 $grey-scale-50: hsl(0, 0%, 89%);
 $grey-scale-60: hsl(0, 0%, 98%);
+
+/**
+      Utilities
+  ==================
+*/
+
+ @function luminance($color) {
+  $red: nth($linear-channel-values, red($color) + 1);
+  $green: nth($linear-channel-values, green($color) + 1);
+  $blue: nth($linear-channel-values, blue($color) + 1);
+
+  @return .2126 * $red + .7152 * $green + .0722 * $blue;
+}
+
+@function contrast($back, $front) {
+  $backLum: luminance($back) + .05;
+  $foreLum: luminance($front) + .05;
+
+  @return max($backLum, $foreLum) / min($backLum, $foreLum);
+}
+
+@function pick-color-based-on-contrast($bg-color, $option-one, $option-two) {
+  $color-option-one: contrast($bg-color, $option-one);
+  $color-option-two: contrast($bg-color, $option-two);
+
+  @if ($color-option-one > $color-option-two) {
+    @return $option-one;
+  }
+  @else {
+    @return $option-two;
+  }
+}
+
+@function pick-color-based-on-contrasts($bg-color, $colors) {
+  $color-to-use: null;
+
+  @each $color in $colors {
+    @if ($color-to-use == null) {
+      $color-to-use: $color
+    }  @else {
+      $color-option-one: contrast($bg-color, $color);
+      $color-option-two: contrast($bg-color, $color-to-use);
+
+      @if($color-option-one > $color-option-two) {
+        $color-to-use: $color;
+      }
+    }
+  }
+
+  @return $color-to-use;
+}

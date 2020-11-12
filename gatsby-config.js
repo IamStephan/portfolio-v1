@@ -36,5 +36,6 @@ module.exports = {
       }
     },
     `gatsby-plugin-glslify`,
+    `gatsby-plugin-less`
   ],
 }
