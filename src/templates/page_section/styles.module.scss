@@ -1,0 +1,32 @@
+@import '../../foundation/spacing/spacing';
+
+.section {
+  &.isClamped {
+    max-width: #{$clamp-width}px;
+    margin: auto;
+  }
+
+  &.isPadded {
+    padding: #{$spacing-40}px;
+  }
+
+  &.gutter {
+    &.bottom {
+      margin-bottom: 5vh;
+    }
+
+    &.top {
+      margin-top: 5vh;
+    }
+
+    &.both {
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+
+    &.none {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}

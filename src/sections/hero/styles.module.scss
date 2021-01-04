@@ -1,0 +1,150 @@
+@import '../../foundation/spacing/spacing';
+@import '../../foundation/colors/colors';
+
+$breakpoint-one: 900;
+
+.heroContainer {
+  .hero {
+    // The layout cannot have size constraints
+    // since if it does not grow/shrink
+    // according to the hero img, the poportions
+    // get messed up
+
+    margin-top: #{$spacing-60}px;
+    display: grid;
+    grid-template-columns: 2fr 5vw 1fr;
+    grid-template-rows: 1fr 6vw 5fr auto;
+
+    .explainContainer {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      position: relative;
+
+      .explain {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .sloganContainer {
+      grid-column: 1;
+      grid-row: 3;
+      position: relative;
+
+      .slogan {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .scribblesContainer {
+      grid-column: 2 / span 2;
+      grid-row: 1 / span 2;
+      position: relative;
+
+      .scribble {
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        height: 200%;
+      }
+    }
+
+    // This is the reference for the container
+    .heroImg {
+      grid-column: 3;
+      grid-row: 2 / span 2;
+      position: relative;
+
+      .img {
+        height: 100%;
+      }
+    }
+
+    .actionsContainer {
+      grid-column: 1;
+      grid-row: 4;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      // border-top: 3px dashed $grey-scale-dark-200;
+      // border-bottom: 3px dashed $grey-scale-dark-200;
+      display: flex;
+      justify-content: flex-end;
+
+      .ctaContainer {
+        .ctaBtn {
+          background-color: $primary-200;
+        }
+      }
+
+      .accountsContainer {
+        .iconBtn {
+          margin-right: 10px;
+          margin-left: 10px;
+          font-size: 36px;
+          color: $grey-scale-dark-200;
+        }
+      }
+    }
+  }
+}
+
+// This specifc case it makes sense to use the orientation of the
+// device. If the device is i portrait mode, this layout just makes more sense.
+@media (orientation: portrait), (max-width: #{$breakpoint-one}px) {
+  .heroContainer {
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+  
+      .sloganContainer {
+        grid-column: 1;
+        grid-row: 3;
+
+        .slogan {
+          position: relative;
+        }
+      }
+
+      .explainContainer {
+        grid-column: 1;
+        grid-row: 1;
+        position: relative;
+  
+        .explain {
+          position: relative;
+          //padding-right: 10vw;
+          //padding-left: 10vw;
+        }
+      }
+
+      .scribblesContainer {
+        grid-row: 2;
+        grid-column: 1;
+        position: relative;
+  
+        .scribble {
+          position: absolute;
+          right: 0px;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      
+      .heroImg {
+        grid-row: 2;
+        grid-column: 1;
+  
+        .img {
+          transform: rotate(-90deg);
+          margin-bottom: -5vw;
+          height: 60vw;
+          width: auto;
+        }
+      }
+    }
+  }
+}

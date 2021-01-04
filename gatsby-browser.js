@@ -1,28 +1,16 @@
 import React from 'react'
 
-// Components
+// Organisms
 import Provider from './src/organisms/provider'
+import Container from './src/organisms/container'
 
 // Styles
 import 'sanitize.css'
 
-/**
- * NOTE TO SELF:
- * =============
- * This runs in the browser on initial load of the page
- * And can lead to some unexpected bugs if the component
- * state is required immediately
- */
-
-/**
-* TODO
-* =====
-* - Remove duplicates that are not needed
-*/
-
-function wrapRootElement ({ element, props }) {
+function wrapRootElement ({ element, props, ...rest }) {
   // props provide same data to Layout as Page element will get
   // including location, data, etc - you don't need to pass it
+
   return (
     <Provider {...props}>
       {element}
@@ -30,6 +18,17 @@ function wrapRootElement ({ element, props }) {
   )
 }
 
+function wrapPageElement({ element, props }) {
+  return (
+    <Container
+      {...props}
+    >
+      { element }
+    </Container>
+  )
+}
+
 export {
-  wrapRootElement
+  wrapRootElement,
+  wrapPageElement
 }

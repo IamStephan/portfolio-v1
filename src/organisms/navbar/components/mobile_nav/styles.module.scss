@@ -1,0 +1,32 @@
+@import '../../../../foundation/spacing/spacing';
+@import '../../../../foundation/colors/colors';
+
+// Shared Vars
+@import '../../../shared_vars';
+
+.mobileNav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+
+  display: grid;
+  grid-template-rows: #{$navbar-height}px 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  .topContainer {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    padding: #{$spacing-30}px;
+    background-color: $grey-scale-light-100;
+  }
+
+  .overlay {
+    grid-row: 1 / span 4;
+    grid-column: 1 / span 2;
+    z-index: -1;
+    background-color: rgba($grey-scale-dark-300, 0.75);
+  }
+}

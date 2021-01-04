@@ -1,0 +1,76 @@
+@import '../../foundation/spacing/spacing';
+
+$breakpoint-1: 1000;
+
+.ctaSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .showcaseContainer {
+    grid-column: 1;
+    position: relative;
+    
+    .handImg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+    }
+
+    .letsgo {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .actionContainer {
+    grid-column: 2;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .action {
+        margin-top: #{$spacing-50}px;;
+
+        * {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-1}px) {
+  .ctaSection {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  
+    .showcaseContainer {
+      grid-column: 1;
+      grid-row: 1;
+      margin-bottom: #{$spacing-30}px;
+      
+      .letsgo {
+        position: relative;
+      }
+    }
+  
+    .actionContainer {
+      grid-column: 1;
+      grid-row: 2;
+  
+      .content {
+        position: relative;
+
+        .heyThere {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

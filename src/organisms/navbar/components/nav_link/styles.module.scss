@@ -1,0 +1,12 @@
+@import '../../../../foundation/colors/colors';
+
+.menuButton {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  .icon {
+    font-size: 26px;
+    z-index: 2;
+    color: $grey-scale-dark-300;
+  }
+}

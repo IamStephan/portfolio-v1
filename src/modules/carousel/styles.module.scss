@@ -1,0 +1,18 @@
+
+
+.viewport {
+  overflow: hidden;
+
+  .container {
+    display: flex;
+
+    .fixedSlideWidth {
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+
+    .loopSlide {
+      position: relative;
+    }
+  }
+}

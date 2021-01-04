@@ -1,0 +1,12 @@
+@import '../shared_vars';
+
+.page {
+  margin-left: #{$navbar-width}px;
+}
+
+@media screen and (max-width: #{$container-breakpoint}px) {
+  .page {
+    margin-left: 0px;
+    //margin-top: #{$navbar-height}px;
+  }
+}

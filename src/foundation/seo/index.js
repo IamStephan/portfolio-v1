@@ -18,13 +18,20 @@ const query = graphql`
         titleTemplate
         defaultDescription: description
         siteUrl: url
-        defaultImage: image
       }
     }
   }
 `
 
-const SEO = ({ title, description, image, article }) => {
+/**
+ * 
+ * @param {{
+ *    title: string,
+ *    description: string,
+ *    article: string
+ * }} props 
+ */
+const SEO = ({ title, description, article }) => {
   const { pathname } = useLocation()
   const { site } = useStaticQuery(query)
 
@@ -33,13 +40,11 @@ const SEO = ({ title, description, image, article }) => {
     titleTemplate,
     defaultDescription,
     siteUrl,
-    defaultImage,
   } = site.siteMetadata
 
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
 
@@ -57,8 +62,6 @@ const SEO = ({ title, description, image, article }) => {
       {seo.description && (
         <meta property="og:description" content={seo.description} />
       )}
-
-      {seo.image && <meta property="og:image" content={seo.image} />}
     </Helmet>
   )
 }

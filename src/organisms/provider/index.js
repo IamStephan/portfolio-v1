@@ -5,16 +5,20 @@ import { ThemeProvider } from '@material-ui/core'
 
 // Foundation
 import { theme } from '../../foundation/theme'
+import '../../foundation/reset.scss'
 
+const Provider = props => {
+  const {
+    children
+  } = props
 
-const ProviderSSR = props => {
   return (
     <ThemeProvider
       theme={theme}
     >
-      { props.children }
+      { children }
     </ThemeProvider>
   )
 }
 
-export default ProviderSSR
+export default Provider

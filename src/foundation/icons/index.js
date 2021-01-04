@@ -5,26 +5,31 @@ import 'remixicon/fonts/remixicon.css'
 // Styles
 import styles from './styles.module.scss'
 
-
 /**
  * 
  * @param {{
  *    name: string,
  *    mode: ('fill' | 'line')
- *    size: ('tiny' | 'large' | 'big' | 'huge' | 'massive' | 'inherit')
+ *    className: string
  * }} props 
  */
 const Icon = props => {
   const {
     name = '',
-    mode = 'fill',
-    size = 'normal'
+    mode = 'line',
+    className
   } = props
+
+  let stylesToAdd = []
+
+  if(className) stylesToAdd.push(className)
+
+  const addedStyles = stylesToAdd.join(' ')
 
   return (
     <i
       className={
-        `${styles['icon']} ri-${name}-${mode} ri-fw ${styles['size_' + size]}`
+        `${styles['icon']} ri-${name}-${mode} ${addedStyles}`
       }
     />
   )

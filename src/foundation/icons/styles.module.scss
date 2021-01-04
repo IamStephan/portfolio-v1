@@ -1,26 +1,6 @@
-@import '../typography/tyography';
-
 .icon {
   color: inherit;
 
-  &.size_tiny {
-    font-size: #{$font-size-10}px;
-  }
-  &.size_normal {
-    font-size: #{$font-size-30}px;
-  }
-  &.size_large {
-    font-size: #{$font-size-50}px;
-  }
-  &.size_big {
-    font-size: #{$font-size-60}px;
-  }
-  &.size_huge {
-    font-size: #{$font-size-80}px;
-  }
-  &.size_massive {
-    font-size: #{$font-size-100}px;
-  }
   &.size_inherit {
     font-size: inherit;
   }

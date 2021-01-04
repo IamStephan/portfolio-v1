@@ -1,5 +1,14 @@
-import React, { useEffect } from 'react'
-import { Button, Typography } from '@material-ui/core'
+import React from 'react'
+
+// Templates
+import Page from '../templates/page'
+
+// Sections
+import Hero from '../sections/hero'
+import CaseStudyFeatured from '../sections/case_study_featured'
+import SkillSet from '../sections/skill_set'
+import BlogFeatured from '../sections/blog_featured'
+import CTA from '../sections/cta'
 
 const index = () => {
   return <App />
@@ -7,21 +16,13 @@ const index = () => {
 
 const App = () => {
   return (
-    <div
-    >
-      <Button
-        variant='contained'
-        color='primary'
-      >
-        Submit
-      </Button>
-
-      <Typography
-        variant='h1'
-      >
-        yuhkjn
-      </Typography>
-    </div>
+    <Page>
+      <Hero />
+      <CaseStudyFeatured />
+      <SkillSet />
+      {/* <BlogFeatured /> */}
+      <CTA />
+    </Page>
   )
 }
 

@@ -3,7 +3,6 @@ import { createMuiTheme } from '@material-ui/core'
 
 const headerStyles = {
   fontFamily: [
-    '"Ubuntu"',
     'Arial',
     '"Helvetica Neue"'
   ].join(', '),
@@ -23,34 +22,34 @@ const theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      dark: 'hsl(6, 63%, 37%)',
-      main: 'hsl(6, 63%, 46%)',
-      light: 'hsl(6, 63%, 53%)'
+      dark: '#9e2f2f',
+      main: '#e24444',
+      light: '#e76969'
     },
     secondary: {
-      dark: 'hsl(0, 0%, 10%)',
-      main: 'hsl(0, 0%, 19%)',
-      light: 'hsl(0, 0%, 35%)'
+      dark: '#354a4c',
+      main: '#354a4c',
+      light: '#70878a'
     },
     success: {
-      dark: 'hsl(145, 63%, 35%)',
-      main: 'hsl(145, 63%, 42%)',
-      light: 'hsl(145, 63%, 54%)'
+      dark: '#44884e',
+      main: '#62C370',
+      light: '#81cf8c'
     },
     info: {
-      dark: 'hsl(168, 76%, 26%)',
-      main: 'hsl(168, 76%, 36%)',
-      light: 'hsl(169, 76%, 42%)'
+      dark: '#354a4c',
+      main: '#4D6A6D',
+      light: '#70878a'
     },
     warning: {
-      dark: 'hsl(37, 90%, 40%)',
-      main: 'hsl(37, 90%, 51%)',
-      light: 'hsl(37, 90%, 60%)'
+      dark: '#9e2f2f',
+      main: '#e24444',
+      light: '#e76969'
     },
     error: {
-      dark: 'hsl(6, 63%, 37%)',
-      main: 'hsl(6, 63%, 46%)',
-      light: 'hsl(6, 63%, 53%)'
+      dark: '#9e2f2f',
+      main: '#e24444',
+      light: '#e76969'
     }
   },
   typography: {
