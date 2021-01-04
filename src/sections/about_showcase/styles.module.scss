@@ -25,6 +25,7 @@ $breakpoint-1: 850;
   .showcaseContainer {
     grid-row: 1;
     grid-column: 2;
+    margin-left: #{$spacing-30}px;
   }
 }
 
@@ -50,6 +51,7 @@ $breakpoint-1: 850;
       grid-row: 1;
       grid-column: 1;
       margin-bottom: #{$spacing-30}px;
+      margin-left: 0px;
     }
   }  
 }
