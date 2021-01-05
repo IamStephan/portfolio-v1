@@ -39,6 +39,7 @@ $breakpoint-1: 360;
   .copyrightSection {
     display: flex;
     justify-content: center;
+    margin-bottom: #{$spacing-30}px;
 
     .copyright {
       color: $grey-scale-dark-100;
