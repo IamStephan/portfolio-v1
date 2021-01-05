@@ -3,18 +3,21 @@ import { createMuiTheme } from '@material-ui/core'
 
 const headerStyles = {
   fontFamily: [
+    'Ubuntu',
     'Arial',
     '"Helvetica Neue"'
   ].join(', '),
-  fontWeight: 'bold'
+  fontWeight: 'bold',
+  color: '#171c22'
 }
 
 const bodyStyles = {
   fontFamily: [
-    '"Open Sans"',
+    'Ubuntu',
     'Arial',
     '"Helvetica Neue"'
-  ].join(', ')
+  ].join(', '),
+  color: '#171c22'
 }
 
 // Global Theme
