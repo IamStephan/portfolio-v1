@@ -3,11 +3,14 @@ import React from 'react'
 // Templates
 import Section from '../../templates/page_section'
 
+// Foundation
+import Icon from '../../foundation/icons'
+
 // Material
 import { Button } from '@material-ui/core'
 
 // Gatbsy
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Svg
@@ -71,8 +74,11 @@ const CTA = () => {
               variant='contained'
               color='primary'
               size='large'
+              component={Link}
+              to='/contact'
+              endIcon={<Icon name='door-open' className={styles['icon']} />}
             >
-              Email me...
+              Contact Me
             </Button>
           </div>
         </div>

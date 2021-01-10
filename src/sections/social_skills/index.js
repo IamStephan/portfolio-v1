@@ -16,16 +16,16 @@ import Industrious from '../../assets/svg/abstracts/industrious.svg'
 
 const Social_Skills_Info = [
   {
-    title: 'Focused',
-    Avatar: Focused
+    Avatar: Focused,
+    text: 'Focus is the key to getting things done. Be in the flow...'
   },
   {
-    title: 'Lively',
-    Avatar: Lively
+    Avatar: Lively,
+    text: 'Focus is the key to getting things done. Be in the flow...'
   },
   {
-    title: 'Industroius',
-    Avatar: Industrious
+    Avatar: Industrious,
+    text: 'Focus is the key to getting things done. Be in the flow...'
   },
 ]
 
@@ -34,33 +34,37 @@ const SocialSkills = () => {
     <Section
       className={styles['socialSkillsSection']}
     >
-      {
-        Social_Skills_Info.map(item => (
-          <div
-            key={item.title}
-            className={styles['socialSkill']}
-          >
+      <div
+        className={styles['skillsContainer']}
+      >
+        {
+          Social_Skills_Info.map(item => (
             <div
-              className={styles['avatarContainer']}
+              key={item.title}
+              className={styles['socialSkill']}
             >
-              <item.Avatar
-                className={styles['avatar']}
-              />
-            </div>
-
-            <div
-              className={styles['titleContainer']}
-            >
-              <Typography
-                className={styles['title']}
-                variant='h3'
+              <div
+                className={styles['avatarContainer']}
               >
-                <b>{item.title}</b>
-              </Typography>
+                <item.Avatar
+                  className={styles['avatar']}
+                />
+              </div>
+
+              <div
+                className={styles['contentContainer']}
+              >
+                <Typography
+                  className={styles['content']}
+                >
+                  {item.text}
+                </Typography>
+              </div>
             </div>
-          </div>
-        ))
-      }
+          ))
+        }
+      </div>
+
     </Section>
   )
 }

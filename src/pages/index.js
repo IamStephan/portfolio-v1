@@ -20,7 +20,7 @@ const App = () => {
       <Hero />
       <CaseStudyFeatured />
       <SkillSet />
-      {/* <BlogFeatured /> */}
+      <BlogFeatured />
       <CTA />
     </Page>
   )

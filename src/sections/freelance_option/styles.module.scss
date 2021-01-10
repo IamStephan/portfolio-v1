@@ -1,0 +1,62 @@
+@import '../../foundation/spacing/spacing';
+
+$breakpoint-1: 850;
+
+.freelanceOptionSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: #{$spacing-80}px;
+  column-gap: #{$spacing-80}px;
+
+  .showcaseContainer {
+    position: relative;
+
+    .showcase {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .actionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      margin-bottom: #{$spacing-60}px;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-1}px) {
+  .freelanceOptionSection {
+    grid-template-columns: 1fr;
+    grid-row-gap: #{$spacing-80}px;
+    row-gap: #{$spacing-80}px;
+  
+    .showcaseContainer {
+      position: relative;
+      display: flex;
+      justify-content: center;
+  
+      .showcase {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    .actionContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      .title {
+        margin-bottom: #{$spacing-60}px;
+        text-align: center;
+      }
+    }
+  }
+}

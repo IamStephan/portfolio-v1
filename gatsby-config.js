@@ -12,9 +12,17 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `assets`, 'images'),
+        path: `${__dirname}/src/assets/images`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/articles`,
+        name: `articles`,
+      },
+    },
+    `gatsby-plugin-mdx`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,

@@ -4,8 +4,8 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
-// Svgs
-import Standards from '../../assets/svg/text/standards.svg'
+// Material
+import { Typography, Button } from '@material-ui/core'
 
 // Templates
 import Section from '../../templates/page_section'
@@ -34,21 +34,44 @@ const AboutShowcaseSection = () => {
       className={styles['aboutShowcaseSection']}
     >
       <div
-        className={styles['sloganContainer']}
-      >
-        <Standards
-          className={styles['slogan']}
-        />
-      </div>
-
-      <div
         className={styles['showcaseContainer']}
       >
         <Img
           fluid={helloImage}
           objectFit='contain'
-          className={styles['img']}
+          className={styles['showcase']}
         />
+      </div>
+
+      <div
+        className={styles['bioContainer']}
+      >
+        <Typography
+          variant='h2'
+          className={styles['title']}
+        >
+          My name is Stephan and I'm a software developer
+        </Typography>
+        <br />
+        <Typography
+          className={styles['content']}
+        >
+          Creating impactful software solutions drives me to become a better developer. 
+        </Typography>
+
+        <br />
+
+        <div
+          className={styles['actions']}
+        >
+          <Button
+            variant='contained'
+            color='primary'
+            size='large'
+          >
+            My Resume
+          </Button>
+        </div>
       </div>
     </Section>
   )

@@ -1,5 +1,7 @@
 @import '../../foundation/spacing/spacing';
 
+$section-gap: 10vh;
+
 .section {
   &.isClamped {
     max-width: #{$clamp-width}px;
@@ -7,21 +9,21 @@
   }
 
   &.isPadded {
-    padding: #{$spacing-40}px;
+    padding: #{$spacing-50}px;
   }
 
   &.gutter {
     &.bottom {
-      margin-bottom: 5vh;
+      margin-bottom: $section-gap;
     }
 
     &.top {
-      margin-top: 5vh;
+      margin-top: $section-gap;
     }
 
     &.both {
-      margin-top: 5vh;
-      margin-bottom: 5vh;
+      margin-top: $section-gap;
+      margin-bottom: $section-gap;
     }
 
     &.none {
