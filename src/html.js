@@ -12,7 +12,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <link rel="preconnect" href="https://fonts.gstatic.com" rel="preload"/>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap" rel="preload"/>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap" rel="stylesheet"/>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
