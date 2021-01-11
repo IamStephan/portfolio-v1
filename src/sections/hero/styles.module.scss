@@ -1,150 +1,190 @@
 @import '../../foundation/spacing/spacing';
 @import '../../foundation/colors/colors';
 
-$breakpoint-one: 900;
+$breakpoint-one: 1350;
+$breakpoint-two: 980;
+$breakpoint-three: 650;
 
 .heroContainer {
-  .hero {
-    // The layout cannot have size constraints
-    // since if it does not grow/shrink
-    // according to the hero img, the poportions
-    // get messed up
+  display: grid;
+  grid-template-columns: 1000px 1fr;
+  grid-template-rows: auto 200px auto;
 
+  .socialLinksContainer {
+    display: flex;
     margin-top: #{$spacing-60}px;
-    display: grid;
-    grid-template-columns: 2fr 5vw 1fr;
-    grid-template-rows: 1fr 6vw 5fr auto;
 
-    .explainContainer {
+    .iconBtn {
+      margin-right: #{$spacing-30}px;
+      // font-size: 28px;
+      color: $complement-300;
+
+      .icon {
+        font-size: 24px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .showcaseTwoContainer {
+    grid-row: 2 / span 2;
+    grid-column: 1 / span 2;
+    position: relative;
+
+    .showcaseTwo {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.1;
+    }
+  }
+
+  .showcaseOneContainer {
+    grid-row: 1 / span 3;
+    grid-column: 2 / span 2;
+    position: relative;
+
+    .showcaseOne {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: hoverMotion 3s ease-in-out infinite;
+    }
+  }
+
+  .contentContainer {
+    grid-column: 1;
+    grid-row: 3;
+    z-index: 2;
+
+    .title {
+      margin-bottom: #{$spacing-50}px;
+    }
+
+    .subtitle {
+      font-weight: normal;
+      margin-bottom: #{$spacing-70}px;
+      font-family: 'Open Sans';
+    }
+
+    .actions {
+      .main {
+        margin-right: #{$spacing-30}px;
+      }
+    }
+  }
+}
+
+
+
+@media screen and (max-width: #{$breakpoint-one}px) {
+  .heroContainer {
+    grid-template-columns: 2fr 1fr;
+
+    .contentContainer {
+      .title {
+        font-size: 3.5rem;
+      }
+  
+      .subtitle {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-two}px) {
+  .heroContainer {
+    grid-template-columns: 1fr 25vw;
+    grid-template-rows: auto 150px auto;
+    overflow: hidden;
+  
+    .socialLinksContainer {
+      grid-row: 1;
       grid-column: 1;
-      grid-row: 1 / span 2;
-      position: relative;
-
-      .explain {
-        position: absolute;
-        width: 100%;
+    }
+  
+    .showcaseTwoContainer {
+      grid-row: 1 / span 3;
+      grid-column: 1 / span 2;
+      
+      .showcaseTwo {
+        width: auto;
         height: 100%;
       }
     }
-
-    .sloganContainer {
-      grid-column: 1;
+  
+    .showcaseOneContainer {
+      grid-row: 1 / span 3;
+      grid-column: 2;
+  
+      .showcaseOne {
+        width: auto;
+        height: 100%;
+      }
+    }
+  
+    .contentContainer {
       grid-row: 3;
-      position: relative;
-
-      .slogan {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .scribblesContainer {
-      grid-column: 2 / span 2;
-      grid-row: 1 / span 2;
-      position: relative;
-
-      .scribble {
-        position: absolute;
-        right: 0px;
-        width: 100%;
-        height: 200%;
-      }
-    }
-
-    // This is the reference for the container
-    .heroImg {
-      grid-column: 3;
-      grid-row: 2 / span 2;
-      position: relative;
-
-      .img {
-        height: 100%;
-      }
-    }
-
-    .actionsContainer {
       grid-column: 1;
-      grid-row: 4;
-      padding-top: 8px;
-      padding-bottom: 8px;
-      // border-top: 3px dashed $grey-scale-dark-200;
-      // border-bottom: 3px dashed $grey-scale-dark-200;
-      display: flex;
-      justify-content: flex-end;
-
-      .ctaContainer {
-        .ctaBtn {
-          background-color: $primary-200;
-        }
+  
+      .title {
+        font-size: 2.5rem;
       }
+  
+      .subtitle {
+        // display: none;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
 
-      .accountsContainer {
-        .iconBtn {
-          margin-right: 10px;
-          margin-left: 10px;
-          font-size: 36px;
-          color: $grey-scale-dark-200;
+@media screen and (max-width: #{$breakpoint-three}px) {
+  .heroContainer {
+    grid-template-columns: 1fr 15vw;
+    grid-template-rows: auto auto auto;
+
+    .socialLinksContainer {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 0px;
+    }
+  
+    .contentContainer {
+      margin-top: #{$spacing-60}px;
+
+      .title {
+        font-size: 2rem;
+      }
+  
+      .subtitle {
+        display: none;
+      }
+  
+      .actions {
+        display: flex;
+        flex-direction: column;
+        .main {
+          margin-right: 0px;
         }
       }
     }
   }
 }
 
-// This specifc case it makes sense to use the orientation of the
-// device. If the device is i portrait mode, this layout just makes more sense.
-@media (orientation: portrait), (max-width: #{$breakpoint-one}px) {
-  .heroContainer {
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto;
-  
-      .sloganContainer {
-        grid-column: 1;
-        grid-row: 3;
+@keyframes hoverMotion {
+  0% {
+    transform: translateY(0px);
+  }
 
-        .slogan {
-          position: relative;
-        }
-      }
+  50% {
+    transform: translateY(20px);
+  }
 
-      .explainContainer {
-        grid-column: 1;
-        grid-row: 1;
-        position: relative;
-  
-        .explain {
-          position: relative;
-          //padding-right: 10vw;
-          //padding-left: 10vw;
-        }
-      }
-
-      .scribblesContainer {
-        grid-row: 2;
-        grid-column: 1;
-        position: relative;
-  
-        .scribble {
-          position: absolute;
-          right: 0px;
-          width: 100%;
-          height: 100%;
-        }
-      }
-      
-      .heroImg {
-        grid-row: 2;
-        grid-column: 1;
-  
-        .img {
-          transform: rotate(-90deg);
-          margin-bottom: -5vw;
-          height: 60vw;
-          width: auto;
-        }
-      }
-    }
+  100% {
+    transform: translateY(0px);
   }
 }

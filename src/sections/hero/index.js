@@ -1,132 +1,130 @@
 import React from 'react'
 
-// Gatbsy
-import { Link } from 'gatsby'
+// Foundation
+import Icon from '../../foundation/icons'
+
+// Svgs
+import Hello from '../../assets/svg/abstracts/coffee_hello.svg'
+import Mountains from '../../assets/svg/abstracts/mountains.svg'
+
+// Material
+import { Typography, Button, IconButton } from '@material-ui/core'
 
 // Temaplates
 import Section from '../../templates/page_section'
 
-// Foundation
-import Icon from '../../foundation/icons'
-
-// Material
-import { IconButton, Button } from '@material-ui/core'
-
-// SVG
-import Slogan from '../../assets/svg/text/slogan.svg'
-import ExplainMe from '../../assets/svg/text/explain_me.svg'
-import ScribblesOne from '../../assets/svg/scribbles/scribbles_1.svg'
-
-// Gatsby
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image/withIEPolyfill'
-
 // Styles
 import styles from './styles.module.scss'
 
-const query = graphql`
-  {
-    hero: file(relativePath: {eq: "hero/face.png"}) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`
-
 const Hero = () => {
-  const { hero: { childImageSharp: { fluid: heroImage } } } = useStaticQuery(query)
-
   return (
     <Section
       className={styles['heroContainer']}
     >
       <div
-        className={styles['hero']}
+        className={styles['socialLinksContainer']}
       >
-        <div
-          className={styles['explainContainer']}
+        <Button
+          className={styles['iconBtn']}
+          startIcon={(
+            <Icon
+              mode='fill'
+              name='instagram'
+              className={styles['icon']}
+            />
+          )}
         >
-          <ExplainMe
-            className={styles['explain']}
-          />
-        </div>
+          Instagram
+        </Button>
+
+        <Button
+          className={styles['iconBtn']}
+          startIcon={(
+            <Icon
+              mode='fill'
+              name='github'
+              className={styles['icon']}
+            />
+          )}
+        >
+          Github
+        </Button>
+
+        <Button
+          className={styles['iconBtn']}
+          startIcon={(
+            <Icon
+              mode='fill'
+              name='linkedin-box'
+              className={styles['icon']}
+            />
+          )}
+        >
+          LinkedIn
+        </Button>
+      </div>
+
+      <div
+        className={styles['showcaseTwoContainer']}
+      >
+        <Mountains
+          className={styles['showcaseTwo']}
+        />
+      </div>
+
+      <div
+        className={styles['showcaseOneContainer']}
+      >
+        <Hello
+          className={styles['showcaseOne']}
+        />
+      </div>
+
+      <div
+        className={styles['contentContainer']}
+      >
+        <Typography
+          variant='h1'
+          className={styles['title']}
+        >
+          I am Stephan...<br/>
+          a <u>Software Developer</u>
+        </Typography>
+
+        <Typography
+          variant='h4'
+          className={styles['subtitle']}
+        >
+          Creating impactful software solutions that propel businesses to success.
+        </Typography>
 
         <div
-          className={styles['sloganContainer']}
+          className={styles['actions']}
         >
-          <Slogan
-            className={styles['slogan']}
-          />
-        </div>
-
-        <div
-          className={styles['scribblesContainer']}
-        >
-          <ScribblesOne
-            className={styles['scribble']}
-          />
-        </div>
-        
-        {/**
-         * This is the point of reference. Used for the rest of the hero to
-         * scale appropriately
-         */}
-        <div
-          className={styles['heroImg']}
-        >
-          <Img
-            draggable={false}
-            className={styles['img']}
-            fluid={heroImage}
-            objectFit='contain'
-          />
-        </div>
-
-        <div
-          className={styles['actionsContainer']}
-        >
-
-          <div
-            className={styles['accountsContainer']}
+          <Button
+            variant='contained'
+            color='primary'
+            size='large'
+            className={styles['main']}
           >
-            <a>
-              <IconButton
-                className={styles['iconBtn']}
-              >
-                <Icon
-                  mode='fill'
-                  name='github'
-                />
-              </IconButton>
-            </a>
-            
-            <a>
-              <IconButton
-                className={styles['iconBtn']}
-              >
-                <Icon
-                  mode='fill'
-                  name='linkedin-box'
-                />
-              </IconButton>
-            </a>
-            
-            <a>
-              <IconButton
-                className={styles['iconBtn']}
-              >
-                <Icon
-                  mode='fill'
-                  name='instagram'
-                />
-              </IconButton>
-            </a>
-            
-          </div>
+            My Resume
+          </Button>
+
+          <Button
+            variant='text'
+            color='secondary'
+            size='large'
+            className={styles['second']}
+          >
+            Contact Me
+          </Button>
         </div>
+      </div>
+
+      <div
+        className={styles['miscContainer']}
+      >
+
       </div>
     </Section>
   )
