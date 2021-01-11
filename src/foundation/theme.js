@@ -13,7 +13,7 @@ const headerStyles = {
 
 const bodyStyles = {
   fontFamily: [
-    'Ubuntu',
+    'Open Sans',
     'Arial',
     '"Helvetica Neue"'
   ].join(', '),
@@ -30,7 +30,13 @@ const theme = createMuiTheme({
       light: '#e76969'
     },
     secondary: {
-      dark: '#354a4c',
+      /**
+       * This is weird since its not the
+       * actual defined color pattern
+       * but it works and looks visually
+       * pleasant
+       */
+      dark: '#222831',
       main: '#354a4c',
       light: '#70878a'
     },
