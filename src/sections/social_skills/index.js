@@ -3,8 +3,8 @@ import React from 'react'
 // Material
 import { Typography } from '@material-ui/core'
 
-// Templates
-import Section from '../../templates/page_section'
+// Organisms
+import Section from '../../organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'
@@ -16,16 +16,13 @@ import Industrious from '../../assets/svg/abstracts/industrious.svg'
 
 const Social_Skills_Info = [
   {
-    Avatar: Focused,
-    text: 'Focus is the key to getting things done. Be in the flow...'
+    Avatar: Focused
   },
   {
-    Avatar: Lively,
-    text: 'Focus is the key to getting things done. Be in the flow...'
+    Avatar: Lively
   },
   {
-    Avatar: Industrious,
-    text: 'Focus is the key to getting things done. Be in the flow...'
+    Avatar: Industrious
   },
 ]
 
@@ -34,6 +31,7 @@ const SocialSkills = () => {
     <Section
       className={styles['socialSkillsSection']}
     >
+
       <div
         className={styles['skillsContainer']}
       >
@@ -49,16 +47,6 @@ const SocialSkills = () => {
                 <item.Avatar
                   className={styles['avatar']}
                 />
-              </div>
-
-              <div
-                className={styles['contentContainer']}
-              >
-                <Typography
-                  className={styles['content']}
-                >
-                  {item.text}
-                </Typography>
               </div>
             </div>
           ))

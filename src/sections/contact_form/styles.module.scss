@@ -1,0 +1,19 @@
+$showcase-clamp: 800;
+
+.contactSection {
+  .showcaseContainer {
+    max-width: #{$showcase-clamp}px;
+    margin: auto;
+    position: relative;
+
+    .showcase {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .contactFormContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

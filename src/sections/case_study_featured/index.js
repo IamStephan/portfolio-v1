@@ -10,8 +10,8 @@ import Icon from '../../foundation/icons'
 // Material
 import { Typography, Chip, Button } from '@material-ui/core'
 
-// Template
-import Section from '../../templates/page_section'
+// Organisms
+import Section from '../../organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'
@@ -55,7 +55,8 @@ const DemoCaseStudies = [
     title: 'Mobility Crunch',
     summary: 'Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.',
     tags: [
-      'Mobile App'
+      'Mobile App',
+      'Enterprise App'
     ],
     showcase: null,
     previewLink: null,

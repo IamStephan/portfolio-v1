@@ -9,9 +9,8 @@ import Speaker from '../../assets/svg/abstracts/speaker.svg'
 import KingVert from '../../assets/svg/abstracts/king_vert.svg'
 import KingHor from '../../assets/svg/abstracts/king_hor.svg'
 
-
-// Templates
-import Section from '../../templates/page_section'
+// Organisms
+import Section from '../../organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'

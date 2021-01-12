@@ -1,12 +1,15 @@
 import React from 'react'
 
-// Templates
-import Page from '../../templates/page'
+// Organisms
+import Page from '../../organisms/page'
+
+// Sections
+import ContactForm from '../../sections/contact_form'
 
 const Contact = () => {
   return (
     <Page>
-      Contact
+      <ContactForm />
     </Page>
   )
 }

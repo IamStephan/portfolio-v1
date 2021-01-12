@@ -1,13 +1,16 @@
 @import '../../foundation/spacing/spacing';
 @import '../../foundation/colors/colors';
 
-$avatar-size: 200;
+$avatar-size: 250;
 $content-clamp: 250;
 
 $breakpoint-1: 960;
 $breakpoint-2: 675;
 
 .socialSkillsSection {
+  .title {
+    text-align: center;
+  }
   .skillsContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -25,16 +28,6 @@ $breakpoint-2: 675;
         .avatar {
           height: #{$avatar-size}px;
           width: auto;
-        }
-      }
-  
-      .contentContainer {
-        max-width: #{$content-clamp}px;
-        margin: auto;
-
-        .content {
-          text-align: center;
-          font-size: 1.25rem;
         }
       }
     }

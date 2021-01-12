@@ -10,6 +10,8 @@ $breakpoint-1: 850;
 
   .showcaseContainer {
     position: relative;
+    display: flex;
+    align-items: center;
 
     .showcase {
       width: 100%;
@@ -23,9 +25,13 @@ $breakpoint-1: 850;
     align-items: center;
     justify-content: center;
 
-    .title {
-      margin-bottom: #{$spacing-60}px;
-      text-align: center;
+    .letsTalkContainer {
+      position: relative;
+
+      .letsTalk {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

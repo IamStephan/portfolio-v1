@@ -7,8 +7,8 @@ import Img from 'gatsby-image/withIEPolyfill'
 // Material
 import { Typography, Button } from '@material-ui/core'
 
-// Templates
-import Section from '../../templates/page_section'
+// Organisms
+import Section from '../../organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'

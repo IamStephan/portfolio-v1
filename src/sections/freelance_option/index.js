@@ -8,9 +8,10 @@ import { Link } from 'gatsby'
 
 // SVGs
 import Idea from '../../assets/svg/abstracts/idea.svg'
+import LetsTalk from '../../assets/svg/abstracts/lets_talk.svg'
 
-// Templates
-import Section from '../../templates/page_section'
+// Organisms
+import Section from '../../organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'
@@ -31,13 +32,14 @@ const FreelanceOption = () => {
       <div
         className={styles['actionContainer']}
       >
-        <Typography
-          variant='h3'
-          className={styles['title']}
+        <div
+          className={styles['letsTalkContainer']}
         >
-          Let's talk about it...
-        </Typography>
-
+          <LetsTalk
+            className={styles['letsTalk']}
+          />
+        </div>
+        
         <Button
           variant='contained'
           color='primary'

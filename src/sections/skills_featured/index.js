@@ -9,8 +9,8 @@ import Computer from '../../assets/svg/abstracts/computer.svg'
 import Vault from '../../assets/svg/abstracts/vault.svg'
 import Launch from '../../assets/svg/abstracts/launch.svg'
 
-// Templates
-import Section from '../../templates/page_section'
+// Organisms
+import Section from '../../organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'

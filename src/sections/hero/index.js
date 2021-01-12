@@ -8,10 +8,10 @@ import Hello from '../../assets/svg/abstracts/coffee_hello.svg'
 import Mountains from '../../assets/svg/abstracts/mountains.svg'
 
 // Material
-import { Typography, Button, IconButton } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 
-// Temaplates
-import Section from '../../templates/page_section'
+// Organisms
+import Section from '../../organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'
