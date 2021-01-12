@@ -1,11 +1,14 @@
 import React from 'react'
 
 // Gatsby
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
+// Foundation
+import Icon from '../../foundation/icons'
+
 // Material
-import { Typography, Chip, ButtonGroup, Button } from '@material-ui/core'
+import { Typography, Chip, Button } from '@material-ui/core'
 
 // Template
 import Section from '../../templates/page_section'
@@ -25,6 +28,41 @@ const query = graphql`
   }
 `
 
+const DemoCaseStudies = [
+  {
+    title: 'Gerimed Mobility',
+    summary: 'Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.',
+    tags: [
+      'Website',
+      'E-commerce'
+    ],
+    showcase: null,
+    previewLink: 'https://gerimedmobility.co.za',
+    caseStudyLink: '/about'
+  },
+  {
+    title: 'Cycleworx Langebaan',
+    summary: 'Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.',
+    tags: [
+      'Website',
+      'Landing Page'
+    ],
+    showcase: null,
+    previewLink: 'https://cycleworxlangebaan.com',
+    caseStudyLink: '/about'
+  },
+  {
+    title: 'Mobility Crunch',
+    summary: 'Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.',
+    tags: [
+      'Mobile App'
+    ],
+    showcase: null,
+    previewLink: null,
+    caseStudyLink: '/about'
+  }
+]
+
 const CaseStudyPreview = () => {
   const { test: { childImageSharp: { fluid: testImage } } } = useStaticQuery(query)
 
@@ -32,230 +70,96 @@ const CaseStudyPreview = () => {
     <Section
       className={styles['caseStudyFeaturedSection']}
     >
-      <div
-        className={styles['contentContainer']}
-      >
-        <div
-          className={styles['showcaseContainer']}
-        >
-          <Img
-            fluid={testImage}
-          />
-        </div>
-
-        <div
-          className={styles['infoContainer']}
-        >
-          <Typography
-            variant='h3'
-          >
-            Gerimed Mobility
-          </Typography>
-
+      {
+        DemoCaseStudies.map(caseStudy => (
           <div
-            className={styles['tags']}
+            className={styles['caseStudyContainer']}
           >
-            <Chip
-              label='Website'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
+            <div
+              className={styles['showcaseContainer']}
+            >
+              <Img 
+                className={styles['showcase']}
+                objectFit='contain'
+                fluid={testImage}
+              />
+            </div>
 
-            <Chip
-              label='E-commerce'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-
-          <Chip
-              label='E-commerce'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-          </div>
-          <br />
-
-          <Typography>
-            Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.
-          </Typography>
-          <br />
-
-          <div
-            className={styles['actions']}
-          >
-            <ButtonGroup>
-              <Button
-                variant='contained'
-                color='primary'
+            <div
+              className={styles['contentContainer']}
+            >
+              <div
+                className={styles['tagsContainer']}
               >
-                Read Case Study
-              </Button>
+                {
+                  caseStudy.tags.map(tag => (
+                    <Chip
+                      key={tag}
+                      label={tag}
+                      size='small'
+                      color='primary'
+                      className={styles['tag']}
+                    />
+                  ))
+                }
+              </div>
 
-              <Button
-                variant='outlined'
-                color='secondary'
+              <Typography
+                variant='h3'
+                className={styles['title']}
               >
-                Visit Site
-              </Button>
-            </ButtonGroup>
-          </div>
-        </div>
-      </div>
+                {caseStudy.title}
+              </Typography>
 
-
-      <div
-        className={styles['contentContainer']}
-      >
-        <div
-          className={styles['showcaseContainer']}
-        >
-          <Img
-            fluid={testImage}
-          />
-        </div>
-
-        <div
-          className={styles['infoContainer']}
-        >
-          <Typography
-            variant='h3'
-          >
-            Gerimed Mobility
-          </Typography>
-
-          <div
-            className={styles['tags']}
-          >
-            <Chip
-              label='Website'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-
-            <Chip
-              label='E-commerce'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-
-          <Chip
-              label='E-commerce'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-          </div>
-          <br />
-
-          <Typography>
-            Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.
-          </Typography>
-          <br />
-
-          <div
-            className={styles['actions']}
-          >
-            <ButtonGroup>
-              <Button
-                variant='contained'
-                color='primary'
+              <Typography
+                className={styles['summary']}
               >
-                Read Case Study
-              </Button>
+                {caseStudy.summary}
+              </Typography>
 
-              <Button
-                variant='outlined'
-                color='secondary'
+              <div
+                className={styles['actionContainer']}
               >
-                Visit Site
-              </Button>
-            </ButtonGroup>
+                <Button
+                  variant='outlined'
+                  color='secondary'
+                  className={styles['action']}
+                  component={Link}
+                  to={caseStudy.caseStudyLink}
+                  endIcon={(
+                    <Icon
+                      className={styles['icon']}
+                      name='projector-2'
+                      mode='fill'
+                    />
+                  )}
+                >
+                  Read Case Study
+                </Button>
+
+                <Button
+                  variant='contained'
+                  color='primary'
+                  className={styles['action']}
+                  disabled={!caseStudy.previewLink}
+                  component={caseStudy.previewLink ? 'a' : 'div'}
+                  href={caseStudy.previewLink ? caseStudy.previewLink : ''}
+                  target='_blank'
+                  endIcon={(
+                    <Icon
+                      className={styles['icon']}
+                      name='eye'
+                      mode='fill'
+                    />
+                  )}
+                >
+                  Live Preview
+                </Button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-
-
-
-
-
-      <div
-        className={styles['contentContainer']}
-      >
-        <div
-          className={styles['showcaseContainer']}
-        >
-          <Img
-            fluid={testImage}
-          />
-        </div>
-
-        <div
-          className={styles['infoContainer']}
-        >
-          <Typography
-            variant='h3'
-          >
-            Gerimed Mobility
-          </Typography>
-
-          <div
-            className={styles['tags']}
-          >
-            <Chip
-              label='Website'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-
-            <Chip
-              label='E-commerce'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-
-          <Chip
-              label='E-commerce'
-              variant='outlined'
-              color='primary'
-              size='small'
-            />
-          </div>
-          <br />
-
-          <Typography>
-            Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.
-          </Typography>
-          <br />
-
-          <div
-            className={styles['actions']}
-          >
-            <ButtonGroup>
-              <Button
-                variant='contained'
-                color='primary'
-              >
-                Read Case Study
-              </Button>
-
-              <Button
-                variant='outlined'
-                color='secondary'
-              >
-                Visit Site
-              </Button>
-            </ButtonGroup>
-          </div>
-        </div>
-      </div>
+        ))
+      }
     </Section>
   )
 }

@@ -1,38 +1,134 @@
 @import '../../foundation/spacing/spacing';
 @import '../../foundation/colors/colors';
 
+$content-clamp: 500;
+
+$breakpoint-one: 950;
+$breakpoint-two: 350;
 
 .caseStudyFeaturedSection {
-  .contentContainer {
+  .caseStudyContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 150px;
-    margin-bottom: 150px;
+    grid-gap: #{$spacing-30}px;
+    column-gap: #{$spacing-30}px;
+    margin-bottom: #{$spacing-80}px;
 
-    &:last-of-type {
+    &:last-child {
       margin-bottom: 0px;
     }
 
-    &:nth-child(2n) {
-      .showcaseContainer{
-        grid-row: 1;
+    &:nth-of-type(2n) {
+      .showcaseContainer {
         grid-column: 2;
+        grid-row: 1;
+      }
+
+      .contentContainer {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+
+    .showcaseContainer {
+      padding: #{$spacing-30}px;
+      display: flex;
+
+      .showcase {
+        flex: 1;
+      }
+    }
+
+    .contentContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: #{$content-clamp}px;
+      margin: auto;
+      
+
+      .tagsContainer {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: #{$spacing-30}px;
+        column-gap: #{$spacing-30}px;
+        margin-bottom: #{$spacing-30}px;
+      }
+
+      .title {
+        margin-bottom: #{$spacing-60}px;
+        text-align: center;
+      }
+
+      .summary {
+        margin-bottom: #{$spacing-60}px;
+        text-align: center;
+      }
+
+      .actionContainer {
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: #{$spacing-30}px;
+        column-gap: #{$spacing-30}px;
+
+        .action {
+          .icon {
+            font-weight: normal;
+            font-size: inherit;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-one}px) {
+  .caseStudyFeaturedSection {
+    .caseStudyContainer {
+      grid-template-columns: 1fr;
+
+      &:nth-of-type(2n) {
+        .showcaseContainer {
+          grid-column: 1;
+          grid-row: auto;
+        }
+  
+        .contentContainer {
+          grid-column: 1;
+          grid-row: auto;
+        }
       }
   
-      .infoContainer {
-        grid-row: 1;
-        grid-column: 1;
+      .showcaseContainer {
+        padding: 0px;
+      }
+  
+      .contentContainer {
+        .tagsContainer {
+          margin-bottom: #{$spacing-30}px;
+        }
+  
+        .title {
+          margin-bottom: #{$spacing-30}px;
+        }
+  
+        .summary {
+          margin-bottom: #{$spacing-30}px;
+        }
       }
     }
+  }
+}
 
-    .showcaseContainer{
-      grid-row: 1;
-      grid-column: 1;
-    }
-
-    .infoContainer {
-      grid-row: 1;
-      grid-column: 2;
+@media screen and (max-width: #{$breakpoint-two}px) {
+  .caseStudyFeaturedSection {
+    .caseStudyContainer {
+      .contentContainer {
+        .actionContainer {
+          grid-auto-flow: row;
+        }
+      }
     }
   }
 }
