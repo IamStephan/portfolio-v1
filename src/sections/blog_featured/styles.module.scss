@@ -1,6 +1,128 @@
+@import '../../foundation/spacing/spacing';
 @import '../../foundation/colors/colors';
+
+$breakpoint-one: 1250;
+$breakpoint-two: 800;
+
+$content-container-clamp: 600;
 
 .blogFeaturedSection {
   display: grid;
   grid-template-columns: 3fr 2fr 2fr 2fr;
+  grid-gap: #{$spacing-60}px;
+  gap: #{$spacing-60}px;
+
+  .contentContainer {
+    .header {
+      margin-bottom: #{$spacing-30}px;
+    }
+
+    .subheader {
+      margin-bottom: #{$spacing-60}px;
+      font-size: 1.25rem;
+    }
+
+    .ctaAction {
+      .icon {
+        font-weight: normal;
+        font-size: inherit;
+      }
+    }
+  }
+
+  .articleContainer {
+    background-color: $complement-300;
+    border-radius: #{$spacing-30}px;
+    padding: #{$spacing-30}px;
+    display: flex;
+    flex-direction: column;
+
+    .date {
+      color: $grey-scale-light-100;
+    }
+
+    .title {
+      color: $grey-scale-light-100;
+      margin-bottom: #{$spacing-30}px;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .tagsContainer {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: #{$spacing-30}px;
+
+      .tag {
+        margin: #{$spacing-10}px;
+        background-color: $grey-scale-light-100;
+        color: $grey-scale-dark-300;
+      }
+    }
+
+    .summary {
+      color: $grey-scale-light-100;
+      flex: 1;
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-one}px) {
+  .blogFeaturedSection {
+    grid-template-columns: 1fr 1fr 1fr;
+  
+    .contentContainer {
+      grid-row: 1;
+      grid-column: 1 / span 3;
+      max-width: #{$content-container-clamp}px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .header {
+        text-align: center;
+      }
+  
+      .subheader {
+        text-align: center;
+      }
+  
+      .ctaAction {
+        .icon {
+          font-weight: normal;
+          font-size: inherit;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-two}px) {
+  .blogFeaturedSection {
+    grid-template-columns: 1fr;
+  
+    .contentContainer {
+      grid-row: 1;
+      grid-column: 1;
+
+      .header {
+        text-align: center;
+      }
+  
+      .subheader {
+        text-align: center;
+      }
+  
+      .ctaAction {
+        .icon {
+          font-weight: normal;
+          font-size: inherit;
+        }
+      }
+    }
+  }
 }
