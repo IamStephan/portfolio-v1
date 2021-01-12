@@ -1,0 +1,100 @@
+@import '../../foundation/colors/colors';
+@import '../../foundation/spacing/spacing';
+
+$content-clamp: 1250;
+$domain-clamp: 250;
+$avatar-size: 150;
+
+$breakpoint-one: 950;
+$breakpoint-two: 450;
+
+.skillsFeatured {
+  .contentContainer {
+    max-width: #{$content-clamp}px;
+    margin: auto;
+
+    .title {
+      text-align: center;
+      margin-bottom: #{$spacing-50}px;
+    }
+
+    .context {
+      text-align: center;
+      margin-bottom: #{$spacing-80}px;
+      font-size: 1.5rem;
+    }
+
+    .domainContainer {
+      display: flex;
+      justify-content: space-between;
+
+      .domain {
+        max-width: #{$domain-clamp}px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-left: #{$spacing-30}px;
+        margin-right: #{$spacing-30}px;
+
+        .avatarContainer {
+          width: #{$avatar-size}px;
+          height: #{$avatar-size}px;
+          position: relative;
+          margin-bottom: #{$spacing-60}px;
+          display: flex;
+          justify-content: center;
+
+          .avatar {
+            height: 100%;
+            width: auto;
+          }
+        }
+
+        .header {
+          text-align: center;
+          margin-bottom: #{$spacing-30}px;
+        }
+
+        .content {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-one}px) {
+  .skillsFeatured {
+    .contentContainer {
+      .domainContainer {
+        position: relative;
+        flex-wrap: wrap;
+
+        .domain {
+          max-width: calc(50% - #{$spacing-30 * 2}px);
+
+          &:nth-child(1), &:nth-child(2) {
+            margin-bottom: #{$spacing-80}px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-two}px) {
+  .skillsFeatured {
+    .contentContainer {
+      .domainContainer {
+        position: relative;
+        flex-wrap: wrap;
+
+        .domain {
+          max-width: calc(100% - #{$spacing-30 * 2}px);
+          margin-bottom: #{$spacing-80}px;
+        }
+      }
+    }
+  }
+}
