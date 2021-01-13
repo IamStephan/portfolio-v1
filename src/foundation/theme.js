@@ -1,5 +1,5 @@
 // Material
-import { createMuiTheme } from '@material-ui/core'
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core'
 
 const headerStyles = {
   fontFamily: [
@@ -107,6 +107,8 @@ const theme = createMuiTheme({
   }
 })
 
+const responsiveFonts = responsiveFontSizes(theme)
+
 export {
-  theme
+  responsiveFonts as theme
 }
