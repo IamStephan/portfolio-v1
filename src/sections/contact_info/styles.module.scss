@@ -1,0 +1,46 @@
+@import '../../foundation/spacing/spacing';
+@import '../../foundation/colors/colors';
+
+$breakpoint-one: 850;
+
+.contactInfoSection {
+  .infoContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: #{$spacing-30}px;
+    gap: #{$spacing-30}px;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .infoAction {
+        background-color: $complement-300;
+        margin-bottom: #{$spacing-60}px;
+
+        .icon {
+          color: $grey-scale-light-100;
+        }
+      }
+
+      .infoDetails {
+        text-align: center;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-one}px) {
+  .contactInfoSection {
+    .infoContainer {
+      grid-template-columns: 1fr;
+
+      grid-gap: #{$spacing-80}px;
+    gap: #{$spacing-80}px;
+    }
+  }
+}
