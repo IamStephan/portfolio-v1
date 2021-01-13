@@ -1,19 +1,197 @@
-$showcase-clamp: 800;
+@import '../../foundation/spacing/spacing';
+@import '../../foundation/typography/typography';
 
-.contactSection {
-  .showcaseContainer {
-    max-width: #{$showcase-clamp}px;
-    margin: auto;
-    position: relative;
+$form-clamp-min: 400;
+$form-clamp-max: 600;
 
-    .showcase {
-      width: 100%;
-      height: auto;
+$breakpoint-one: 1375;
+$breakpoint-two: 1100;
+$breakpoint-three: 450;
+
+.contactFormSection {
+  .contactContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: #{$spacing-70}px;
+    margin-top: #{$spacing-70}px;
+
+    .showcaseContainer {
+      align-self: center;
+      display: grid;
+      grid-template-columns: auto 1fr 1fr;
+      grid-template-rows: auto auto 1fr;
+      
+      .showcase {
+        grid-column: 1;
+        grid-row: 2 / span 2;
+        position: relative;
+        z-index: -1;
+        
+        svg {
+          position: absolute;
+          width: auto;
+          height: 100%;
+        }
+      }
+  
+      .header {
+        grid-column: 2 / span 2;
+        grid-row: 1;
+        text-align: right;
+        margin-bottom: #{$spacing-50}px;
+      }
+  
+      .subheader {
+        grid-column: 3;
+        grid-row: 2;
+        justify-self: flex-end;
+        margin-bottom: #{$spacing-70}px;
+        text-align: right;
+        font-weight: normal;
+      }
+  
+      .actionContainer {
+        grid-column: 3;
+        grid-row: 3;
+        justify-self: flex-end;
+      }
+    }
+  
+    .formContainer {
+      align-self: center;
+      min-width: #{$form-clamp-min}px;
+      padding: #{$spacing-50}px;
+  
+      .form {
+        display: flex;
+        flex-direction: column;
+        
+  
+        .input {
+          margin-bottom: #{$spacing-40}px;
+        }
+      }
+  
+      .contentContainer {
+        display: flex;
+        align-items: center;
+        margin-bottom: #{$spacing-50}px;
+
+        .icon {
+          font-size: 1.5rem;
+          margin-right: #{$spacing-30}px;
+        }
+      }
     }
   }
+}
 
-  .contactFormContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+@media screen and (max-width: #{$breakpoint-one}px) {
+  .contactFormSection {
+    .contactContainer {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-column-gap: #{$spacing-70}px;
+      margin-top: #{$spacing-70}px;
+      
+      .showcaseContainer {
+        .header {
+          font-size: #{$title-size-20};
+          line-height: #{$title-line-20};
+        }
+    
+        .subheader {
+          font-size: #{$body-size-10};
+          line-height: #{$body-line-10};
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-two}px) {
+  .contactFormSection {
+    .contactContainer {
+      grid-template-columns: 1fr;
+      grid-row-gap: #{$spacing-80}px;
+      
+      .showcaseContainer {
+        grid-row: 1;
+        max-width: #{$form-clamp-max}px;
+        justify-self: center;
+        display: grid;
+      }
+    
+      .formContainer {
+        justify-self: center;
+        max-width: #{$form-clamp-max}px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-three}px) {
+  .contactFormSection {
+    .contactContainer {
+      .showcaseContainer {
+        align-self: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 300px auto;
+
+        .header {
+          font-size: #{$title-size-30};
+          line-height: #{$title-line-30};
+        }
+        
+        .showcase {
+          grid-column: 1;
+          grid-row: 3;
+          position: relative;
+
+          svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+        }
+    
+        .header {
+          grid-column: 1;
+          grid-row: 1;
+          margin-bottom: #{$spacing-50}px;
+          text-align: center;
+        }
+    
+        .subheader {
+          grid-column: 1;
+          grid-row: 2;
+          margin-bottom: #{$spacing-70}px;
+          text-align: center;
+        }
+    
+        .actionContainer {
+          grid-column: 1;
+          grid-row: 4;
+          justify-self: center;
+        }
+      }
+    
+      .formContainer {
+        min-width: 100%;
+        padding: 0px;
+
+        .contentContainer {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          margin-bottom: #{$spacing-50}px;
+  
+          .icon {
+            margin-right: 0px;
+          }
+        }
+      }
+    }
   }
 }
