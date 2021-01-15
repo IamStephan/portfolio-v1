@@ -1,0 +1,99 @@
+@import '../../../../foundation/spacing/spacing';
+
+$content-clamp: 500;
+
+$breakpoint-one: 950;
+$breakpoint-two: 350;
+
+.overviewSection {
+  .overviewContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: #{$spacing-30}px;
+    gap: #{$spacing-30}px;
+
+    .showcaseContainer {
+      position: relative;
+
+      .showcase {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .contentContainer {
+      align-self: center;
+      justify-self: center;
+      max-width: #{$content-clamp}px;
+
+      .tagsContainer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: #{$spacing-10}px;
+
+        .tag {
+          margin-left: #{$spacing-10}px;
+          margin-right: #{$spacing-10}px;
+        }
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .summary {
+        text-align: center;
+      }
+
+      .actionContainer {
+        display: flex;
+        justify-content: center;
+        
+
+        .action {
+          margin-left: #{$spacing-10}px;
+          margin-right: #{$spacing-10}px;
+
+          .icon {
+            font-size: inherit;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: #{$breakpoint-one}px) {
+  .overviewSection {
+    .overviewContainer {
+      grid-template-columns: 1fr;
+  
+      .showcaseContainer {
+        grid-row: 1;
+      }
+    } 
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-two}px) {
+  .overviewSection {
+    .overviewContainer {
+      .contentContainer {
+        .actionContainer {
+          flex-direction: column;
+          align-items: center;
+  
+          .action {
+            margin-left: 0px;
+            margin-right: 0px;
+
+            &:not(:last-child) {
+              margin-bottom: #{$spacing-20}px;
+            }
+          }
+        }
+      }
+    } 
+  }
+}
