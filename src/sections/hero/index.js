@@ -4,8 +4,8 @@ import React from 'react'
 import Icon from '@foundation/icons'
 
 // Svgs
-import Hello from '@assets/svg/abstracts/coffee_hello.svg'
-import Mountains from '@assets/svg/abstracts/mountains.svg'
+import Hello from '@svg/abstracts/coffee_hello.svg'
+import Mountains from '@svg/abstracts/mountains.svg'
 
 // Material
 import { Typography, Button } from '@material-ui/core'

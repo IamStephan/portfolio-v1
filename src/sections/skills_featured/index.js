@@ -4,10 +4,10 @@ import React from 'react'
 import { Typography } from '@material-ui/core'
 
 // Svgs
-import Screen from '@assets/svg/abstracts/screen.svg'
-import Computer from '@assets/svg/abstracts/computer.svg'
-import Vault from '@assets/svg/abstracts/vault.svg'
-import Launch from '@assets/svg/abstracts/launch.svg'
+import Screen from '@svg/abstracts/screen.svg'
+import Computer from '@svg/abstracts/computer.svg'
+import Vault from '@svg/abstracts/vault.svg'
+import Launch from '@svg/abstracts/launch.svg'
 
 // Organisms
 import Section from '@organisms/page_section'

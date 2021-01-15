@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Templates
-import Page from '../../organisms/page'
+import Page from '@organisms/page'
 
 const studies = () => {
   return (

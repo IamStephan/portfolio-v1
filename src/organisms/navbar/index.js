@@ -13,7 +13,7 @@ import Icon from '@foundation/icons'
 import { IconButton } from '@material-ui/core'
 
 // Logo
-import Logo from '@assets/svg/logo/icon.svg'
+import Logo from '@svg/logo/icon.svg'
 
 // Components
 import NavLink from './components/nav_link'

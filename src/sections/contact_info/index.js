@@ -7,7 +7,7 @@ import Icon from '@foundation/icons'
 import { Typography, IconButton } from '@material-ui/core'
 
 // Organisms
-import Section from '../../organisms/page_section'
+import Section from '@organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'

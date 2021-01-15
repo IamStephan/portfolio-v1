@@ -10,7 +10,7 @@ import Section from '@organisms/page_section'
 import { ContentSection, Paragraph, Header } from '../../content_components'
 
 // Svgs
-import Pres from '@assets/svg/abstracts/presentation.svg'
+import Pres from '@svg/abstracts/presentation.svg'
 
 // Styles
 import styles from './styles.module.scss'

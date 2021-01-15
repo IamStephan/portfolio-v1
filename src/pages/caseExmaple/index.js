@@ -4,8 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Organisms
-import Page from '../../organisms/page'
-import Section from '../../organisms/page_section'
+import Page from '@organisms/page'
+import Section from '@organisms/page_section'
 
 // styles
 import styles from './styles.module.scss'
