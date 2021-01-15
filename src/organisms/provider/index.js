@@ -4,8 +4,8 @@ import React from 'react'
 import { ThemeProvider } from '@material-ui/core'
 
 // Foundation
-import { theme } from '../../foundation/theme'
-import '../../foundation/reset.scss'
+import { theme } from '@foundation/theme'
+import '@foundation/reset.scss'
 
 const Provider = props => {
   const {

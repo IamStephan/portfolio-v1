@@ -1,19 +1,25 @@
 import React from 'react'
 
 // Organisms
-import Page from '../../organisms/page'
+import Page from '@organisms/page'
 
 // Sections
-import AboutShowcase from '../../sections/about_showcase'
-import SocialSkills from '../../sections/social_skills'
-import Freelance from '../../sections/freelance_option'
+import AboutSection from '@sections/about'
+import CTA from '@sections/cta'
 
+/**
+ * NOTE:
+ * =====
+ * Trying to follow a content | article type style to
+ * the about me since the other styles don't feel right
+ * 
+ * Maybe this will make more sense
+ */
 const About = () => {
   return (
     <Page>
-      <AboutShowcase />
-      <SocialSkills />
-      <Freelance />
+      <AboutSection />
+      <CTA />
     </Page>
   )
 }

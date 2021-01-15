@@ -1,0 +1,50 @@
+
+
+.articleList {
+  display: grid;
+  grid-template-columns: 1fr 900px 1fr;
+
+  .tags {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .list {
+    grid-column: 2;
+    grid-row: 2;
+
+    .article {
+      margin-bottom: 10vh;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      .showcase {
+        position: relative;
+        margin-bottom: 12px;
+        svg {
+          height: auto;
+          width: 100%
+        }
+      }
+
+      .tagsContainer {
+        margin-bottom: 8px;
+        .tag {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  .featured {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .pagination {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}

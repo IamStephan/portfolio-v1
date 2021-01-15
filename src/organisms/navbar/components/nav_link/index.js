@@ -10,7 +10,7 @@ import { IconButton } from '@material-ui/core'
 import { useMatch } from '@reach/router'
 
 // Foundation
-import Icon from '../../../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Styles
 import styles from './styles.module.scss'

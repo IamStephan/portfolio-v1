@@ -1,11 +1,11 @@
 import React from 'react'
 
 // Foundation
-import Icon from '../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Svgs
-import Hello from '../../assets/svg/abstracts/coffee_hello.svg'
-import Mountains from '../../assets/svg/abstracts/mountains.svg'
+import Hello from '@assets/svg/abstracts/coffee_hello.svg'
+import Mountains from '@assets/svg/abstracts/mountains.svg'
 
 // Material
 import { Typography, Button } from '@material-ui/core'

@@ -15,18 +15,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/articles`,
-        name: `articles`,
-      },
-    },
-    `gatsby-plugin-mdx`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `content`,
+    //     path: `${__dirname}/content`,
+    //   },
+    // },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
+    // `gatsby-plugin-mdx`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -62,6 +62,21 @@ module.exports = {
       },
     },
     '@bumped-inc/gatsby-plugin-optional-chaining',
-    `gatsby-plugin-glslify`
+    {
+      resolve: 'gatsby-plugin-alias-imports',
+      options: {
+        alias: {
+          '@foundation': 'src/foundation',
+          '@elements': 'src/elements',
+          '@modules': 'src/modules',
+          '@organisms': 'src/organisms',
+          '@sections': 'src/sections',
+          '@stores': 'src/stores',
+          '@templates': 'src/templates',
+          '@utils': 'src/utils',
+          '@svg': 'src/assets/svg'
+        }
+      }
+    }
   ],
 }

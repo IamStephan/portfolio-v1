@@ -1,8 +1,8 @@
 import React from 'react'
 
 // Organisms
-import Navbar from '../navbar'
-import Footer from '../footer'
+import Navbar from '@organisms/navbar'
+import Footer from '@organisms/footer'
 
 // Styles
 import styles from './styles.module.scss'

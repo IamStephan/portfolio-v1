@@ -1,0 +1,22 @@
+@import '../../foundation/spacing/spacing';
+
+$overview-clamp: 600;
+
+.aboutSection {
+  .contentContainer {
+    max-width: #{$content-width}px;
+    margin: auto;
+
+    .test {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 5rem;
+    }
+
+    .overviewSection {
+      text-align: center;
+      max-width: #{$overview-clamp}px;
+      margin: auto;
+    }
+  }
+}

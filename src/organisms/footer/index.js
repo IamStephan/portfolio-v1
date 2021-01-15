@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Foundation
-import Icon from '../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Gatsby
 import { Link } from 'gatsby'

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import { IconButton } from '@material-ui/core'
 
 // Foundation
-import Icon from '../../../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Styles
 import styles from './styles.module.scss'

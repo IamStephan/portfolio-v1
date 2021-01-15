@@ -5,13 +5,13 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Foundation
-import Icon from '../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Material
 import { Typography, Chip, Button } from '@material-ui/core'
 
 // Organisms
-import Section from '../../organisms/page_section'
+import Section from '@organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'

@@ -7,13 +7,13 @@ import { Link } from 'gatsby'
 import { AnimatePresence } from 'framer-motion'
 
 // Foundation
-import Icon from '../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Material
 import { IconButton } from '@material-ui/core'
 
 // Logo
-import Logo from '../../assets/svg/logo/icon.svg'
+import Logo from '@assets/svg/logo/icon.svg'
 
 // Components
 import NavLink from './components/nav_link'
@@ -77,7 +77,7 @@ const Navbar = props => {
 
           <NavLink
             title='About'
-            icon='skull'
+            icon='account-pin-circle'
             to='/about'
           />
 

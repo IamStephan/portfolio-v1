@@ -1,17 +1,17 @@
 import React from 'react'
 
 // Foundation
-import Icon from '../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Material
 import { Typography, Button, TextField, Select } from '@material-ui/core'
 
 // Organisms
-import Section from '../../organisms/page_section'
+import Section from '@organisms/page_section'
 
 // Svgs
-import Sitting from '../../assets/svg/abstracts/sitting.svg'
-import City from '../../assets/svg/abstracts/city.svg'
+import Sitting from '@assets/svg/abstracts/sitting.svg'
+import City from '@assets/svg/abstracts/city.svg'
 
 // Styles
 import styles from './styles.module.scss'

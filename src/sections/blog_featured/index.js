@@ -4,13 +4,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 // Foundation
-import Icon from '../../foundation/icons'
+import Icon from '@foundation/icons'
 
 // Material
 import { Typography, Button, Chip } from '@material-ui/core'
 
 // Organisms
-import Section from '../../organisms/page_section'
+import Section from '@organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'

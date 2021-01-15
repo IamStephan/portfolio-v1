@@ -4,13 +4,13 @@ import React from 'react'
 import { Typography, Button } from '@material-ui/core'
 
 // Svgs
-import Brain from '../../assets/svg/abstracts/brain.svg'
-import Speaker from '../../assets/svg/abstracts/speaker.svg'
-import KingVert from '../../assets/svg/abstracts/king_vert.svg'
-import KingHor from '../../assets/svg/abstracts/king_hor.svg'
+import Brain from '@assets/svg/abstracts/brain.svg'
+import Speaker from '@assets/svg/abstracts/speaker.svg'
+import KingVert from '@assets/svg/abstracts/king_vert.svg'
+import KingHor from '@assets/svg/abstracts/king_hor.svg'
 
 // Organisms
-import Section from '../../organisms/page_section'
+import Section from '@organisms/page_section'
 
 // Styles
 import styles from './styles.module.scss'

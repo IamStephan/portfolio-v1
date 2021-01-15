@@ -1,0 +1,24 @@
+
+
+.overviewSection {
+  .infoContainer {
+    max-width: 900px;
+    margin: auto;
+    
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  .showcaseContainer {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+
+    .showcase {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
