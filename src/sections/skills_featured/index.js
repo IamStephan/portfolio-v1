@@ -56,7 +56,7 @@ const SkillSet = () => {
         <Typography
           className={styles['context']}
         >
-          Able to to go from start to productions using articulated architecture and renowned tools, or just creating them when needed. 
+          Able to to go from start to productions using articulated architecture and renowned tools, with the ability to create new tools on the fly. 
         </Typography>
 
         <div
