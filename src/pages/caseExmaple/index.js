@@ -3,13 +3,15 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
-// Organisms
-import Page from '@organisms/page'
-import Section from '@organisms/page_section'
+// Templates
+import Page from '@templates/case_study'
 
-// styles
-import styles from './styles.module.scss'
-import { Typography } from '@material-ui/core'
+// Sections
+import Overview from '@templates/case_study/sections/overview'
+import Outline from '@templates/case_study/sections/outline'
+
+// Element
+import Paragraph from '@elements/paragraph'
 
 const query = graphql`
   {
@@ -28,35 +30,28 @@ const Example = () => {
 
   return (
     <Page>
-      <Section
-        className={styles['overviewSection']}
+      <Overview
+        title='Gerimed Mobility'
+        showcase={testImage}
+        tags={[
+          'E-commerce',
+          'Website'
+        ]}
       >
-        <div
-          className={styles['infoContainer']}
-        >
-          <Typography
-            variant='h1'
-            className={styles['title']}
-            gutterBottom
-          >
-            Gerimed mobility
-          </Typography>
-        </div>
-        <div
-          className={styles['showcaseContainer']}
-        >
-          <Img
-            className={styles['showcase']}
-            fluid={testImage}
-          />
-        </div>
+        <Paragraph>
+          Gerimed Mobility has been operating in the medical sphere for a few years.
+          Gerimed Mobility has been operating in the medical sphere for a few years.
+          Gerimed Mobility has been operating in the medical sphere for a few years.
+        </Paragraph>
+      </Overview>
 
-        <div
-          className={styles['contentContainer']}
-        >
-          Content
-        </div>
-      </Section>
+      <Outline
+        goal='Providing customers the ease of purchasing online and having an extensive product catalog.'
+        industry='A mixture between retail and medical supplies. Also provides customers with a rental option.'
+        scope='Admin management portal, with a landing page and a rich online shopping experience.'
+      />
+
+      
     </Page>
   )
 }
