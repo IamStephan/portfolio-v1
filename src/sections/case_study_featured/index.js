@@ -18,61 +18,53 @@ import styles from './styles.module.scss'
 
 const query = graphql`
   {
-    test: file(relativePath: {eq: "test_imgs/mockup_test.png"}) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid
+    allStudies(
+      filter: {
+        featured: {
+          eq: true
+        }
+      }
+
+      sort: {
+        order: ASC,
+        fields: featuredIndex
+      }
+
+      limit: 3,
+
+    ) {
+      nodes {
+        title
+        overview
+        tags
+        previewLink
+        repositoryLink
+
+        showcase {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+
+        fields {
+          slug
         }
       }
     }
   }
 `
 
-const DemoCaseStudies = [
-  {
-    title: 'Gerimed Mobility',
-    summary: 'Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.',
-    tags: [
-      'Website',
-      'E-commerce'
-    ],
-    showcase: null,
-    previewLink: 'https://gerimedmobility.co.za',
-    caseStudyLink: '/about'
-  },
-  {
-    title: 'Cycleworx Langebaan',
-    summary: 'Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.',
-    tags: [
-      'Website',
-      'Landing Page'
-    ],
-    showcase: null,
-    previewLink: 'https://cycleworxlangebaan.com',
-    caseStudyLink: '/about'
-  },
-  {
-    title: 'Mobility Crunch',
-    summary: 'Gerimed Mobility is a small business located in langebaan, taking care of all your mobility needs.',
-    tags: [
-      'Mobile App',
-      'Enterprise App'
-    ],
-    showcase: null,
-    previewLink: null,
-    caseStudyLink: '/about'
-  }
-]
-
 const CaseStudyPreview = () => {
-  const { test: { childImageSharp: { fluid: testImage } } } = useStaticQuery(query)
+  const { allStudies: { nodes: Studies } } = useStaticQuery(query)
 
   return (
     <Section
       className={styles['caseStudyFeaturedSection']}
     >
       {
-        DemoCaseStudies.map(caseStudy => (
+        Studies.map(study => (
           <div
             className={styles['caseStudyContainer']}
           >
@@ -82,7 +74,7 @@ const CaseStudyPreview = () => {
               <Img 
                 className={styles['showcase']}
                 objectFit='contain'
-                fluid={testImage}
+                fluid={study.showcase.childImageSharp.fluid}
               />
             </div>
 
@@ -93,7 +85,7 @@ const CaseStudyPreview = () => {
                 className={styles['tagsContainer']}
               >
                 {
-                  caseStudy.tags.map(tag => (
+                  study.tags.map(tag => (
                     <Chip
                       key={tag}
                       label={tag}
@@ -109,13 +101,13 @@ const CaseStudyPreview = () => {
                 variant='h3'
                 className={styles['title']}
               >
-                {caseStudy.title}
+                {study.title}
               </Typography>
 
               <Typography
                 className={styles['summary']}
               >
-                {caseStudy.summary}
+                {study.overview}
               </Typography>
 
               <div
@@ -126,7 +118,7 @@ const CaseStudyPreview = () => {
                   color='secondary'
                   className={styles['action']}
                   component={Link}
-                  to={caseStudy.caseStudyLink}
+                  to={`/${study.fields.slug}`}
                   endIcon={(
                     <Icon
                       className={styles['icon']}
@@ -142,9 +134,9 @@ const CaseStudyPreview = () => {
                   variant='contained'
                   color='primary'
                   className={styles['action']}
-                  disabled={!caseStudy.previewLink}
-                  component={caseStudy.previewLink ? 'a' : 'div'}
-                  href={caseStudy.previewLink ? caseStudy.previewLink : ''}
+                  disabled={!study.previewLink}
+                  component={study.previewLink ? 'a' : 'div'}
+                  href={study.previewLink ? study.previewLink : ''}
                   target='_blank'
                   endIcon={(
                     <Icon

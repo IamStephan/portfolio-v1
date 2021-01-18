@@ -1,0 +1,85 @@
+@import '../../../../foundation/spacing/spacing';
+
+$outline-clamp: 300;
+$showcase-size: 175;
+
+$breakpoint-1: 850;
+
+.outlineSection {
+  .outlineContainer {
+    max-width: #{$clamp-md}px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+
+    .outline {
+      max-width: #{$outline-clamp}px;
+      flex: 1;
+
+      margin-left: #{$spacing-30}px;
+      margin-right: #{$spacing-30}px;
+
+      .showcaseContainer {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        height: #{$showcase-size}px;
+        margin-bottom: #{$spacing-30}px;
+
+        .showcase {
+          padding: #{$spacing-30}px;
+          height: 100%;
+          width: auto;
+        }
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .content {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-1}px) {
+  .outlineSection {
+    .outlineContainer {
+     flex-direction: column;
+     align-items: center;
+  
+      .outline {
+        
+        margin-bottom: #{$spacing-60}px;
+        margin-left: 0px;
+        margin-right: 0px;
+  
+        .showcaseContainer {
+          display: flex;
+          justify-content: center;
+          position: relative;
+          height: #{$showcase-size}px;
+          margin-bottom: #{$spacing-30}px;
+  
+          .showcase {
+            padding: #{$spacing-30}px;
+            height: 100%;
+            width: auto;
+          }
+        }
+  
+        .title {
+          text-align: center;
+        }
+  
+        .content {
+          text-align: center;
+        }
+      }
+    }
+  }
+  
+}
