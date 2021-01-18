@@ -1,0 +1,34 @@
+{
+  "featured": true,
+  "featuredIndex": 1,
+  "title": "Gerimed Mobility",
+  "overview": "Gerimed Mobility, Your one-stop medical supply shop. Having been in in operation for a few years it was time for them to go live. Needing both an extensive product catalog and design matching their branding efforts.",
+  "showcase": "./showcase.png",
+  "tags": ["E-commerce", "Landing Page"],
+  "previewLink": "https://gerimedmobility.co.za",
+  "repositoryLink": "",
+
+  "outline": {
+    "goal": "To provide their customers the ability to view their products and place orders online with ease.",
+    "scope": "An admin panel for managing products and orders and an store-front for customers to place orders.",
+    "industry": "Gerimed Mobility supplies its local area with all their medical needs. From hospital-beds to personal hygiene."
+  },
+
+  "challenges": [
+    {
+      "title": "Branding efforts",
+      "content": "sadasdad",
+      "showcase": "./challenge-one.png"
+    },
+    {
+      "title": "Online Shopping",
+      "content": "sadasdad",
+      "showcase": "./showcase.png"
+    },
+    {
+      "title": "Admin Managment",
+      "content": "sadasdad",
+      "showcase": "./showcase.png"
+    }
+  ]
+}
