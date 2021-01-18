@@ -15,18 +15,30 @@ module.exports = {
         path: `${__dirname}/src/assets/images`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `content`,
-    //     path: `${__dirname}/content`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: 'Studies'
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `studies`,
+        path: `${__dirname}/content/case_studies`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    // `gatsby-plugin-mdx`,
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+    //   options: {
+    //     extensions: [`.md`],
+    //   },
+    // },
+    
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
