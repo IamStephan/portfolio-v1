@@ -4,7 +4,7 @@ $section-gap: 13vh;
 
 .section {
   &.isClamped {
-    max-width: #{$clamp-width}px;
+    max-width: #{$clamp-lg}px;
     margin: auto;
   }
 
