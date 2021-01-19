@@ -11,6 +11,9 @@ import { Pagination, PaginationItem } from '@material-ui/lab'
 // Organisms
 import Section from '@organisms/page_section'
 
+// Utils
+import { getArticleLink, getArticlePage } from '@utils/getLink'
+
 // Styles
 import styles from './styles.module.scss'
 
@@ -68,7 +71,7 @@ const Content = (props) => {
                 variant='h5'
                 gutterBottom
               >
-                Poopie poop poop
+                My past work showcasing my growth from knowing nothing to who I am today.
               </Typography>
             </div>
           )
@@ -77,7 +80,7 @@ const Content = (props) => {
         {
           articles.map(article => (
             <Link
-              to={`/${article.fields.slug}`}
+              to={getArticleLink(article.fields.slug)}
               key={article.fields.slug}
               className={styles['articleContainer']}
             >
@@ -154,7 +157,7 @@ const Content = (props) => {
           renderItem={item => (
             <PaginationItem
               component={Link}
-              to={`/articles${item.page === 1 ? '' : `/page-${item.page}`}`}
+              to={getArticlePage(item.page)}
               {...item}
             />
           )}

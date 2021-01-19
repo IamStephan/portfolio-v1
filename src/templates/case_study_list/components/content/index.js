@@ -11,6 +11,9 @@ import { Pagination, PaginationItem } from '@material-ui/lab'
 // Organisms
 import Section from '@organisms/page_section'
 
+// Utils
+import { getStudyLink, getStudyPage } from '@utils/getLink'
+
 // Styles
 import styles from './styles.module.scss'
 
@@ -69,7 +72,7 @@ const Content = (props) => {
         {
           studies.map(study => (
             <Link
-              to={`/${study.fields.slug}`}
+              to={getStudyLink(study.fields.slug)}
               key={study.fields.slug}
               className={styles['studyContainer']}
             >
@@ -133,7 +136,7 @@ const Content = (props) => {
           renderItem={item => (
             <PaginationItem
               component={Link}
-              to={`/studies${item.page === 1 ? '' : `/page-${item.page}`}`}
+              to={getStudyPage(item.page)}
               {...item}
             />
           )}

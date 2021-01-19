@@ -9,7 +9,7 @@
     - Example
     - Test
     - Code
-  showcase: "./assets/showcase.png"
+  showcase: "./assets/hello.png"
   featured: true
 ---
 

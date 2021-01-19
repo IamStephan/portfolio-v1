@@ -40,7 +40,7 @@ $breakpoint-1: 800;
     grid-column-gap: #{$spacing-30}px;
     column-gap: #{$spacing-30}px;
 
-    .nextContainer {
+    .prevContainer {
       grid-column: 3;
       
       .title {
@@ -62,7 +62,7 @@ $breakpoint-1: 800;
       }
     }
 
-    .prevContainer {
+    .nextContainer {
       grid-column: 1;
 
       .title {
@@ -120,12 +120,12 @@ $breakpoint-1: 800;
       grid-row-gap: #{$spacing-80}px;
       row-gap: #{$spacing-80}px;
   
-      .nextContainer {
+      .prevContainer {
         grid-column: 1;
         justify-self: flex-end;
       }
   
-      .prevContainer {
+      .nextContainer {
         grid-column: 1;
         justify-self: flex-start;
       }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Gatsby
-import { Link } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 
 // Foundation
 import Icon from '@foundation/icons'
@@ -12,46 +12,38 @@ import { Typography, Button, Chip } from '@material-ui/core'
 // Organisms
 import Section from '@organisms/page_section'
 
+// Utils
+import { getArticleLink } from '@utils/getLink'
+
 // Styles
 import styles from './styles.module.scss'
 
-const DemoArticles = [
+const query = graphql`
   {
-    title: 'Let\'s explore microservices.',
-    summary: 'This can be an intimidating topic to discus but with good reason, it\'s complicated. Why not get fimiliar with it and start playing with the idea of creating a distributed system.',
-    date: Date.now(),
-    tags: [
-      'Thoughts',
-      'Code'
-    ],
-    link: 'askdmalksdm',
-    showcase: 'ausdgh aosdj apodj'
-  },
-  {
-    title: 'Understanding the ',
-    summary: 'lsa dj lasjd als d',
-    date: Date.now(),
-    tags: [
-      'Thoughts',
-      'Code',
-    ],
-    link: 'askdmalksdm',
-    showcase: 'ausdgh aosdj apodj'
-  },  
-  {
-    title: 'Understanding the poops of poosps',
-    summary: 'lsa dj lasjd als d',
-    date: Date.now(),
-    tags: [
-      'Thoughts',
-      'Code'
-    ],
-    link: 'askdmalksdm',
-    showcase: 'ausdgh aosdj apodj'
+    allMdx(
+      sort: {fields: frontmatter___date,order: DESC}
+      limit: 3
+      filter: {frontmatter: {featured: {eq: true}}}
+    ) {
+      nodes {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          overview
+          tags
+          date(formatString: "DD MMM YY")
+        }
+        timeToRead
+      }
+    }
   }
-]
+`
 
 const BlogPreview = () => {
+  const { allMdx: { nodes: articles } } = useStaticQuery(query)
+
   return (
     <Section
       className={styles['blogFeaturedSection']}
@@ -61,11 +53,14 @@ const BlogPreview = () => {
       >
         <Typography
           variant='h2'
+          gutterBottom
           className={styles['header']}
         >
           Featured Articles
         </Typography>
         <Typography
+          variant='h6'
+          gutterBottom
           className={styles['subheader']}
         >
           Exploring uncontroversial topics to more guide-like article. See what catches your eye, maybe we can talk about it...
@@ -90,34 +85,25 @@ const BlogPreview = () => {
       </div>
 
       {
-        DemoArticles.map(article => (
-          <div
-            key={article.title}
+        articles.map(article => (
+          <Link
+            to={getArticleLink(article.fields.slug)}
+            key={article.fields.slug}
             className={styles['articleContainer']}
           >
             <Typography
-              variant='overline'
-              className={styles['date']}
+              className={styles['title']}
+              variant='h5'
+              gutterBottom
             >
-              13 Nov
+              {article.frontmatter.title}
             </Typography>
-
-            <Link
-              to={article.link}
-            >
-              <Typography
-                className={styles['title']}
-                variant='h5'
-              >
-                {article.title}
-              </Typography>
-            </Link>
             
             <div
               className={styles['tagsContainer']}
             >
               {
-                article.tags.map(tag => (
+                article.frontmatter.tags.map(tag => (
                   <Chip
                     className={styles['tag']}
                     key={tag}
@@ -130,11 +116,20 @@ const BlogPreview = () => {
             </div>
 
             <Typography
+              variant='body2'
+              paragraph
+              className={styles['date']}
+            >
+              {article.frontmatter.date} • <b>{article.timeToRead} min read</b>
+            </Typography>
+
+            <Typography
+              paragraph
               className={styles['summary']}
             >
-              {article.summary}
+              {article.frontmatter.overview}
             </Typography>
-          </div>
+          </Link>
         ))
       }
     </Section>

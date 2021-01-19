@@ -15,6 +15,9 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 // Organisms
 import Section from '@organisms/page_section'
 
+// Utils
+import { getArticleLink } from '@utils/getLink'
+
 // Styles
 import styles from './styles.module.scss'
 
@@ -89,37 +92,9 @@ const Content = (props) => {
         className={styles['nextPrevContainer']}
       >
         {
-          meta.prev && (
-            <Link
-              to={`/${meta.prev.fields.slug}`}
-              className={styles['prevContainer']}
-            >
-              <Typography
-                variant='h3'
-                color='primary'
-                className={styles['link']}
-              >
-                Prev
-              </Typography>
-
-              <Typography
-                className={styles['title']}
-              >
-                {meta.prev.frontmatter.title}
-              </Typography>
-
-              <Icon
-                name='arrow-left-circle'
-                className={styles['icon']}
-              />
-            </Link>
-          )
-        }
-        
-        {
           meta.next && (
             <Link
-              to={`/${meta.next.fields.slug}`}
+              to={getArticleLink(meta.next.fields.slug)}
               className={styles['nextContainer']}
             >
               <Typography
@@ -134,6 +109,34 @@ const Content = (props) => {
                 className={styles['title']}
               >
                 {meta.next.frontmatter.title}
+              </Typography>
+
+              <Icon
+                name='arrow-left-circle'
+                className={styles['icon']}
+              />
+            </Link>
+          )
+        }
+        
+        {
+          meta.prev && (
+            <Link
+              to={getArticleLink(meta.prev.fields.slug)}
+              className={styles['prevContainer']}
+            >
+              <Typography
+                variant='h3'
+                color='primary'
+                className={styles['link']}
+              >
+                Prev
+              </Typography>
+
+              <Typography
+                className={styles['title']}
+              >
+                {meta.prev.frontmatter.title}
               </Typography>
               
 

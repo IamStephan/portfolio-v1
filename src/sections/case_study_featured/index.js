@@ -13,6 +13,9 @@ import { Typography, Chip, Button } from '@material-ui/core'
 // Organisms
 import Section from '@organisms/page_section'
 
+// Utils
+import { getStudyLink } from '@utils/getLink'
+
 // Styles
 import styles from './styles.module.scss'
 
@@ -118,7 +121,7 @@ const CaseStudyPreview = () => {
                   color='secondary'
                   className={styles['action']}
                   component={Link}
-                  to={`/${study.fields.slug}`}
+                  to={getStudyLink(study.fields.slug)}
                   endIcon={(
                     <Icon
                       className={styles['icon']}
