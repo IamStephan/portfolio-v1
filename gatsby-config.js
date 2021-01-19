@@ -108,13 +108,11 @@ module.exports = {
         alias: {
           '@foundation': 'src/foundation',
           '@elements': 'src/elements',
-          '@modules': 'src/modules',
           '@organisms': 'src/organisms',
           '@sections': 'src/sections',
-          '@stores': 'src/stores',
           '@templates': 'src/templates',
-          '@utils': 'src/utils',
-          '@svg': 'src/assets/svg'
+          '@svg': 'src/assets/svg',
+          '@utils': 'src/utils'
         }
       }
     }

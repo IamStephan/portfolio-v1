@@ -5,10 +5,8 @@
     "paths": {
       "@foundation/*": ["src/foundation/*"],
       "@elements/*": ["src/elements/*"],
-      "@modules/*": ["src/modules/*"],
       "@organisms/*": ["src/organisms/*"],
       "@sections/*": ["src/sections/*"],
-      "@stores/*": ["src/stores/*"],
       "@templates/*": ["src/templates/*"],
       "@svg/*": ["src/assets/svg/*"],
       "@utils/*": ["src/utils/*"],
