@@ -2,6 +2,11 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require(`path`)
 const { kebabCase } = require(`lodash`)
 
+const Pages = {
+  article: '/article',
+  study: '/study'
+}
+
 /**
  * NOTES:
  * =======
@@ -25,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   const articlesQuery = graphql(`
     {
-      allMdx(sort: {fields: frontmatter___date, order: ASC}) {
+      allMdx(sort: {fields: frontmatter___date, order: DESC}) {
         nodes {
           fields {
             slug
@@ -49,11 +54,11 @@ exports.createPages = ({ graphql, actions }) => {
      * Create the article pages
      */
     articles.forEach((article, i, arr) => {
-      const prev = arr[i - 1]
-      const next = arr[i + 1]
+      const prev = arr[i + 1]
+      const next = arr[i - 1]
 
       createPage({
-        path: article.fields.slug,
+        path: `${Pages.article}/${article.fields.slug}`,
         component: ArticlePage,
         context: {
           slug: article.fields.slug,
@@ -105,7 +110,7 @@ exports.createPages = ({ graphql, actions }) => {
      */
     studies.forEach(study => {
       createPage({
-        path: study.fields.slug,
+        path: `${Pages.study}/${study.fields.slug}`,
         component: CaseStudyPage,
         context: {
           slug: study.fields.slug
@@ -145,7 +150,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const instance = getNode(node.parent).sourceInstanceName
 
     if(instance === 'articles') {
-      const slugValue = `article/${kebabCase(node.frontmatter.title)}`
+      const slugValue = `${kebabCase(node.frontmatter.title)}`
 
       createNodeField({
         name: `slug`,
@@ -157,7 +162,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
   // Case Studies
   if(node.internal.type === `Studies`) {
-    const slugValue = `study/${kebabCase(node.title)}`
+    const slugValue = `${kebabCase(node.title)}`
     createNodeField({
       name: `slug`,
       node,
