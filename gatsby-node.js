@@ -17,8 +17,69 @@ const pageListSize = 5
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
+  const ArticlePage = path.resolve('./src/templates/article/index.js')
+  // const ArticleListPage = path.resolve('./src/templates/case_study_list/index.js')
+
   const CaseStudyPage = path.resolve('./src/templates/case_study/index.js')
   const CaseStudyListPage = path.resolve('./src/templates/case_study_list/index.js')
+
+  const articlesQuery = graphql(`
+    {
+      allMdx(sort: {fields: frontmatter___date, order: ASC}) {
+        nodes {
+          fields {
+            slug
+          }
+
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+  `).then((result) => {
+    if(result.errors) {
+      return
+    }
+
+    // All the data
+    const articles = result.data.allMdx.nodes
+
+    /**
+     * Create the study pages
+     */
+    articles.forEach((article, i, arr) => {
+      const prev = arr[i - 1]
+      const next = arr[i + 1]
+
+      createPage({
+        path: article.fields.slug,
+        component: ArticlePage,
+        context: {
+          slug: article.fields.slug,
+          prev,
+          next
+        }
+      })
+    })
+
+    /**
+     * Create the study list pages
+     */
+    // const numPages = Math.ceil(article.length / pageListSize)
+    // Array.from({ length: numPages }).forEach((_articlesPage, i) => {
+    //   createPage({
+    //     path: i === 0 ? `/studies` : `/studies/page-${i + 1}`,
+    //     component: CaseStudyListPage,
+    //     context: {
+    //       limit: pageListSize,
+    //       skip: i * pageListSize,
+    //       currentPage: i + 1,
+    //       numPages,
+    //     },
+    //   })
+    // })
+  })
 
   const studiesQuery = graphql(`
     {
@@ -39,14 +100,10 @@ exports.createPages = ({ graphql, actions }) => {
     // All the data
     const studies = result.data.allStudies.nodes
 
-    // Extra Data
-    const studyTags = []
-
     /**
      * Create the study pages
      */
     studies.forEach(study => {
-      study.tags.forEach(tag => studyTags.push(tag))
       createPage({
         path: study.fields.slug,
         component: CaseStudyPage,
@@ -60,7 +117,7 @@ exports.createPages = ({ graphql, actions }) => {
      * Create the study list pages
      */
     const numPages = Math.ceil(studies.length / pageListSize)
-    Array.from({ length: numPages }).forEach((_studyPage, i) => {
+    Array.from({ length: numPages }).forEach((_studiesPage, i) => {
       createPage({
         path: i === 0 ? `/studies` : `/studies/page-${i + 1}`,
         component: CaseStudyListPage,
@@ -74,9 +131,7 @@ exports.createPages = ({ graphql, actions }) => {
     })
   })
 
-  
-
-  return Promise.all([studiesQuery])
+  return Promise.all([studiesQuery, articlesQuery])
 }
 
 /**
@@ -85,36 +140,21 @@ exports.createPages = ({ graphql, actions }) => {
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
-  // if (node.internal.type === `Mdx`) {
-  //   const instance = getNode(node.parent).sourceInstanceName
+  if (node.internal.type === `Mdx`) {
+    const instance = getNode(node.parent).sourceInstanceName
 
-  //   let type = ''
+    if(instance === 'articles') {
+      const slugValue = `article/${kebabCase(node.frontmatter.title)}`
 
-  //   switch(instance) {
-  //     case 'studies': {
-  //       type = 'studies'
-  //       break
-  //     }
+      createNodeField({
+        name: `slug`,
+        node,
+        value: slugValue,
+      })
+    }
 
-  //     default: {
-  //       type = 'unknown'
-  //     }
-  //   }
-
-  //   const slugValue = type + `/${kebabCase(node.frontmatter.title)}`
-
-  //   createNodeField({
-  //     name: `slug`,
-  //     node,
-  //     value: slugValue,
-  //   })
-
-  //   createNodeField({
-  //     name: `type`,
-  //     node,
-  //     value: type,
-  //   })
-  // }
+    
+  }
 
   // Case Studies
   if(node.internal.type === `Studies`) {

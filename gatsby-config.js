@@ -28,17 +28,45 @@ module.exports = {
         path: `${__dirname}/content/case_studies`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `articles`,
+        path: `${__dirname}/content/articles`,
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    // {
-    //   resolve: `gatsby-plugin-mdx`,
-    //   options: {
-    //     extensions: [`.md`],
-    //   },
-    // },
-    
+    {
+      resolve: `gatsby-remark-images`,
+      options: {
+        maxWidth: 900,
+        linkImagesToOriginal: false,
+        backgroundColor: `none`,
+        disableBgImageOnAlpha: true
+      },
+    },
+    `gatsby-remark-prismjs`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 900,
+              linkImagesToOriginal: false,
+              backgroundColor: `none`,
+              disableBgImageOnAlpha: true
+            },
+          },
+          `gatsby-remark-prismjs`
+        ],
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

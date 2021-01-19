@@ -84,16 +84,8 @@ $breakpoint-1: 850;
 @media screen and (max-width: #{$breakpoint-1}px) {
   .contentSection {
     .contentContainer {
-      margin-bottom: #{$spacing-90}px;
-  
       .studyContainer {
         grid-template-columns: 1fr;
-        grid-gap: #{$spacing-60}px;
-        gap: #{$spacing-60}px;
-        
-        &:not(:last-child) {
-          margin-bottom: #{$spacing-80}px;
-        }
   
         .showcaseContainer {
           width: 100%;

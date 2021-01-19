@@ -1,0 +1,134 @@
+@import '../../../../foundation/colors/colors';
+@import '../../../../foundation/spacing/spacing';
+@import '../../../../foundation/typography/typography';
+@import '../../../../foundation/borders/borders';
+
+$breakpoint-1: 800;
+
+.contentSection {
+  .headerContainer {
+    max-width: #{$clamp-sm}px;
+    margin: auto;
+    margin-bottom: #{$spacing-80}px;
+
+    .header {
+      margin-bottom: #{$spacing-30}px;
+    }
+
+    .tagsContainer {
+      display: flex;
+      margin-bottom: #{$spacing-10}px;
+      
+      .tag {
+        margin-bottom: #{$spacing-20}px;
+        margin-right: #{$spacing-20}px;
+      }
+    }
+  }
+
+  .contentContainer {
+    max-width: #{$clamp-sm}px;
+    margin: auto;
+    margin-bottom: #{$spacing-80}px;
+  }
+
+  .nextPrevContainer {
+    max-width: #{$clamp-sm}px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-column-gap: #{$spacing-30}px;
+    column-gap: #{$spacing-30}px;
+
+    .nextContainer {
+      grid-column: 3;
+      
+      .title {
+        grid-column: 1;
+        grid-row: 2;
+        text-align: right;
+      }
+
+      .link {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: flex-end;
+        text-align: right;
+      }
+
+      .icon {
+        grid-column: 2;
+        grid-row: 1;
+      }
+    }
+
+    .prevContainer {
+      grid-column: 1;
+
+      .title {
+        grid-column: 2;
+        grid-row: 2;
+      }
+
+      .link {
+        grid-column: 2;
+        grid-row: 1;
+      }
+
+      .icon {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+
+    .prevContainer, .nextContainer {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: auto auto;
+      grid-gap: #{$spacing-30}px;
+      gap: #{$spacing-30}px;
+      padding: #{$spacing-30}px;
+      max-width: #{$clamp-xxs}px;
+      border-radius: #{$border-radius-round}px;
+
+      &:hover {
+        background-color: rgba($grey-scale-dark-300, 0.1);
+      }
+
+      &:active {
+        background-color: rgba($grey-scale-dark-300, 0.2);
+      }
+
+      .title {
+        font-weight: bold;
+        align-self: flex-start;
+      }
+
+      .icon {
+        font-size: $title-size-40;
+        color: $primary-200;
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-1}px) {
+  .contentSection {
+    .nextPrevContainer {
+      grid-template-columns: 1fr;
+      grid-row-gap: #{$spacing-80}px;
+      row-gap: #{$spacing-80}px;
+  
+      .nextContainer {
+        grid-column: 1;
+        justify-self: flex-end;
+      }
+  
+      .prevContainer {
+        grid-column: 1;
+        justify-self: flex-start;
+      }
+    }
+  }
+}

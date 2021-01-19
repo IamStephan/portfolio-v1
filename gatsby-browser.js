@@ -6,6 +6,7 @@ import Container from './src/organisms/container'
 
 // Styles
 import 'sanitize.css'
+import 'prismjs/themes/prism-okaidia.css'
 
 function wrapRootElement ({ element, props, ...rest }) {
   // props provide same data to Layout as Page element will get
