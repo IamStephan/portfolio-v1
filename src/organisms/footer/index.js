@@ -92,7 +92,7 @@ const Footer = () => {
         <Typography
           className={styles['copyright']}
         >
-          &#169; 2020 IamStephan, All rights reserved.
+          &#169; 2021 IamStephan, All rights reserved.
         </Typography>
       </section>
     </footer>
