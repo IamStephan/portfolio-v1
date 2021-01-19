@@ -1,11 +1,11 @@
 import React from 'react'
 
 // Material
-import { Typography, TypographyProps } from '@material-ui/core'
+import { Typography } from '@material-ui/core'
 
 /**
  * 
- * @param {TypographyProps} props 
+ * @param {import('@material-ui/core').TypographyProps} props 
  */
 const Paragraph = (props) => {
   const {

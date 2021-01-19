@@ -3,9 +3,6 @@ import React from 'react'
 // Foundation
 import SEO from '@foundation/seo'
 
-// Styles
-import styles from './styles.module.scss'
-
 /**
  * 
  * @param {{

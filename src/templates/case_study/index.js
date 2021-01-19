@@ -15,8 +15,7 @@ import {
 
 const CaseStudyTemplate = (props) => {
   const {
-    data,
-    pageContext
+    data
   } = props
 
   const results = data.studies
