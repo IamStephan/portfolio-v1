@@ -9,6 +9,8 @@
     - Example
     - Test
     - Code
+  showcase: "./assets/showcase.png"
+  featured: true
 ---
 
 #### Hello World
@@ -31,7 +33,7 @@ This is an simple test **page** and does not do anything else
   }
 ```
 
-`return false`
+`return false`{.javascript}
 
 This is an simple test **page** and does not do anything else.
 This is an simple test **page** and does not do anything elseThis is an simple test **page** and does not do anything elseThis is an simple test **page** and does not do anything elseThis is an simple test **page** and does not do anything else  

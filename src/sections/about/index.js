@@ -1,19 +1,22 @@
 import React from 'react'
 
-// Material
-import { Typography } from '@material-ui/core'
-
 // Organisms
 import Section from '@organisms/page_section'
 
 // Content Components
-import { ContentSection, Paragraph, Header } from '../../content_components'
+import Header from '@elements/header'
+import Paragraph from '@elements/paragraph'
 
 // Svgs
 import Pres from '@svg/abstracts/presentation.svg'
 
 // Styles
 import styles from './styles.module.scss'
+
+const H1 = Header('h2')
+const H2 = Header('h3')
+const H3 = Header('h4')
+
 
 const AboutSection = () => {
   return (
@@ -23,28 +26,24 @@ const AboutSection = () => {
       <div
         className={styles['contentContainer']}
       >
-        <ContentSection
+        <div
           className={styles['overviewSection']}
         >
-          <Header
-            level='h2'
-          >
+          <H1>
             Hi there,<br/> I'm Stephan Burger
-          </Header>
+          </H1>
           <Paragraph>
           I operate in the digital space as a software developer and
           I've been working side-by-side with local businesses for the past four years to help find the best solutions to their digital problems.
           </Paragraph>
-        </ContentSection>
+        </div>
         
         <Pres className={styles['test']} />
 
-        <ContentSection>
-          <Header
-            level='h3'
-          >
+        <div>
+          <H2>
             What I do?
-          </Header>
+          </H2>
 
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -59,14 +58,12 @@ const AboutSection = () => {
             Ut tristique pretium velit, ut ultricies elit placerat condimentum.
             Nunc laoreet ipsum et nisi gravida volutpat.
           </Paragraph>
-        </ContentSection>
+        </div>
 
-        <ContentSection>
-          <Header
-            level='h3'
-          >
+        <div>
+          <H2>
             What skills do I have?
-          </Header>
+          </H2>
 
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -80,14 +77,12 @@ const AboutSection = () => {
             Aliquam nec pretium lectus, vel tincidunt lacus.
             Morbi vitae velit aliquet, viverra velit ut, consequat libero.
           </Paragraph>
-        </ContentSection>
+        </div>
 
-        <ContentSection>
-          <Header
-            level='h3'
-          >
+        <div>
+          <H2>
             What I'm like?
-          </Header>
+          </H2>
 
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -101,18 +96,16 @@ const AboutSection = () => {
             Ut tristique pretium velit, ut ultricies elit placerat condimentum.
             Nunc laoreet ipsum et nisi gravida volutpat.
           </Paragraph>
-          <Header
-            level='h5'
-          >
+          <H3>
             Why am I like this
-          </Header>
+          </H3>
           <Paragraph>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Sed varius quam ipsum, ac sagittis ligula ornare sed.
             Ut tristique pretium velit, ut ultricies elit placerat condimentum.
             Nunc laoreet ipsum et nisi gravida volutpat.
           </Paragraph>
-        </ContentSection>
+        </div>
       </div>      
     </Section>
   )

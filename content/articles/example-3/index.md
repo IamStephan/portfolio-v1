@@ -1,5 +1,5 @@
 ---
-  title: Example Page 1 sakdulhasl dhali shdaishd .ash d.ajhs dk.ash d
+  title: Example Page 3
   date: 2021-19-09
   overview:
     This is a simple example of how an overview can look.
@@ -9,4 +9,5 @@
     - Example
     - Test
     - Code
+  featured: true
 ---

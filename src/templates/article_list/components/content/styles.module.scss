@@ -1,0 +1,106 @@
+@import '../../../../foundation/spacing/spacing';
+@import '../../../../foundation/colors/colors';
+@import '../../../../foundation/borders/borders';
+
+$breakpoint-1: 850;
+
+.contentSection {
+  .headerContainer {
+    max-width: #{$clamp-sm}px;
+    margin: auto;
+    margin-bottom: #{$spacing-90}px;
+
+    .header {
+      text-align: center;
+    }
+
+    .subheader {
+      text-align: center;
+      font-weight: normal;
+      max-width: #{$clamp-xs}px;
+      margin: auto;
+    }
+  }
+
+  .contentContainer {
+    max-width: #{$clamp-sm}px;
+    margin: auto;
+    margin-bottom: #{$spacing-90}px;
+
+    .articleContainer {
+      display: grid;
+      grid-template-columns: #{$clamp-xxs}px 1fr;
+      padding: #{$spacing-30}px;
+      grid-gap: #{$spacing-60}px;
+      gap: #{$spacing-60}px;
+      border-radius: #{$border-radius-round}px;
+      cursor: pointer;
+      
+      &:not(:last-child) {
+        margin-bottom: #{$spacing-80}px;
+      }
+
+      &:hover {
+        background-color: rgba($grey-scale-dark-100, 0.1);
+      }
+
+      &:active {
+        background-color: rgba($grey-scale-dark-300, 0.2);
+      }
+
+      .showcaseContainer {
+        align-self: center;
+      }
+
+      .content {
+        &:only-child {
+          grid-column: 1 / span 2;
+        }
+
+        .tagsContainer {
+          .tag {
+            margin-right: #{$spacing-20}px;
+            margin-bottom: #{$spacing-20}px;
+          }
+        }
+
+        .actions {
+          .action {
+            margin-right: #{$spacing-30}px;
+
+            .icon {
+              font-size: inherit;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .paginationContainer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: #{$breakpoint-1}px) {
+  .contentSection {
+    .contentContainer {
+      .articleContainer {
+        grid-template-columns: 1fr;
+  
+        // .showcaseContainer {
+        //   width: 100%;
+        //   max-width: #{$clamp-xs}px;
+        //   justify-self: center;
+        // }
+        .content {
+          &:only-child {
+            grid-column: 1;
+          }
+        }
+      }
+    }
+  }
+}

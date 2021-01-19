@@ -18,7 +18,7 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const ArticlePage = path.resolve('./src/templates/article/index.js')
-  // const ArticleListPage = path.resolve('./src/templates/case_study_list/index.js')
+  const ArticleListPage = path.resolve('./src/templates/article_list/index.js')
 
   const CaseStudyPage = path.resolve('./src/templates/case_study/index.js')
   const CaseStudyListPage = path.resolve('./src/templates/case_study_list/index.js')
@@ -46,7 +46,7 @@ exports.createPages = ({ graphql, actions }) => {
     const articles = result.data.allMdx.nodes
 
     /**
-     * Create the study pages
+     * Create the article pages
      */
     articles.forEach((article, i, arr) => {
       const prev = arr[i - 1]
@@ -64,21 +64,21 @@ exports.createPages = ({ graphql, actions }) => {
     })
 
     /**
-     * Create the study list pages
+     * Create the article list pages
      */
-    // const numPages = Math.ceil(article.length / pageListSize)
-    // Array.from({ length: numPages }).forEach((_articlesPage, i) => {
-    //   createPage({
-    //     path: i === 0 ? `/studies` : `/studies/page-${i + 1}`,
-    //     component: CaseStudyListPage,
-    //     context: {
-    //       limit: pageListSize,
-    //       skip: i * pageListSize,
-    //       currentPage: i + 1,
-    //       numPages,
-    //     },
-    //   })
-    // })
+    const numPages = Math.ceil(articles.length / pageListSize)
+    Array.from({ length: numPages }).forEach((_articlesPage, i) => {
+      createPage({
+        path: i === 0 ? `/articles` : `/articles/page-${i + 1}`,
+        component: ArticleListPage,
+        context: {
+          limit: pageListSize,
+          skip: i * pageListSize,
+          currentPage: i + 1,
+          numPages,
+        },
+      })
+    })
   })
 
   const studiesQuery = graphql(`
@@ -135,11 +135,12 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 /**
- * Generate slugs and types that can be queried
+ * Generate slugs that can be queried
  */
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
+  // Articles
   if (node.internal.type === `Mdx`) {
     const instance = getNode(node.parent).sourceInstanceName
 
@@ -152,8 +153,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         value: slugValue,
       })
     }
-
-    
   }
 
   // Case Studies

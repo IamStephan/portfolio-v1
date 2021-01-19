@@ -56,8 +56,7 @@ const Content = (props) => {
               <Chip
                 className={styles['tag']}
                 key={`tag-${tag}`}
-                variant='outlined'
-                color='secondary'
+                color='primary'
                 size='small'
                 label={tag}
               />
@@ -71,7 +70,7 @@ const Content = (props) => {
           <Typography
             variant='body2'
           >
-            { frontmatter.date } • <b>{ meta.timeToRead }min read</b>
+            { frontmatter.date } • <b>{ meta.timeToRead } min read</b>
           </Typography>
         </div>
       </div>

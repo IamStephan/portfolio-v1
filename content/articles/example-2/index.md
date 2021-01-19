@@ -1,5 +1,5 @@
 ---
-  title: Example Page 2 salkd askjdh ahd kauhd lauhd lauh daush dajhsd .
+  title: Example Page 2
   date: 2021-19-11
   overview:
     This is a simple example of how an overview can look.
@@ -9,4 +9,5 @@
     - Example
     - Test
     - Code
+  featured: true
 ---
