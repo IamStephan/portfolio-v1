@@ -8,7 +8,7 @@ import Header from '@elements/header'
 import Paragraph from '@elements/paragraph'
 
 // Svgs
-import Pres from '@svg/abstracts/presentation.svg'
+import { ReactComponent as Pres } from '@svg/abstracts/presentation.svg'
 
 // Styles
 import styles from './styles.module.scss'

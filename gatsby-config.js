@@ -68,10 +68,13 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-svgr',
       options: {
-        rule: {
-          include: /assets/
+        include: /assets/,
+        svgoConfig: {
+          plugins: [
+            { removeViewBox: false }
+          ],
         }
       }
     },

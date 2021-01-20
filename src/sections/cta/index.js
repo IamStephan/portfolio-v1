@@ -4,10 +4,10 @@ import React from 'react'
 import { Typography, Button } from '@material-ui/core'
 
 // Svgs
-import Brain from '@svg/abstracts/brain.svg'
-import Speaker from '@svg/abstracts/speaker.svg'
-import KingVert from '@svg/abstracts/king_vert.svg'
-import KingHor from '@svg/abstracts/king_hor.svg'
+import { ReactComponent as Brain } from '@svg/abstracts/brain.svg'
+import { ReactComponent as Speaker } from '@svg/abstracts/speaker.svg'
+import { ReactComponent as KingVert } from '@svg/abstracts/king_vert.svg'
+import { ReactComponent as KingHor } from '@svg/abstracts/king_hor.svg'
 
 // Organisms
 import Section from '@organisms/page_section'

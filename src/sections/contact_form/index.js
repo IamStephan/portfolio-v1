@@ -10,7 +10,7 @@ import { Typography, Button, TextField, Select } from '@material-ui/core'
 import Section from '@organisms/page_section'
 
 // Svgs
-import Sitting from '@svg/abstracts/sitting.svg'
+import { ReactComponent as Sitting } from '@svg/abstracts/sitting.svg'
 
 // Styles
 import styles from './styles.module.scss'
