@@ -7,9 +7,9 @@ import { Typography } from '@material-ui/core'
 import Section from '@organisms/page_section'
 
 // Svgs
-import Spec from '@svg/abstracts/spec.svg'
-import Industry from '@svg/abstracts/industry.svg'
-import Scope from '@svg/abstracts/scope.svg'
+import { ReactComponent as Spec } from '@svg/abstracts/spec.svg'
+import { ReactComponent as Industry } from '@svg/abstracts/industry.svg'
+import { ReactComponent as Scope } from '@svg/abstracts/scope.svg'
 
 // Styles
 import styles from './styles.module.scss'
