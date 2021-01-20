@@ -75,7 +75,7 @@ const BlogPreview = () => {
           endIcon={(
             <Icon
               className={styles['icon']}
-              
+              mode='fill'
               name='eye'
             />
           )}
