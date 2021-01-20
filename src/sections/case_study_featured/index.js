@@ -103,12 +103,14 @@ const CaseStudyPreview = () => {
               <Typography
                 variant='h3'
                 className={styles['title']}
+                gutterBottom
               >
                 {study.title}
               </Typography>
 
               <Typography
                 className={styles['summary']}
+                paragraph
               >
                 {study.overview}
               </Typography>

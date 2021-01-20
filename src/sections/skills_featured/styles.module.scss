@@ -1,7 +1,9 @@
 @import '../../foundation/colors/colors';
 @import '../../foundation/spacing/spacing';
 
-$content-clamp: 1250;
+// Utils
+@import '../../utils/mixins';
+
 $domain-clamp: 250;
 $avatar-size: 150;
 
@@ -10,21 +12,22 @@ $breakpoint-two: 450;
 
 .skillsFeatured {
   .contentContainer {
-    max-width: #{$content-clamp}px;
+    max-width: #{$clamp-md}px;
     margin: auto;
 
     .title {
       text-align: center;
-      margin-bottom: #{$spacing-50}px;
     }
 
     .context {
       text-align: center;
-      margin-bottom: #{$spacing-80}px;
-      font-size: 1.5rem;
+      max-width: #{$clamp-sm}px;
+      margin: auto;
+      @include useBodyFont;
     }
 
     .domainContainer {
+      margin-top: #{$spacing-80}px;
       display: flex;
       justify-content: space-between;
 
@@ -53,7 +56,6 @@ $breakpoint-two: 450;
 
         .header {
           text-align: center;
-          margin-bottom: #{$spacing-30}px;
         }
 
         .content {

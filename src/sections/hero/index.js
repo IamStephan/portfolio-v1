@@ -16,6 +16,16 @@ import Section from '../../organisms/page_section'
 // Styles
 import styles from './styles.module.scss'
 
+/**
+ * NOTE:
+ * =====
+ * Not going to mess with font of the hero,
+ * I'm leaving it as is. It is the hero after all
+ * and the default theme makes it looks worse
+ * 
+ * I have fine control over the hero text here and
+ * it works better this way
+ */
 const Hero = () => {
   return (
     <Section

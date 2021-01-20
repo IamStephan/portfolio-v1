@@ -1,6 +1,9 @@
 @import '../../foundation/spacing/spacing';
 @import '../../foundation/colors/colors';
 
+// Utils
+@import '../../utils/mixins';
+
 $showcase-size: 150;
 $vs-container-size: 70;
 $action-container-clamp: 450;
@@ -73,13 +76,11 @@ $breakpoint-one: 875;
 
     .title {
       text-align: center;
-      margin-bottom: #{$spacing-30}px;
     }
 
     .content {
       text-align: center;
-      margin-bottom: #{$spacing-60}px;
-      font-size: 1.25rem;
+      @include useBodyFont
     }
   }
 }

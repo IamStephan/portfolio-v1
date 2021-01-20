@@ -49,11 +49,14 @@ const SkillSet = () => {
         <Typography
           variant='h2'
           className={styles['title']}
+          gutterBottom
         >
           A well-rounded developer.
         </Typography>
 
         <Typography
+          variant='h5'
+          gutterBottom
           className={styles['context']}
         >
           Able to to go from start to productions using articulated architecture and renowned tools, with the ability to create new tools on the fly. 
@@ -79,6 +82,7 @@ const SkillSet = () => {
                 <Typography
                   variant='h5'
                   className={styles['header']}
+                  gutterBottom
                 >
                   {item.domain}
                 </Typography>

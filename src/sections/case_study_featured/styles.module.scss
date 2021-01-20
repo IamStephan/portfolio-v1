@@ -4,7 +4,7 @@
 $content-clamp: 500;
 
 $breakpoint-one: 950;
-$breakpoint-two: 350;
+$breakpoint-two: 385;
 
 .caseStudyFeaturedSection {
   .caseStudyContainer {
@@ -57,12 +57,10 @@ $breakpoint-two: 350;
       }
 
       .title {
-        margin-bottom: #{$spacing-60}px;
         text-align: center;
       }
 
       .summary {
-        margin-bottom: #{$spacing-60}px;
         text-align: center;
       }
 
@@ -106,14 +104,6 @@ $breakpoint-two: 350;
   
       .contentContainer {
         .tagsContainer {
-          margin-bottom: #{$spacing-30}px;
-        }
-  
-        .title {
-          margin-bottom: #{$spacing-30}px;
-        }
-  
-        .summary {
           margin-bottom: #{$spacing-30}px;
         }
       }

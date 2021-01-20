@@ -34,12 +34,15 @@ const CTA = () => {
         <Typography
           variant='h4'
           className={styles['title']}
+          gutterBottom
         >
           Hire me
         </Typography>
 
         <Typography
           className={styles['content']}
+          variant='h6'
+          gutterBottom
         >
           I am currently available for hire, either freelancing or full-time.
         </Typography>
@@ -87,6 +90,7 @@ const CTA = () => {
         </div>
         <Typography
           variant='h4'
+          gutterBottom
           className={styles['title']}
         >
           Contact Me
@@ -94,6 +98,8 @@ const CTA = () => {
 
         <Typography
           className={styles['content']}
+          variant='h6'
+          gutterBottom
         >
           Do you have an exciting new idea, or have a problem with your current software solutions.
         </Typography>
