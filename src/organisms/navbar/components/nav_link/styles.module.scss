@@ -1,12 +1,41 @@
+@import '../../../../foundation/spacing/spacing';
 @import '../../../../foundation/colors/colors';
 
-.menuButton {
-  margin-top: 25px;
-  margin-bottom: 25px;
 
-  .icon {
-    font-size: 26px;
-    z-index: 2;
-    color: $grey-scale-dark-300;
+.navLink {
+  position: relative;
+
+  .indicator {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid $primary-200;
+  }
+
+  .menuButton {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition: background-color 150ms ease-in-out;
+
+    .icon {
+      font-size: 26px;
+      z-index: 2;
+      color: $grey-scale-dark-300;
+      transition: color 150ms ease-in-out;
+    }
+
+    &.active {
+      background-color: $complement-300;
+
+      .icon {
+        color: $grey-scale-light-100;
+      }
+    }
+  
+    
   }
 }

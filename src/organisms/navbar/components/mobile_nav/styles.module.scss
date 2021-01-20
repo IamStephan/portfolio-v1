@@ -21,6 +21,8 @@
     grid-row: 1;
     padding: #{$spacing-30}px;
     background-color: $grey-scale-light-100;
+    display: flex;
+    justify-content: flex-end;
   }
 
   .overlay {

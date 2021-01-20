@@ -6,9 +6,6 @@ import { Link } from 'gatsby'
 // Material
 import { IconButton } from '@material-ui/core'
 
-// Router
-import { useMatch } from '@reach/router'
-
 // Foundation
 import Icon from '@foundation/icons'
 
@@ -20,6 +17,7 @@ import styles from './styles.module.scss'
  * @param {{
  *    icon: string
  *    title: string,
+ *    active: boolean
  *    to: string
  * }} props 
  */
@@ -27,15 +25,17 @@ const NavLink = (props) => {
   const {
     icon,
     to,
+    active,
     ...rest
   } = props
 
   return (
     <Link
       to={to}
+      className={styles['navLink']}
     >
       <IconButton
-        className={styles['menuButton']}
+        className={`${styles['menuButton']} ${!!active && styles['active']}`}
         {...rest}
       >
         <Icon

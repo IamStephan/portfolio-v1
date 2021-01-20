@@ -35,6 +35,26 @@ const Navbar = props => {
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 
+  function _isLinkActive(linksToCheck) {
+    /**
+     * Only Check for first level paths
+     */
+    const checkPath = location.pathname.split('/')[1]
+
+    // Home page is active
+    if(!checkPath) return false
+
+    if(typeof linksToCheck === 'string') {
+      return checkPath === linksToCheck
+    }
+
+    if(Array.isArray(linksToCheck)) {
+      return linksToCheck.includes(checkPath)
+    }
+
+    return false
+  }
+
   function _toggleMobileNav() {
     setIsMobileNavOpen(prev => !prev)
   }
@@ -67,24 +87,30 @@ const Navbar = props => {
             title='Articles'
             icon='article'
             to='/articles'
+            active={_isLinkActive(['articles', 'article'])}
           />
 
           <NavLink
             title='Case Studies'
             icon='projector-2'
             to='/studies'
+            active={_isLinkActive(['studies', 'study'])}
           />
 
           <NavLink
             title='About'
             icon='account-pin-circle'
             to='/about'
+            active={_isLinkActive('about')}
+
           />
 
           <NavLink
             title='Contact'
             icon='door-open'
             to='/contact'
+            active={_isLinkActive('contact')}
+
           />
         </section>
       </nav>
