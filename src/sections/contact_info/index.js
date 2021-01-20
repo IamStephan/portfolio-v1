@@ -34,6 +34,7 @@ const ContactInformation = () => {
 
           <Typography
             className={styles['infoDetails']}
+            gutterBottom
           >
             <b>Langebaan, Western Cape</b>
           </Typography>

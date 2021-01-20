@@ -26,9 +26,6 @@ $breakpoint-one: 850;
 
       .infoDetails {
         text-align: center;
-        &:last-child {
-          margin-bottom: 0px;
-        }
       }
     }
   }
@@ -40,7 +37,7 @@ $breakpoint-one: 850;
       grid-template-columns: 1fr;
 
       grid-gap: #{$spacing-80}px;
-    gap: #{$spacing-80}px;
+      gap: #{$spacing-80}px;
     }
   }
 }
