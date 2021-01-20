@@ -4,7 +4,7 @@ $transition-start-offset: 15;
 $transition-duration: 250;
 
 @mixin Tooltip(
-  $position: right,
+  $position,
   $offset
 ) {
   position: relative;
