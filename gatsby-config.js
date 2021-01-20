@@ -118,6 +118,7 @@ module.exports = {
           '@utils': 'src/utils'
         }
       }
-    }
+    },
+    `gatsby-plugin-preact`
   ],
 }
