@@ -16,10 +16,10 @@ Todo:
     ☐ About Page
 
   Templates:
-    ☐ Article Page
-    ☐ List of Articles
-    ☐ Case Study page
-    ☐ List of Case Studies
+    ✔ Article Page @done(21-01-20 01:19)
+    ✔ List of Articles @done(21-01-20 01:19)
+    ✔ Case Study page @done(21-01-20 01:19)
+    ✔ List of Case Studies @done(21-01-20 01:19)
 
   Case Studies:
     ☐ Gerimed Mobility
@@ -31,7 +31,7 @@ Todo:
     ☐ The Boardroom
     ☐ Gerimed
     ☐ Docoo
-    ☐ Cycleworx App
+    ☐ Workshop Records
 
   Articles:
     ☐ Code Design Patterns: Behavioural
