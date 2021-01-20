@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Material
 import { Typography, Button, TextField, Select } from '@material-ui/core'
@@ -30,7 +30,7 @@ const ContactForm = () => {
               className={styles['contentContainer']}
             >
               <Icon
-                name='volume-vibrate'
+                name='volume-vibrate-line'
                 className={styles['icon']}
               />
               <Typography

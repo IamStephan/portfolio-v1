@@ -4,7 +4,7 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Material
 import { Typography, Button, Chip } from '@material-ui/core'
@@ -75,8 +75,7 @@ const BlogPreview = () => {
           endIcon={(
             <Icon
               className={styles['icon']}
-              mode='fill'
-              name='eye'
+              name='eye-fill'
             />
           )}
         >

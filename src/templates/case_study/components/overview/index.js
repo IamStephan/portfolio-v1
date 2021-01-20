@@ -4,7 +4,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Material
 import { Typography, Chip, Button } from '@material-ui/core'
@@ -91,8 +91,7 @@ const OverviewSection = (props) => {
               disabled={!previewLink}
               endIcon={(
                 <Icon
-                  name='eye'
-                  mode='fill'
+                  name='eye-fill'
                   className={styles['icon']}
                 />
               )}
@@ -110,8 +109,7 @@ const OverviewSection = (props) => {
               disabled={!repositoryLink}
               endIcon={(
                 <Icon
-                  name={repositoryLink ? 'git-repository' : 'git-repository-private'}
-                  mode='fill'
+                  name={repositoryLink ? 'git-repository-fill' : 'git-repository-private-fill'}
                   className={styles['icon']}
                 />
               )}

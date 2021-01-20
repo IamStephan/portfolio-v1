@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Material
 import { Typography, IconButton } from '@material-ui/core'
@@ -27,7 +27,7 @@ const ContactInformation = () => {
             className={styles['infoAction']}
           >
             <Icon
-              name='map-pin-2'
+              name='map-pin-user-line'
               className={styles['icon']}
             />
           </IconButton>
@@ -52,7 +52,7 @@ const ContactInformation = () => {
             className={styles['infoAction']}
           >
             <Icon
-              name='mail-send'
+              name='mail-send-line'
               className={styles['icon']}
             />
           </IconButton>
@@ -71,7 +71,7 @@ const ContactInformation = () => {
             className={styles['infoAction']}
           >
             <Icon
-              name='phone'
+              name='phone-line'
               className={styles['icon']}
             />
           </IconButton>

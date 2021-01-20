@@ -5,7 +5,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Material
 import { Typography, Chip, Button } from '@material-ui/core'
@@ -125,8 +125,7 @@ const CaseStudyPreview = () => {
                   endIcon={(
                     <Icon
                       className={styles['icon']}
-                      name='projector-2'
-                      mode='fill'
+                      name='projector-2-fill'
                     />
                   )}
                 >
@@ -144,8 +143,7 @@ const CaseStudyPreview = () => {
                   endIcon={(
                     <Icon
                       className={styles['icon']}
-                      name='eye'
-                      mode='fill'
+                      name='eye-fill'
                     />
                   )}
                 >

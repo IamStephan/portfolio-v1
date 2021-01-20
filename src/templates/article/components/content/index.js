@@ -4,7 +4,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Material
 import { Chip, Typography } from '@material-ui/core'
@@ -112,7 +112,7 @@ const Content = (props) => {
               </Typography>
 
               <Icon
-                name='arrow-left-circle'
+                name='arrow-left-circle-line'
                 className={styles['icon']}
               />
             </Link>
@@ -141,7 +141,7 @@ const Content = (props) => {
               
 
               <Icon
-                name='arrow-right-circle'
+                name='arrow-right-circle-line'
                 className={styles['icon']}
               />
             </Link>

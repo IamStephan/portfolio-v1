@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Gatsby
 import { Link } from 'gatsby'
@@ -56,34 +56,29 @@ const Footer = () => {
       <section
         className={styles['accountsSection']}
       >
-        <a
-          target='_blank'
-        >
-          <IconButton>
-            <Icon
-              name='github'
-              mode='fill'
-            />
-          </IconButton>
-        </a>
 
-        <a>
-          <IconButton>
-            <Icon
-              name='linkedin-box'
-              mode='fill'
-            />
-          </IconButton>
-        </a>
-        
-        <a>
-          <IconButton>
-            <Icon
-              name='instagram'
-              mode='fill'
-            />
-          </IconButton>
-        </a>
+        <IconButton>
+          <Icon
+            name='github-fill'
+          />
+        </IconButton>
+
+
+
+        <IconButton>
+          <Icon
+            name='linkedinbox-fill'
+          />
+        </IconButton>
+
+      
+
+        <IconButton>
+          <Icon
+            name='instagram-fill'
+          />
+        </IconButton>
+
       </section>
 
       <section

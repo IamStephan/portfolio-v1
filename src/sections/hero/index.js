@@ -1,7 +1,7 @@
 import React from 'react'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Svgs
 import { ReactComponent as Hello } from '@svg/abstracts/coffee_hello.svg'
@@ -28,8 +28,7 @@ const Hero = () => {
           className={styles['iconBtn']}
           startIcon={(
             <Icon
-              mode='fill'
-              name='instagram'
+              name='instagram-fill'
               className={styles['icon']}
             />
           )}
@@ -41,8 +40,7 @@ const Hero = () => {
           className={styles['iconBtn']}
           startIcon={(
             <Icon
-              mode='fill'
-              name='github'
+              name='github-fill'
               className={styles['icon']}
             />
           )}
@@ -54,8 +52,7 @@ const Hero = () => {
           className={styles['iconBtn']}
           startIcon={(
             <Icon
-              mode='fill'
-              name='linkedin-box'
+              name='linkedinbox-fill'
               className={styles['icon']}
             />
           )}

@@ -7,7 +7,7 @@ import { Link } from 'gatsby'
 import { AnimatePresence } from 'framer-motion'
 
 // Foundation
-import Icon from '@foundation/icons'
+import Icon from '@foundation/icons_svg'
 
 // Material
 import { IconButton } from '@material-ui/core'
@@ -85,21 +85,21 @@ const Navbar = props => {
         >
           <NavLink
             title='Articles'
-            icon='article'
+            icon='article-line'
             to='/articles'
             active={_isLinkActive(['articles', 'article'])}
           />
 
           <NavLink
             title='Case Studies'
-            icon='projector-2'
+            icon='projector-2-line'
             to='/studies'
             active={_isLinkActive(['studies', 'study'])}
           />
 
           <NavLink
             title='About'
-            icon='account-pin-circle'
+            icon='file-user-line'
             to='/about'
             active={_isLinkActive('about')}
 
@@ -107,7 +107,7 @@ const Navbar = props => {
 
           <NavLink
             title='Contact'
-            icon='door-open'
+            icon='door-open-line'
             to='/contact'
             active={_isLinkActive('contact')}
 
@@ -137,7 +137,7 @@ const Navbar = props => {
             onClick={_toggleMobileNav}
           >
             <Icon
-              name='menu'
+              name='menu-line'
             />
           </IconButton>
         </div>
