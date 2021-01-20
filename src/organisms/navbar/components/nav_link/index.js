@@ -25,6 +25,7 @@ const NavLink = (props) => {
   const {
     icon,
     to,
+    title,
     active,
     ...rest
   } = props
@@ -36,6 +37,7 @@ const NavLink = (props) => {
     >
       <IconButton
         className={`${styles['menuButton']} ${!!active && styles['active']}`}
+        data-tooltip={title}
         {...rest}
       >
         <Icon

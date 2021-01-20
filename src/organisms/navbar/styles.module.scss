@@ -9,6 +9,7 @@ $logo-size-mobile: $navbar-height - (2 * $spacing-30);
 
 .navbarDesktop {
   position: fixed;
+  z-index: 99;
   left: 0px;
   top: 0px;
   height: 100%;
@@ -33,26 +34,6 @@ $logo-size-mobile: $navbar-height - (2 * $spacing-30);
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-}
-
-.scene {
-  position: fixed;
-  top: 0px;
-  left: 100px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  z-index: 99;
-
-  .menu {
-    background-color: $grey-scale-light-100;
-    width: 300px
-  }
-
-  .overlay {
-    flex: 1;
-    background-color: rgba($grey-scale-dark-300, 0.75);
   }
 }
 

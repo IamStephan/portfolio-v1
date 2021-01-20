@@ -1,0 +1,47 @@
+@import '../../foundation/colors/colors';
+
+$transition-start-offset: 15;
+$transition-duration: 250;
+
+@mixin Tooltip(
+  $position: right,
+  $offset
+) {
+  position: relative;
+
+  &::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: $complement-300;
+    width: auto;
+    height: auto;
+    white-space: nowrap;
+    z-index: 2;
+    padding: #{$spacing-30}px;
+    color: $grey-scale-light-100;
+    font-size: 0.95rem;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity #{$transition-duration}ms ease-in-out, transform #{$transition-duration}ms ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  @if $position == right {
+    &::before {
+      right: 0px;
+      top: 50%;
+      transform: translate(calc(100% + #{$offset - $transition-start-offset}px), -50%);
+    }
+
+    &:hover {
+      &::before {
+        transform: translate(calc(100% + #{$offset}px), -50%);
+      }
+    }
+  }
+}

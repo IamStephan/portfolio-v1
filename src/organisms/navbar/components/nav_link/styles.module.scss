@@ -1,6 +1,9 @@
 @import '../../../../foundation/spacing/spacing';
 @import '../../../../foundation/colors/colors';
 
+// Tooltips
+@import '../../../../elements/tooltip/tooltip';
+
 
 .navLink {
   position: relative;
@@ -20,6 +23,8 @@
     margin-top: 25px;
     margin-bottom: 25px;
     transition: background-color 150ms ease-in-out;
+
+    @include Tooltip(right, $spacing-30);
 
     .icon {
       font-size: 26px;
