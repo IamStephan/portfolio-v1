@@ -92,6 +92,7 @@ const Hero = () => {
       >
         <Typography
           variant='h1'
+          component='h1'
           className={styles['title']}
         >
           I am Stephan...<br/>
@@ -100,6 +101,7 @@ const Hero = () => {
 
         <Typography
           variant='h4'
+          component='p'
           className={styles['subtitle']}
         >
           Creating impactful software solutions that propel businesses to success.

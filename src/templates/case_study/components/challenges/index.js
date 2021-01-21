@@ -66,6 +66,7 @@ const Chanllenges = (props) => {
               >
                 <Typography
                   variant='h4'
+                  component='h2'
                   gutterBottom
                   className={styles['title']}
                 >

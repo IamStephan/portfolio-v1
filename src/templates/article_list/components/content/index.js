@@ -60,6 +60,7 @@ const Content = (props) => {
             >
               <Typography
                 variant='h2'
+                component='h1'
                 gutterBottom
                 className={styles['header']}
               >
@@ -69,6 +70,7 @@ const Content = (props) => {
               <Typography
                 className={styles['subheader']}
                 variant='h5'
+                component='p'
                 gutterBottom
               >
                 My past work showcasing my growth from knowing nothing to who I am today.
@@ -102,6 +104,7 @@ const Content = (props) => {
               >
                 <Typography
                   variant='h4'
+                  component='h2'
                   className={styles['title']}
                   gutterBottom
                 >

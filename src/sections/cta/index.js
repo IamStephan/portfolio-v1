@@ -33,6 +33,7 @@ const CTA = () => {
 
         <Typography
           variant='h4'
+          component='h2'
           className={styles['title']}
           gutterBottom
         >
@@ -90,6 +91,7 @@ const CTA = () => {
         </div>
         <Typography
           variant='h4'
+          component='h2'
           gutterBottom
           className={styles['title']}
         >

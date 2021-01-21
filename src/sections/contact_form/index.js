@@ -35,6 +35,7 @@ const ContactForm = () => {
               />
               <Typography
                 variant='h4'
+                component='h2'
                 className={styles['title']}
               >
                 Give me a shout...
@@ -111,6 +112,7 @@ const ContactForm = () => {
             <Typography
               className={styles['subheader']}
               variant='h6'
+              component='p'
             >
               Don't hesitate to send me a message or call me,
               we can build on your proposition together and find the best possible outcome.

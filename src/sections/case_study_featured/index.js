@@ -102,6 +102,7 @@ const CaseStudyPreview = () => {
 
               <Typography
                 variant='h3'
+                component='h2'
                 className={styles['title']}
                 gutterBottom
               >

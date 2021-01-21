@@ -53,6 +53,7 @@ const BlogPreview = () => {
       >
         <Typography
           variant='h2'
+          component='h2'
           gutterBottom
           className={styles['header']}
         >
@@ -93,6 +94,7 @@ const BlogPreview = () => {
             <Typography
               className={styles['title']}
               variant='h5'
+              component='h3'
               gutterBottom
             >
               {article.frontmatter.title}

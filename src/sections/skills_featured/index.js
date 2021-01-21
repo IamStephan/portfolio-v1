@@ -48,6 +48,7 @@ const SkillSet = () => {
       >
         <Typography
           variant='h2'
+          component='h2'
           className={styles['title']}
           gutterBottom
         >
@@ -56,6 +57,7 @@ const SkillSet = () => {
 
         <Typography
           variant='h5'
+          compoennt='p'
           gutterBottom
           className={styles['context']}
         >
@@ -81,6 +83,7 @@ const SkillSet = () => {
 
                 <Typography
                   variant='h5'
+                  component='h3'
                   className={styles['header']}
                   gutterBottom
                 >

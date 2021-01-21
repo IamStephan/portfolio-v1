@@ -52,6 +52,7 @@ const Content = (props) => {
             >
               <Typography
                 variant='h2'
+                component='h1'
                 gutterBottom
                 className={styles['header']}
               >
@@ -60,6 +61,7 @@ const Content = (props) => {
     
               <Typography
                 className={styles['subheader']}
+                component='p'
                 variant='h5'
                 gutterBottom
               >
@@ -105,6 +107,7 @@ const Content = (props) => {
                 </div>
                 <Typography
                   variant='h4'
+                  component='h2'
                   className={styles['title']}
                   gutterBottom
                 >
