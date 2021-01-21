@@ -56,29 +56,35 @@ const Footer = () => {
       <section
         className={styles['accountsSection']}
       >
-
-        <IconButton>
+        <IconButton
+          component='a'
+          target='_blank'
+          href='https://github.com/IamStephan'
+        >
           <Icon
             name='github-fill'
           />
         </IconButton>
 
-
-
-        <IconButton>
+        <IconButton
+          component='a'
+          target='_blank'
+          href='https://www.linkedin.com/in/iamstephann'
+        >
           <Icon
             name='linkedinbox-fill'
           />
         </IconButton>
 
-      
-
-        <IconButton>
+        <IconButton
+          component='a'
+          target='_blank'
+          href='https://www.instagram.com/i_am_stephann/'
+        >
           <Icon
             name='instagram-fill'
           />
         </IconButton>
-
       </section>
 
       <section

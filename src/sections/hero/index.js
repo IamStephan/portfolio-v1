@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Gatsby
+import { Link } from 'gatsby'
+
 // Foundation
 import Icon from '@foundation/icons_svg'
 
@@ -36,18 +39,9 @@ const Hero = () => {
       >
         <Button
           className={styles['iconBtn']}
-          startIcon={(
-            <Icon
-              name='instagram-fill'
-              className={styles['icon']}
-            />
-          )}
-        >
-          Instagram
-        </Button>
-
-        <Button
-          className={styles['iconBtn']}
+          component='a'
+          target='_blank'
+          href='https://github.com/IamStephan'
           startIcon={(
             <Icon
               name='github-fill'
@@ -60,6 +54,9 @@ const Hero = () => {
 
         <Button
           className={styles['iconBtn']}
+          component='a'
+          target='_blank'
+          href='https://www.linkedin.com/in/iamstephann'
           startIcon={(
             <Icon
               name='linkedinbox-fill'
@@ -68,6 +65,21 @@ const Hero = () => {
           )}
         >
           LinkedIn
+        </Button>
+
+        <Button
+          className={styles['iconBtn']}
+          component='a'
+          target='_blank'
+          href='https://www.instagram.com/i_am_stephann/'
+          startIcon={(
+            <Icon
+              name='instagram-fill'
+              className={styles['icon']}
+            />
+          )}
+        >
+          Instagram
         </Button>
       </div>
 
@@ -124,6 +136,8 @@ const Hero = () => {
             color='secondary'
             size='large'
             className={styles['second']}
+            component={Link}
+            to='/contact'
           >
             Contact Me
           </Button>
