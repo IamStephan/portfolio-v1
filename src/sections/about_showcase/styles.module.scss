@@ -56,6 +56,11 @@
         text-align: center;
         @include useBodyFont;
       }
+
+      .actionContainer {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 }

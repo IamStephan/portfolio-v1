@@ -1,7 +1,13 @@
 import React from 'react'
 
+// Gatsby
+import { Link } from 'gatsby'
+
+// Foundation
+import Icon from '@foundation/icons_svg'
+
 // Material
-import { Typography } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 
 // SVGs
 import { ReactComponent as Book } from '@svg/abstracts/book.svg'
@@ -51,9 +57,29 @@ const AboutShowcase = () => {
           <Typography
             variant='h3'
             className={styles['subheader']}
+            gutterBottom
           >
-            I am a Software developer and this is my portfolio.
+            I am a Software developer.
           </Typography>
+
+          <div
+            className={styles['actionContainer']}
+          >
+            <Button
+              size='large'
+              variant='contained'
+              color='primary'
+              component={Link}
+              to='/studies'
+              endIcon={(
+                <Icon
+                  name='eye-fill'
+                />
+              )}
+            >
+              See my work
+            </Button>
+          </div>
         </div>
       </div>
     </Section>
