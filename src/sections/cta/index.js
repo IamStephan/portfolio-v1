@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Gatsby
+import { Link } from 'gatsby'
+
 // Material
 import { Typography, Button } from '@material-ui/core'
 
@@ -110,6 +113,8 @@ const CTA = () => {
           variant='contained'
           color='secondary'
           size='large'
+          component={Link}
+          to='/contact'
         >
           Let's talk
         </Button>
