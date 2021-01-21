@@ -25,6 +25,9 @@ const ContactInformation = () => {
         >
           <IconButton
             className={styles['infoAction']}
+            component='a'
+            target='_blank'
+            href='https://goo.gl/maps/ZEHYAH9SNWNyXp6W8'
           >
             <Icon
               name='map-pin-user-line'
@@ -51,6 +54,8 @@ const ContactInformation = () => {
         >
           <IconButton
             className={styles['infoAction']}
+            component='a'
+            href='mailto:stephanburger54@gmail.com'
           >
             <Icon
               name='mail-send-line'
@@ -70,6 +75,8 @@ const ContactInformation = () => {
         >
           <IconButton
             className={styles['infoAction']}
+            component='a'
+            href='tel:+27629098820'
           >
             <Icon
               name='phone-line'
