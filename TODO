@@ -1,25 +1,13 @@
 Todo:
   General: @critical
-    ☐ Add SEO data to all pages
     ☐ Make sure the titles are in semantic order
     ☐ Check for grammar and spelling errors
     ☐ Make appropriate changes to the tone and voice of the site
     ☐ 3 Case studies for launch
     ☐ 5 Artilces for launch
-    ☐ Add links where appropriate
     ☐ Create a resume pdf and add it to the page
-    ☐ Use Semantic HTML tags
-    ☐ Optimize SVGs
-    ☐ Fix Iconsistencies
 
-  Pages:
-    ☐ About Page
 
-  Templates:
-    ✔ Article Page @done(21-01-20 01:19)
-    ✔ List of Articles @done(21-01-20 01:19)
-    ✔ Case Study page @done(21-01-20 01:19)
-    ✔ List of Case Studies @done(21-01-20 01:19)
 
   Case Studies:
     ☐ Gerimed Mobility
@@ -43,3 +31,14 @@ Todo:
     ☐ State Machines
     ☐ Web Security: Frontend
     
+Archive:
+  ✔ Add SEO data to all pages @done(21-01-21 17:41) @project(Todo.General)
+  ✔ Add links where appropriate @done(21-01-21 17:41) @project(Todo.General)
+  ✔ Use Semantic HTML tags @done(21-01-21 17:41) @project(Todo.General)
+  ✔ Optimize SVGs @done(21-01-21 17:41) @project(Todo.General)
+  ✔ Fix Iconsistencies @done(21-01-21 17:41) @project(Todo.General)
+  ✔ About Page @done(21-01-21 17:41) @project(Todo.Pages)
+  ✔ Article Page @done(21-01-20 01:19) @project(Todo.Templates)
+  ✔ List of Articles @done(21-01-20 01:19) @project(Todo.Templates)
+  ✔ Case Study page @done(21-01-20 01:19) @project(Todo.Templates)
+  ✔ List of Case Studies @done(21-01-20 01:19) @project(Todo.Templates)
