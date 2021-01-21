@@ -34,10 +34,10 @@ const NavLink = (props) => {
     <Link
       to={to}
       className={styles['navLink']}
+      data-tooltip={title}
     >
       <IconButton
         className={`${styles['menuButton']} ${!!active && styles['active']}`}
-        data-tooltip={title}
         {...rest}
       >
         <Icon

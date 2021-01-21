@@ -6,6 +6,7 @@
 
 
 .navLink {
+  @include Tooltip(right, $spacing-30);
   position: relative;
 
   .indicator {
@@ -23,8 +24,6 @@
     margin-top: 25px;
     margin-bottom: 25px;
     transition: background-color 150ms ease-in-out;
-
-    @include Tooltip(right, $spacing-30);
 
     .icon {
       font-size: 26px;
