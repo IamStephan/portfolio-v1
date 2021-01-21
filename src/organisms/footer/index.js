@@ -57,6 +57,7 @@ const Footer = () => {
         className={styles['accountsSection']}
       >
         <IconButton
+          rel='noopener'
           component='a'
           target='_blank'
           href='https://github.com/IamStephan'
@@ -67,6 +68,7 @@ const Footer = () => {
         </IconButton>
 
         <IconButton
+          rel='noopener'
           component='a'
           target='_blank'
           href='https://www.linkedin.com/in/iamstephann'
@@ -77,6 +79,7 @@ const Footer = () => {
         </IconButton>
 
         <IconButton
+          rel='noopener'
           component='a'
           target='_blank'
           href='https://www.instagram.com/i_am_stephann/'

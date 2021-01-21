@@ -17,7 +17,7 @@ const ContactInformation = () => {
     <Section
       className={styles['contactInfoSection']}
     >
-      <div
+      <address
         className={styles['infoContainer']}
       >
         <div
@@ -25,6 +25,7 @@ const ContactInformation = () => {
         >
           <IconButton
             className={styles['infoAction']}
+            rel='noopener'
             component='a'
             target='_blank'
             href='https://goo.gl/maps/ZEHYAH9SNWNyXp6W8'
@@ -90,7 +91,7 @@ const ContactInformation = () => {
             <b>(+27) 62 909 8820</b>
           </Typography>
         </div>
-      </div>
+      </address>
     </Section>
   )
 }
