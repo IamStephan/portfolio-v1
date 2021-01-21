@@ -52,11 +52,15 @@ const ContactForm = () => {
                 className={styles['input']}
               >
                 <option>
-                  Freelancing
+                  General
                 </option>
 
                 <option>
                   Job Opportunity
+                </option>
+
+                <option>
+                  Freelancing
                 </option>
 
                 <option>
