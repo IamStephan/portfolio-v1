@@ -1,22 +1,23 @@
 import React from 'react'
 
+// Material
+import { Typography } from '@material-ui/core'
+
 // Organisms
 import Section from '@organisms/page_section'
-
-// Content Components
-import Header from '@elements/header'
-import Paragraph from '@elements/paragraph'
-
-// Svgs
-import { ReactComponent as Pres } from '@svg/abstracts/presentation.svg'
 
 // Styles
 import styles from './styles.module.scss'
 
-const H1 = Header('h2')
-const H2 = Header('h3')
-const H3 = Header('h4')
+// Elements
+import HeaderConst from '@elements/header'
+import Paragraph from '@elements/paragraph'
+import { ListItem, UnorderedList } from '@elements/list'
 
+
+const HeaderOne = HeaderConst('h3')
+const HeaderTwo = HeaderConst('h4')
+const HeaderThree = HeaderConst('h5')
 
 const AboutSection = () => {
   return (
@@ -24,88 +25,150 @@ const AboutSection = () => {
       className={styles['aboutSection']}
     >
       <div
-        className={styles['contentContainer']}
+        className={styles['aboutContainer']}
       >
-        <div
-          className={styles['overviewSection']}
-        >
-          <H1>
-            Hi there,<br/> I'm Stephan Burger
-          </H1>
-          <Paragraph>
-          I operate in the digital space as a software developer and
-          I've been working side-by-side with local businesses for the past four years to help find the best solutions to their digital problems.
-          </Paragraph>
-        </div>
-        
-        <Pres className={styles['test']} />
+        <HeaderOne>
+          Who am I and what do I do?
+        </HeaderOne>
+        <Paragraph>
+          My name is Stephan Burger, a software developer with 4 years’ experience.
+          I plan, design, code, deploy and maintain software solutions that businesses use to either help boost their online presence or to promote productivity and efficiency.
+          It can be as simple as a landing page or a cross-platform application that requires cross-device syncing and authentication.
+          I enjoy starting from the ground up, but I don’t reinvent the wheel.
+          Sometimes curiosity gets the best of me and I just start reinventing.
+        </Paragraph>
 
-        <div>
-          <H2>
-            What I do?
-          </H2>
+        <br />
 
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed varius quam ipsum, ac sagittis ligula ornare sed.
-            Ut tristique pretium velit, ut ultricies elit placerat condimentum.
-            Nunc laoreet ipsum et nisi gravida volutpat.
-          </Paragraph>
+        <HeaderOne>
+          What are my skills?
+        </HeaderOne>
+        <Paragraph>
+          Being a developer means more than meets the eye.
+          You need the ability and skills required to develop simple to complex applications, while also being a great team player.
+        </Paragraph>
 
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed varius quam ipsum, ac sagittis ligula ornare sed.
-            Ut tristique pretium velit, ut ultricies elit placerat condimentum.
-            Nunc laoreet ipsum et nisi gravida volutpat.
-          </Paragraph>
-        </div>
+        <br />
 
-        <div>
-          <H2>
-            What skills do I have?
-          </H2>
+        <HeaderTwo>
+          Technical Skills
+        </HeaderTwo>
+        <Paragraph>
+          Something I pride myself on, is the ability to keep learning new concepts and tools.
+          Learning, however, can only develop applications once the work starts.
+          Only when you have a foundation, can you start creating and innovating.
+          Now, I hear you asking, what does my foundation look like?
+        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            Javascript
+          </ListItem>
+          <ListItem>
+            Typescript
+          </ListItem>
+          <ListItem>
+            Python
+          </ListItem>
+          <ListItem>
+            CSS (SASS)
+          </ListItem>
+          <ListItem>
+            HTML
+          </ListItem>
+        </UnorderedList>
+        <Paragraph>
+          With this foundations you start expanding into more depths, developing your stack and methods for getting the job done.
+          What does my my stack look like?
+        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            Sass
+          </ListItem>
+          <ListItem>
+            React
+          </ListItem>
+          <ListItem>
+            Mobx, Redux, Zustand and Xstate
+          </ListItem>
+          <ListItem>
+            Gatsby
+          </ListItem>
+          <ListItem>
+            Netlify
+          </ListItem>
+          <ListItem>
+            And much more...
+          </ListItem>
+        </UnorderedList>
 
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed varius quam ipsum, ac sagittis ligula ornare sed.
-            Ut tristique pretium velit, ut ultricies elit placerat condimentum.
-            Nunc laoreet ipsum et nisi gravida volutpat.
-            
-            Sed auctor, mauris eu luctus bibendum, lorem eros tristique nulla, et mattis sem ipsum id lectus.
-            Cras mollis odio ac quam ultrices pretium. In vitae velit vulputate, bibendum quam vel, interdum nunc.
-            Quisque augue justo, volutpat at egestas vel, vehicula ac justo. Curabitur vel nulla vel nunc sagittis vehicula.
-            Aliquam nec pretium lectus, vel tincidunt lacus.
-            Morbi vitae velit aliquet, viverra velit ut, consequat libero.
-          </Paragraph>
-        </div>
+        <Paragraph>
+          Creating for the web has made me realise how crazy we, as developers, can get when pushing technology further.
+          Because most of what I do on the web can easily be expanded into more specific domains.
+          These domains include desktop, mobile and even server development. Each having their own set of tools that I'm quiet comfortable in:
+        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            React Native (For mobile)
+          </ListItem>
+          <ListItem>
+            Electron (For Desktop)
+          </ListItem>
+          <ListItem>
+            NodeJs and its accompanying libraries (For Servers)
+          </ListItem>
+        </UnorderedList>
 
-        <div>
-          <H2>
-            What I'm like?
-          </H2>
+        <Paragraph>
+          When it's time to deploy I have few more tools at my disposal:
+        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            Firebase, AWS or Digital Ocean
+          </ListItem>
+          <ListItem>
+            Headless CMS's (Like Strapi)
+          </ListItem>
+        </UnorderedList>
 
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed varius quam ipsum, ac sagittis ligula ornare sed.
-            Ut tristique pretium velit, ut ultricies elit placerat condimentum.
-            Nunc laoreet ipsum et nisi gravida volutpat.
-          </Paragraph>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed varius quam ipsum, ac sagittis ligula ornare sed.
-            Ut tristique pretium velit, ut ultricies elit placerat condimentum.
-            Nunc laoreet ipsum et nisi gravida volutpat.
-          </Paragraph>
-          <H3>
-            Why am I like this
-          </H3>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed varius quam ipsum, ac sagittis ligula ornare sed.
-            Ut tristique pretium velit, ut ultricies elit placerat condimentum.
-            Nunc laoreet ipsum et nisi gravida volutpat.
-          </Paragraph>
-        </div>
+        <br />
+
+        <HeaderTwo>
+          Soft Skills
+        </HeaderTwo>
+        <Paragraph>
+          Being apart of a team is a great way to create impactful applications, but you also need the ability to work on your own.
+          Balancing the two can often be a complex task, that's why you need well developed soft skills.
+          Having that in mind what are my soft skills?
+        </Paragraph>
+        <UnorderedList>
+          <ListItem>
+            Industiousness    
+          </ListItem>
+          <ListItem>
+            Disciplined   
+          </ListItem>
+          <ListItem>
+            Articulated
+          </ListItem>
+          <ListItem>
+            Team player    
+          </ListItem>
+          <ListItem>
+            Friendly
+          </ListItem>
+        </UnorderedList>
+
+        <br />
+
+        <HeaderOne>
+          What do I do in my free time?
+        </HeaderOne>
+        <Paragraph>
+          There are 3 things I enjoy to the core; learning, tinkering, and skateboarding.
+          When I’m not busy learning something new, you’ll find me tinkering away on something.
+          And when things get too much, you might end up finding me at the local skatepark.
+          In each case, there’ll be music playing in the background.
+        </Paragraph>
       </div>      
     </Section>
   )

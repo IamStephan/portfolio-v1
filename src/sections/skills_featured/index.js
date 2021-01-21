@@ -61,7 +61,7 @@ const SkillSet = () => {
           gutterBottom
           className={styles['context']}
         >
-          Able to to go from start to productions using articulated architecture and renowned tools, with the ability to create new tools on the fly. 
+          Able to to go from start to production using articulated architecture and renowned tools, with the ability to create new libraries on the fly. 
         </Typography>
 
         <div

@@ -4,6 +4,7 @@ import React from 'react'
 import Page from '@organisms/page'
 
 // Sections
+import AboutShowcase from '@sections/about_showcase'
 import AboutSection from '@sections/about'
 import CTA from '@sections/cta'
 
@@ -21,6 +22,7 @@ const About = () => {
       title='About Me'
       description='I am a software developer focused on creating impactful software.'
     >
+      <AboutShowcase />
       <AboutSection />
       <CTA />
     </Page>
