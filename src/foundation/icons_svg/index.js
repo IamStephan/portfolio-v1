@@ -26,6 +26,14 @@ import { ReactComponent as MailSendFill } from '@svg/icons/business/mail-send-fi
 import { ReactComponent as MailSendLine } from '@svg/icons/business/mail-send-line.svg'
 
 /**
+ * =================
+ *     Buildings
+ * =================
+ */
+import { ReactComponent as HomeSmileTwoFill } from '@svg/icons/buildings/home-smile-2-fill.svg'
+import { ReactComponent as HomeSmileTwoLine } from '@svg/icons/buildings/home-smile-2-line.svg'
+
+/**
  * =============
  *     System
  * =============
@@ -125,6 +133,12 @@ const icons = {
 
   'mail-send-fill': MailSendFill,
   'mail-send-line': MailSendLine,
+
+  /**
+   * Buildings
+   */
+  'home-smile-two-fill': HomeSmileTwoFill,
+  'home-smile-two-line': HomeSmileTwoLine,
   
   /**
    * System
