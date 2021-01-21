@@ -1,0 +1,73 @@
+@import '../../foundation/spacing/spacing';
+@import '../../foundation/typography/typography';
+
+// Utils
+@import '../../utils/mixins';
+
+// Organisms
+@import '../../organisms/page_section/styles.module';
+
+.notFoundSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  .notFoundContainer {
+    max-width: #{$clamp-md}px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-rows: 450px $title-size-10 auto;
+    grid-template-columns: 1fr 1fr;
+
+    .bgContainer {
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
+      z-index: -1;
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .bg {
+        opacity: 0.15;
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .showcaseContainer {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+
+      .showcase {
+        height: 100%;
+        width: auto;
+      }
+    }
+
+    .headerContainer {
+      grid-column: 1 / span 2;
+      grid-row: 2 / span 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .header {
+        text-align: center;
+      }
+
+      .subheader {
+        text-align: center;
+        @include useBodyFont;
+        max-width: #{$clamp-xs}px;
+      }
+
+      .actionContainer {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
