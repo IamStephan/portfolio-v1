@@ -65,7 +65,11 @@ const Article = (props) => {
   console.log(pageContext)
 
   return (
-    <Page>
+    <Page
+      title={`${frontmatter.title} | Article`}
+      description={frontmatter.overview}
+      article
+    >
       <MDXProvider
         components={components}
       >

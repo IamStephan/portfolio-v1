@@ -28,7 +28,7 @@ const query = graphql`
  * @param {{
  *    title: string,
  *    description: string,
- *    article: string
+ *    article: boolean
  * }} props 
  */
 const SEO = ({ title, description, article }) => {

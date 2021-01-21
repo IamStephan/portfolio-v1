@@ -9,7 +9,10 @@ import ContactInfo from '@sections/contact_info'
 
 const Contact = () => {
   return (
-    <Page>
+    <Page
+      title='Contact Me'
+      description={`Give me a shout, and let's work on something great together`}
+    >
       <ContactForm />
       <ContactInfo />
     </Page>

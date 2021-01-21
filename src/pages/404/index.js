@@ -5,7 +5,10 @@ import Page from '@organisms/page'
 
 const NotFound = () => {
   return (
-    <Page>
+    <Page
+      title='Page not found'
+      description='Looks like we cannot find the page you are looking for.'
+    >
       asd
     </Page>
   )

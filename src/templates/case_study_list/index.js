@@ -21,7 +21,10 @@ const StudyList = (props) => {
   const pageCount = pageContext.numPages
 
   return (
-    <Page>
+    <Page
+      title='Case Studies'
+      description={`Most of my work I've done professionally.`}
+    >
       <Content
         studies={studies}
         currentPage={currentPage}

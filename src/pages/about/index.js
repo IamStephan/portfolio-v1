@@ -17,7 +17,10 @@ import CTA from '@sections/cta'
  */
 const About = () => {
   return (
-    <Page>
+    <Page
+      title='About Me'
+      description='I am a software developer focused on creating impactful software.'
+    >
       <AboutSection />
       <CTA />
     </Page>

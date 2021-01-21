@@ -21,7 +21,10 @@ const ArticleList = (props) => {
   const pageCount = pageContext.numPages
 
   return (
-    <Page>
+    <Page
+      title='Articles'
+      description={`Have a look at some topics I write about.`}
+    >
       <Content
         articles={articles}
         currentPage={currentPage}

@@ -16,7 +16,10 @@ const index = () => {
 
 const App = () => {
   return (
-    <Page>
+    <Page
+      title='I am Stephan'
+      description='I am a software developer that creates impactful software solutions that propel businesses to success.'
+    >
       <Hero />
       <SkillFeatured />
       <CaseStudyFeatured />

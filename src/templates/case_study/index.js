@@ -21,7 +21,11 @@ const CaseStudyTemplate = (props) => {
   const results = data.studies
 
   return (
-    <Page>
+    <Page
+      title={`${results.title} | Case Study`}
+      description={results.overview}
+      article
+    >
       <Overview
         title={results.title}
         tags={results.tags}
