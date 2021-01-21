@@ -40,10 +40,12 @@
       position: relative;
       display: flex;
       justify-content: flex-end;
+      margin-bottom: 20px;
 
       .showcase {
         height: 100%;
         width: auto;
+        animation: hoverMotion 3s ease-in-out infinite;
       }
     }
 
@@ -69,5 +71,19 @@
         justify-content: center;
       }
     }
+  }
+}
+
+@keyframes hoverMotion {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
