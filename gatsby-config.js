@@ -113,7 +113,8 @@ module.exports = {
           '@sections': 'src/sections',
           '@templates': 'src/templates',
           '@svg': 'src/assets/svg',
-          '@utils': 'src/utils'
+          '@utils': 'src/utils',
+          '@hooks': 'src/hooks',
         }
       }
     },
