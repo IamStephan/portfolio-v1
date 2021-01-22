@@ -6,7 +6,6 @@
 
 $showcase-size: 150;
 $vs-container-size: 70;
-$action-container-clamp: 450;
 
 $breakpoint-one: 875;
 
@@ -54,7 +53,7 @@ $breakpoint-one: 875;
   }
 
   .actionContainer {
-    max-width: #{$action-container-clamp}px;
+    max-width: #{$clamp-xxs}px;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -104,7 +103,7 @@ $breakpoint-one: 875;
         top: 50%;
         height: auto;
         width: 100%;
-        max-width: #{$action-container-clamp - $spacing-90}px;
+        max-width: #{$clamp-xxs - $spacing-90}px;
         transform: translate(-50%, -50%);
       }
     }
