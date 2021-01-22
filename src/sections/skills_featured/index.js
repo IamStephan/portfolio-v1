@@ -23,7 +23,7 @@ const Domains = [
   },
   {
     domain: 'Back-End',
-    content: 'From having to build a custom solution or just using serverless to drive applications',
+    content: 'From having to build a custom solution or just using serverless to drive applications.',
     avatar: Computer
   },
   {
