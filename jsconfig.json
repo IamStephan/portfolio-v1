@@ -10,6 +10,7 @@
       "@templates/*": ["src/templates/*"],
       "@svg/*": ["src/assets/svg/*"],
       "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
     }
   },
   "include": ["src/**/*"]
