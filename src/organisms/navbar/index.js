@@ -3,9 +3,6 @@ import React, { useState } from 'react'
 // Gatsby
 import { Link } from 'gatsby'
 
-// Framer Motion
-import { AnimatePresence } from 'framer-motion'
-
 // Foundation
 import Icon from '@foundation/icons_svg'
 
@@ -142,10 +139,6 @@ const Navbar = props => {
           </IconButton>
         </div>
       </nav>
-
-      <AnimatePresence>
-        { isMobileNavOpen && <MobileNav closeMobileNav={_closeMobileNav} /> }
-      </AnimatePresence>
     </>
   )
 }

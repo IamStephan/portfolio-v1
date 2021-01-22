@@ -1,8 +1,5 @@
 import React from 'react'
 
-// Framer Motion
-import { motion } from 'framer-motion'
-
 // Material
 import { IconButton } from '@material-ui/core'
 
@@ -21,7 +18,7 @@ const MobileNav = (props) => {
     <nav
       className={styles['mobileNav']}
     >
-      <motion.div
+      <div
         className={styles['topContainer']}
         initial={{ y: '-100%' }}
         animate={{ y: 0 }}
@@ -40,9 +37,9 @@ const MobileNav = (props) => {
             name='close-circle-line'
           />
         </IconButton>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         className={styles['overlay']}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
