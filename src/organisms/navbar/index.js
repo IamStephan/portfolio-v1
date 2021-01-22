@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 // Gatsby
 import { Link } from 'gatsby'
@@ -32,6 +32,12 @@ const Navbar = props => {
 
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 
+  const path = location.pathname
+
+  useEffect(() => {
+    setIsMobileNavOpen(false)
+  }, [path])
+
   function _isLinkActive(linksToCheck) {
     /**
      * Only Check for first level paths
@@ -39,7 +45,10 @@ const Navbar = props => {
     const checkPath = location.pathname.split('/')[1]
 
     // Home page is active
-    if(!checkPath) return false
+    if(!checkPath) {
+      if(typeof linksToCheck === 'string' && linksToCheck === '__home__') return true
+      return false
+    }
 
     if(typeof linksToCheck === 'string') {
       return checkPath === linksToCheck
@@ -139,6 +148,12 @@ const Navbar = props => {
           </IconButton>
         </div>
       </nav>
+
+      <MobileNav
+        isOpen={isMobileNavOpen}
+        closeMobileNav={_closeMobileNav}
+        isLinkActive={_isLinkActive}
+      />
     </>
   )
 }

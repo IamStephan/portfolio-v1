@@ -1,0 +1,34 @@
+@import '../../../../foundation/spacing/spacing';
+@import '../../../../foundation/colors/colors';
+@import '../../../../foundation/borders/borders';
+
+// Shared Vars
+@import '../../../shared_vars';
+
+.mobileNavLink {
+  background-color: $complement-300;
+  padding: #{$spacing-30}px;
+  padding-left: #{$spacing-30 * 1.5}px;
+  margin-bottom: #{$spacing-60}px;
+  border-radius: #{$border-radius-pill}px 0px 0px #{$border-radius-pill}px;
+  transition: background-color 250ms ease-in-out;
+
+  &.active {
+    background-color: $primary-200;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    color: $grey-scale-light-100;
+
+    .icon {
+      font-size: 1.25rem;
+      margin-right: #{$spacing-30}px;
+    }
+  }
+
+  &::before {
+    content: none;
+  }
+}
