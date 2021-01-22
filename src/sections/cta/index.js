@@ -48,7 +48,7 @@ const CTA = () => {
           variant='h6'
           gutterBottom
         >
-          I am currently available for hire, either freelancing or full-time.
+          Have a look at my resume and lets see if we're going to be a good fit for each other.
         </Typography>
 
         <Button
@@ -106,7 +106,7 @@ const CTA = () => {
           variant='h6'
           gutterBottom
         >
-          Do you have an exciting new idea, or have a problem with your current software solutions.
+          I enjoy hearing from people so let's get talking and start something new.
         </Typography>
 
         <Button
