@@ -2,12 +2,10 @@ Todo:
   General: @critical
     ☐ Make sure the titles are in semantic order
     ☐ Check for grammar and spelling errors
-    ☐ Make appropriate changes to the tone and voice of the site
     ☐ 3 Case studies for launch
     ☐ 5 Artilces for launch
     ☐ Create a resume pdf and add it to the page
-
-
+    ☐ Alt tags on generated images
 
   Case Studies:
     ☐ Gerimed Mobility
@@ -17,21 +15,13 @@ Todo:
     ☐ Portfolio
     ☐ Nooti
     ☐ The Boardroom
-    ☐ Gerimed
-    ☐ Docoo
     ☐ Workshop Records
 
   Articles:
-    ☐ Code Design Patterns: Behavioural
-    ☐ Responsive Design Patterns: Layout
-    ☐ Accessibility
-    ☐ Data Structures (Some One)
-    ☐ Algorithm (Some One)
-    ☐ React and the MVC model
-    ☐ State Machines
-    ☐ Web Security: Frontend
+    ☐ Responsive Design Patterns
     
 Archive:
+  ✔ Make appropriate changes to the tone and voice of the site @done(21-01-24 18:20) @project(Todo.General)
   ✔ Add SEO data to all pages @done(21-01-21 17:41) @project(Todo.General)
   ✔ Add links where appropriate @done(21-01-21 17:41) @project(Todo.General)
   ✔ Use Semantic HTML tags @done(21-01-21 17:41) @project(Todo.General)
