@@ -1,0 +1,52 @@
+@import '../../../../foundation/spacing/spacing';
+
+$itemSize: 175;
+$showcaseSize: 75;
+
+.stackSection {
+  .stackContainer {
+    max-width: #{$clamp-md}px;
+    margin: auto;
+
+    .header {
+      text-align: center;
+      margin-bottom: #{$spacing-80}px;
+    }
+
+    .stackList {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      // Negate item margin in the last row
+      margin-bottom: -#{$spacing-60 * 2}px;
+
+      .item {
+        width: #{$itemSize}px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: #{$spacing-60}px;
+        margin-right: #{$spacing-60}px;
+        margin-bottom: #{$spacing-60 * 2}px;
+
+        .showcaseContainer {
+          height: #{$showcaseSize}px;
+          width: #{$showcaseSize}px;
+          margin-bottom: #{$spacing-30}px;
+          position: relative;
+
+          .showcase {
+            height: 100%;
+            width: 100%;
+          }
+
+        }
+        
+        .title {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
