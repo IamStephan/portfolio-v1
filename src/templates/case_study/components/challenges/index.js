@@ -73,11 +73,16 @@ const Chanllenges = (props) => {
                   {item.title}
                 </Typography>
 
-                <Typography
-                  className={styles['content']}
-                >
-                  {item.content}
-                </Typography>
+                {
+                  item.content?.map((paragraph, i) => (
+                    <Typography
+                      className={styles['content']}
+                      paragraph
+                    >
+                      {paragraph}
+                    </Typography>
+                  ))
+                }
               </div>
             </div>
           ))
