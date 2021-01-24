@@ -7,11 +7,11 @@ import { graphql } from 'gatsby'
 import Page from '@organisms/page'
 
 // Components
-import {
-  Overview,
-  Outline,
-  Challenges
-} from './components'
+import Overview from './components/overview'
+import Outline from './components/outline'
+import Challenges from './components/challenges'
+import Stack from './components/stack'
+import Conclusion from './components/conclusion'
 
 const CaseStudyTemplate = (props) => {
   const {
@@ -45,6 +45,23 @@ const CaseStudyTemplate = (props) => {
       <Challenges
         challenges={results.challenges}
       />
+
+      {
+        results.stack && (
+          <Stack
+            items={results.stack}
+          />
+        )
+      }
+      
+      {
+        results.conclusion && (
+          <Conclusion
+            content={results.conclusion}
+          />
+        )
+      }
+      
     </Page>
   )
 }
@@ -66,6 +83,10 @@ export const query = graphql`
       previewLink
       repositoryLink
 
+      fields {
+        slug
+      }
+
       showcase {
         childImageSharp {
           fluid {
@@ -73,9 +94,11 @@ export const query = graphql`
           }
         }
       }
-      
-      fields {
-        slug
+
+      outline {
+        goal
+        industry
+        scope
       }
 
       challenges {
@@ -90,11 +113,18 @@ export const query = graphql`
         }
       }
 
-      outline {
-        goal
-        industry
-        scope
+      stack {
+        title
+        showcase {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
+
+      conclusion
     }
   }
 `
