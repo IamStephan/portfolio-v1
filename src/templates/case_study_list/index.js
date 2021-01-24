@@ -43,7 +43,11 @@ export const qeury = graphql`
   ){
     allStudies(
       limit: $limit,
-      skip: $skip
+      skip: $skip,
+      sort: {
+        order: ASC,
+        fields: sortIndex
+      }
     ) {
       nodes {
         title

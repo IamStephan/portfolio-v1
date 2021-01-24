@@ -30,7 +30,7 @@ const query = graphql`
 
       sort: {
         order: ASC,
-        fields: featuredIndex
+        fields: sortIndex
       }
 
       limit: 3,
