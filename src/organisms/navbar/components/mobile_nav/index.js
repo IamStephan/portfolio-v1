@@ -1,16 +1,7 @@
 import React from 'react'
 
-// Gatsby
-import { Link } from 'gatsby'
-
 // SVGs
 import { ReactComponent as MenuText } from '@svg/text/menu.svg'
-
-// Material
-import { Typography } from '@material-ui/core'
-
-// Foundation
-import Icon from '@foundation/icons_svg'
 
 // Components
 import MobileNavLink from '../mobile_nav_link'
