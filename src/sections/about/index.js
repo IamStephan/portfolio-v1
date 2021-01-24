@@ -1,8 +1,5 @@
 import React from 'react'
 
-// Material
-import { Typography } from '@material-ui/core'
-
 // Organisms
 import Section from '@organisms/page_section'
 
@@ -17,7 +14,6 @@ import { ListItem, UnorderedList } from '@elements/list'
 
 const HeaderOne = HeaderConst('h3')
 const HeaderTwo = HeaderConst('h4')
-const HeaderThree = HeaderConst('h5')
 
 const AboutSection = () => {
   return (
