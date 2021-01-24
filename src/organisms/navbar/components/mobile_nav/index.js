@@ -77,7 +77,7 @@ const MobileNav = (props) => {
           to='/contact'
           title='Contact Me'
           icon='door-open-line'
-          active={isLinkActive('contact')}
+          active={isLinkActive(['contact', 'success', 'failed'])}
         />
       </ul>
 

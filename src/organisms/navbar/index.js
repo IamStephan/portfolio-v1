@@ -115,7 +115,7 @@ const Navbar = props => {
             title='Contact'
             icon='door-open-line'
             to='/contact'
-            active={_isLinkActive('contact')}
+            active={_isLinkActive(['contact', 'success', 'failed'])}
 
           />
         </section>
