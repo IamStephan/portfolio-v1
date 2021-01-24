@@ -7,5 +7,9 @@ export const useMergeState = (initialState) => {
     set((prev) => Object.assign({}, prev, typeof path === 'function' ? patch(prev) : patch))
   }, [set])
 
-  return [state, setMergeState]
+  const resetState = useCallback(() => {
+    set(initialState)
+  }, [set])
+
+  return [state, setMergeState, resetState]
 }
