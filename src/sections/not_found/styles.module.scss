@@ -64,6 +64,7 @@
         text-align: center;
         @include useBodyFont;
         max-width: #{$clamp-xs}px;
+        margin-bottom: #{$spacing-60}px;
       }
 
       .actionContainer {
