@@ -1,5 +1,8 @@
 import React, { useRef, useState } from 'react'
 
+// Gatsby
+import { navigate } from 'gatsby'
+
 // Utils
 import { encode } from '@utils/encodeFormData'
 
@@ -55,10 +58,9 @@ const ContactForm = () => {
       })
     }).then(() => {
       resetForm()
+      navigate('/success')
     }).catch(() => {
-
-    }).finally(() => {
-      setIsLoading(false)
+      navigate('/failed')
     })
   }
 
@@ -179,8 +181,6 @@ const ContactForm = () => {
               Submit
             </Button>
           </form>
-
-          
         </div>
 
         <div
@@ -222,6 +222,8 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
+
+
     </Section>
   )
 }
