@@ -109,6 +109,7 @@ module.exports = {
         alias: {
           '@foundation': 'src/foundation',
           '@elements': 'src/elements',
+          '@modules': 'src/modules',
           '@organisms': 'src/organisms',
           '@sections': 'src/sections',
           '@templates': 'src/templates',
