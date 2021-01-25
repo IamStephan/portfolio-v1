@@ -89,7 +89,7 @@ export const query = graphql`
 
       showcase {
         childImageSharp {
-          fluid {
+          fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -106,7 +106,7 @@ export const query = graphql`
         content
         showcase {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
