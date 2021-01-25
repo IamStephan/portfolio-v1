@@ -71,8 +71,8 @@ $breakpoint-two: 350;
     .overviewContainer {
       grid-template-columns: 1fr;
   
-      .showcaseContainer {
-        grid-row: 1;
+      .contentContainer {
+        grid-row: 2;
       }
     } 
   }
