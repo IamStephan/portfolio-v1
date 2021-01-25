@@ -2,15 +2,68 @@
   "featured": true,
   "sortIndex": 2,
   "title": "Mobility Crunch",
-  "overview": "Gerimed Mobility, Your one-stop medical supply shop. Having been in in operation for a few years it was time for them to go live. Needing both an extensive product catalog and design matching their branding efforts.",
-  "showcase": "./showcase.png",
+  "overview": "Originating as an idea that could potentially help boost efficiency inside Gerimed Mobility during their order mayhem. Turned into a daily driver for managing requests from customers and keeping a small inventory in your pocket.",
+  "showcase": "./assets/showcase.png",
   "tags": ["Mobile App", "Enterprise"],
   "previewLink": "",
   "repositoryLink": "",
 
   "outline": {
-    "goal": "To provide their customers the ability to view their products and place orders online with ease.",
-    "scope": "An admin panel for managing products and orders and an store-front for customers to place orders.",
-    "industry": "Gerimed Mobility supplies its local area with all their medical needs. From hospital-beds to personal hygiene."
-  }
+    "goal": "The goal was to increase the handling of customer requests concerning transactional documents.",
+    "scope": "The app needed a way to generate and send PDF documents to clients while keeping records of all related information.",
+    "industry": "Mobility Crunch operates in the medical industry but helps with transactional documents."
+  },
+
+  "challenges": [
+    {
+      "title": "PDF generation and sending",
+      "showcase": "./assets/challenge_one.png",
+      "content": [
+        "Mobility Crunch can generate four types of PDF documents that the user can view from within the device. When the documents are ready, Mobility Crunch can then send it to the user's provided email address."
+      ]
+    },
+    {
+      "title": "Inventory and order history",
+      "showcase": "./assets/challenge_two.png",
+      "content": [
+        "One of the app's functionalities is that it can store information about the products the client uses. This speeds up the process of creating transactional documents and removes human-made errors.",
+        "Mobility Crunch also keeps track of the order history and allows the client to expand on the order instead of creating a new one."
+      ]
+    },
+    {
+      "title": "Syncing and offline capabilities",
+      "showcase": "./assets/challenge_three.png",
+      "content": [
+        "Since the app is mobile-driven, it needed offline capabilities. I used firebase as the source of truth, and once connectivity was established, the app starts to sync with all the other devices."
+      ]
+    }
+  ],
+
+  "stack": [
+    {
+      "showcase": "./stack/javascript.png",
+      "title": "Javascript"
+    },
+    {
+      "showcase": "./stack/rct.png",
+      "title": "React Native"
+    },
+    {
+      "showcase": "./stack/expo.png",
+      "title": "Expo"
+    },
+    {
+      "showcase": "./stack/firebase.png",
+      "title": "Firebase"
+    },
+    {
+      "showcase": "./stack/figma.png",
+      "title": "Figma"
+    }
+  ],
+
+  "conclusion": [
+    "One of the app's significant drawbacks was that I needed an Apple device to publish it to the App Store. To overcome this, I converted the app to an Expo project and let the client use it through that.",
+    "The app has been so successful with the client that a desktop version has been requested. This would allow me to expand on its current functionality and provide it for use to other businesses."
+  ]
 }
