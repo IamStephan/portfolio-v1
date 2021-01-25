@@ -55,6 +55,7 @@ const Stack = (props) => {
                 >
                   <Img
                     fluid={item.showcase.childImageSharp.fluid}
+                    objectFit='contain'
                     alt={item.title}
                     className={styles['showcase']}
                   />
