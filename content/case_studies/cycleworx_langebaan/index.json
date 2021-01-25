@@ -9,9 +9,9 @@
   "repositoryLink": "",
 
   "outline": {
-    "goal": "Having a small online footprint, I was taksed to increase online awareness that reflects the business' true value.",
-    "scope": "The business needed a landing page customers can find and locate, putting a big emphasis on SEO metrics.",
-    "industry": "The bicycle industry, fast growing and full of potential. An industry I've worked in myself."
+    "goal": "Having a small online footprint, I was tasked to increase online awareness that reflects its true value.",
+    "scope": "The business needed a landing page customers can find and locate, emphasising on SEO metrics.",
+    "industry": "The bicycle industry, fast-growing and full of potential. An industry I've worked in myself."
   },
 
   "challenges": [
@@ -19,14 +19,14 @@
       "title": "Clear Intent",
       "showcase": "./assets/challenge-one.png",
       "content": [
-        "The users visiting the website needed a clear understanding of what the website represents and what services are offred. Explaining most of what is offered by the shop and giving them a clear indication of what the business does."
+        "The website users needed a clear understanding of what the website represents and what services are offered. Explaining most of what is offered by the shop and giving them a clear indication of what the business does."
       ]
     },
     {
       "title": "Telling a Story",
       "showcase": "./assets/challenge-two.png",
       "content": [
-        "One of the strong suites of the business is the story it has to tell. I gave the website a more personal feel by including the journey of the website and the faces that represent it."
+        "One of the strong suits of the business is the story it has to tell. I gave the website a more personal feel by including the website's journey and the faces that represent it."
       ]
     }
   ],
@@ -47,7 +47,7 @@
   ],
 
   "conclusion": [
-    "By converting the website from a website builder to a custom Gatsby landing page we were able to boost SEO resluts witin a week. Searching for a bicycle shop yielded the website on the first page of the search results.",
-    "The business is still gaining traction in the digital space and has great reviews on Google. I had an absolute blast grating the website and increasing its online presence."
+    "By converting the website from a website builder to a custom Gatsby landing page, we were able to boost SEO results within a week. Searching for a bicycle shop yielded the website on the first page of the search results.",
+    "The business is still gaining traction in the digital space and has great reviews on Google. I had an absolute blast creating the website and increasing its online presence."
   ]
 }
