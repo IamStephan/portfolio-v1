@@ -41,18 +41,18 @@ const MobileNav = (props) => {
 
         <MobileNavLink
           className={styles['slide']}
-          to='/articles'
-          title='Articles'
-          icon='article-line'
-          active={isLinkActive(['articles', 'article'])}
-        />
-
-        <MobileNavLink
-          className={styles['slide']}
           to='/studies'
           title='Case Studies'
           icon='projector-2-line'
           active={isLinkActive(['studies', 'study'])}
+        />
+
+        <MobileNavLink
+          className={styles['slide']}
+          to='/articles'
+          title='Articles'
+          icon='article-line'
+          active={isLinkActive(['articles', 'article'])}
         />
 
         <MobileNavLink

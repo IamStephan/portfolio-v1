@@ -90,17 +90,17 @@ const Navbar = props => {
           className={styles['linksSection']}
         >
           <NavLink
-            title='Articles'
-            icon='article-line'
-            to='/articles'
-            active={_isLinkActive(['articles', 'article'])}
-          />
-
-          <NavLink
             title='Case Studies'
             icon='projector-2-line'
             to='/studies'
             active={_isLinkActive(['studies', 'study'])}
+          />
+
+          <NavLink
+            title='Articles'
+            icon='article-line'
+            to='/articles'
+            active={_isLinkActive(['articles', 'article'])}
           />
 
           <NavLink
@@ -116,7 +116,6 @@ const Navbar = props => {
             icon='door-open-line'
             to='/contact'
             active={_isLinkActive(['contact', 'success', 'failed'])}
-
           />
         </section>
       </nav>
