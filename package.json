@@ -37,6 +37,7 @@
     "gatsby-plugin-sharp": "^2.6.37",
     "gatsby-plugin-svgr": "^2.1.0",
     "gatsby-remark-images": "^3.9.0",
+    "gatsby-remark-images-zoom": "^1.1.0",
     "gatsby-remark-prismjs": "^3.11.0",
     "gatsby-source-filesystem": "^2.3.31",
     "gatsby-transformer-json": "^2.9.0",

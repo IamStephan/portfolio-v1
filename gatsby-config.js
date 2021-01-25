@@ -46,6 +46,15 @@ module.exports = {
         disableBgImageOnAlpha: true
       },
     },
+    {
+      resolve: `gatsby-remark-images-zoom`,
+      options: {
+        margin: 60,
+        background: 'rgba(236, 236, 236, 0.85)',
+        scrollOffset: 0,
+        zIndex: 2147483647
+      },
+    },
     `gatsby-remark-prismjs`,
     {
       resolve: `gatsby-plugin-mdx`,
@@ -59,6 +68,15 @@ module.exports = {
               linkImagesToOriginal: false,
               backgroundColor: `none`,
               disableBgImageOnAlpha: true
+            },
+          },
+          {
+            resolve: `gatsby-remark-images-zoom`,
+            options: {
+              margin: 60,
+              background: 'rgba(236, 236, 236, 0.85)',
+              scrollOffset: 0,
+              zIndex: 2147483647
             },
           },
           `gatsby-remark-prismjs`
