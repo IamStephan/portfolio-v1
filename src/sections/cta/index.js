@@ -48,7 +48,7 @@ const CTA = () => {
           variant='h6'
           gutterBottom
         >
-          Have a look at my resume and lets see if we're going to be a good fit for each other.
+          Have a look at my resume and let's see if we're going to be a good fit for each other.
         </Typography>
 
         <Button

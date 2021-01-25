@@ -27,11 +27,10 @@ const AboutSection = () => {
           Who am I and what do I do?
         </HeaderOne>
         <Paragraph>
-          My name is Stephan Burger, a software developer with 4 years’ experience.
-          I plan, design, code, deploy and maintain software solutions that businesses use to either boost their online presence or to promote productivity and efficiency.
-          It can be as simple as a landing page or a cross-platform application that requires cross-device syncing and authentication.
-          I enjoy starting from the ground up while not reinventing the wheel but
-          sometimes curiosity gets the best of me and I just start reinventing.
+        My name is Stephan Burger, a software developer with 4 years’ experience.
+        I plan, design, code, deploy and maintain software solutions that businesses use to boost their online presence or promote productivity and efficiency.
+        It can be as simple as a landing page or a cross-platform application that requires cross-device syncing and authentication.
+        I enjoy starting from the ground up while not reinventing the wheel, but sometimes curiosity gets the best of me, and I just begin reinventing.
         </Paragraph>
 
         <br/>
@@ -41,10 +40,9 @@ const AboutSection = () => {
         </HeaderOne>
         <Paragraph>
           Every project has its own set of problems and requirements.
-          Besides having a strong plan, one needs to be able to choose the right stack for the job.
+          Besides having a sound plan, one needs to choose the right stack for the job.
           Combined with having a strong foundation, no project is unconquerable.
-          That's why I've been pushing myself to keep on learning, making way for the stack I've come to love
-          and enjoy:
+          That's why I've been pushing myself to keep on learning, making way for the stack I've come to love and enjoy:
         </Paragraph>
 
         <HeaderTwo>

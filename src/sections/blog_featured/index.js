@@ -64,7 +64,7 @@ const BlogPreview = () => {
           gutterBottom
           className={styles['subheader']}
         >
-          Exploring uncontroversial topics to more guide-like article. See what catches your eye, maybe we can talk about it...
+          Exploring exciting topics ranging from the latest trends to in-depth discussions over projects and ideas...
         </Typography>
 
         <Button

@@ -18,22 +18,22 @@ import styles from './styles.module.scss'
 const Domains = [
   {
     domain: 'Front-End',
-    content: 'Building performant and relaible applications that businesses can rely on.',
+    content: 'Building performant and reliable applications that businesses can rely on.',
     avatar: Screen
   },
   {
     domain: 'Back-End',
-    content: 'From having to build a custom solution or just using serverless to drive applications.',
+    content: 'Able to build custom servers, to utilizing modern-day serverless technologies.',
     avatar: Computer
   },
   {
     domain: 'Databases',
-    content: 'Choosing the right database for your application is vital for longivity.',
+    content: 'Choosing the right database for your application is vital for longevity.',
     avatar: Vault
   },
   {
     domain: 'Dev-Ops',
-    content: 'Deploy production ready applications that real-world businesses can use.',
+    content: 'Deploy production-ready applications that real-world businesses can use.',
     avatar: Launch
   },
 ]
@@ -61,7 +61,7 @@ const SkillSet = () => {
           gutterBottom
           className={styles['context']}
         >
-          Able to to go from start to production using articulated architecture and renowned tools, with the ability to create new libraries on the fly. 
+          Able to go from start to production using articulated architecture and renowned tools, with the ability to create new libraries on the fly. 
         </Typography>
 
         <div
