@@ -64,6 +64,9 @@ const AboutSection = () => {
           <ListItem>
             HTML and CSS
           </ListItem>
+          <ListItem>
+            CSS preprocessors (Sass and Less)
+          </ListItem>
         </UnorderedList>
 
         <HeaderTwo>
@@ -113,7 +116,10 @@ const AboutSection = () => {
             Digital Ocean
           </ListItem>
           <ListItem>
-            AWS
+            Netlify
+          </ListItem>
+          <ListItem>
+            Figma
           </ListItem>
         </UnorderedList>
 
