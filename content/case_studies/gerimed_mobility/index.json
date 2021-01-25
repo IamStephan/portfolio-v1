@@ -2,8 +2,8 @@
   "featured": true,
   "sortIndex": 1,
   "title": "Gerimed Mobility",
-  "overview": "Gerimed Mobility, Your one-stop medical supply shop. Having been in in operation for a few years it was time for them to go live. Needing both an extensive product catalog and design matching their branding efforts.",
-  "showcase": "./showcase.png",
+  "overview": "Gerimed Mobility, your one-stop medical supply shop. Having been in in operation for a few years it was time for them to go live. Needing both an online shop and a design matching their branding efforts.",
+  "showcase": "./assets/showcase.png",
   "tags": ["E-commerce", "Landing Page"],
   "previewLink": "https://gerimedmobility.co.za",
   "repositoryLink": "",
@@ -17,18 +17,61 @@
   "challenges": [
     {
       "title": "Branding efforts",
-      "content": "sadasdad",
-      "showcase": "./challenge-one.png"
+      "content": [
+        "Gerimed Mobility has their own third-party designer. I had to make sure the design matched their branding efforts while still keeping it UX/UI friendly",
+        "I had some liberty in design choices but kept them to minimal while focusing on the functionality of the online shop."
+      ],
+      "showcase": "./assets/challenge-one.png"
     },
     {
       "title": "Online Shopping",
-      "content": "sadasdad",
-      "showcase": "./showcase.png"
+      "content": [
+        "Since the entire website was custom and the back-end semi-custom I opted for a custom shopping cart and implemented the order managment from the ground up.",
+        "Users can register and login to their accounts to view all their past orders, or simply track their order if they have the reference."
+      ],
+      "showcase": "./assets/challenge-two.png"
     },
     {
       "title": "Admin Managment",
-      "content": "sadasdad",
-      "showcase": "./showcase.png"
+      "content": [
+        "Having an extensive product catalog, it was mandatory that the staff be able to manage the products and content of the online shop.",
+        "I used strapi with a few custom plugins to allow staff to manage their customers orders, inventory, and promotion offered."
+      ],
+      "showcase": "./assets/challenge-three.png"
     }
+  ],
+
+  "stack": [
+    {
+      "showcase": "./stack/javascript.png",
+      "title": "Javascript"
+    },
+    {
+      "showcase": "./stack/rct.png",
+      "title": "React"
+    },
+    {
+      "showcase": "./stack/gatsby.png",
+      "title": "Gatsby"
+    },
+    {
+      "showcase": "./stack/strapi.png",
+      "title": "Strapi"
+    },
+    {
+      "showcase": "./stack/nginx.png",
+      "title": "Nginx"
+    },
+    {
+      "showcase": "./stack/digitalocean.png",
+      "title": "Digital Ocean"
+    }
+  ],
+
+  "conclusion": [
+    "When starting with this project, I decided to build most of the platform from the ground-up, but due to time constraint I ended up using Strapi for the back-end with a few custom plugins. There where, however, a few other constraints I had to keep in mind but the project proved itself to be quite managable.",
+    "Since most of the back-end was complete, I mostly had to focus on architecting the front-end. I ended up trying to use the MVC architecture for the frontend; with react being the View, Strapi the Model and state machinces for the Controller. This allowed me to scale the platoform, while keeping a sound mind of where everything was and how it worked.",
+    "SEO, performance and accessibly were aided by the use of Gatsby, allowing me to focus on more thought provoking tasks like the cart functionality and order managment.",
+    "All-in-all the project broadened my knowledge on numerous aspects of such a large scale project and it certainly expanded my ability to work on large scale projects."
   ]
 }

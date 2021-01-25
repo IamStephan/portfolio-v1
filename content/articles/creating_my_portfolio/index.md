@@ -6,5 +6,9 @@
   tags:
     - Discussion
   featured: true
+  showcase: "./hello.png"
 ---
 
+# asdasd
+
+![alt](./hello.png)
