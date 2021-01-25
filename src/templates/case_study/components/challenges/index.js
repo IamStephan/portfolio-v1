@@ -6,6 +6,9 @@ import Img from 'gatsby-image/withIEPolyfill'
 // Material
 import { Typography } from '@material-ui/core'
 
+// Modules
+import Zoom from '@modules/image_zoom'
+
 // Organisms
 import Section from '@organisms/page_section'
 
@@ -51,15 +54,18 @@ const Chanllenges = (props) => {
               key={item.title}
               className={styles['challenge']}
             >
-              <div
-                className={styles['showcaseContainer']}
-              >
-                <Img
-                  className={styles['showcase']}
-                  objectFit='contain'
-                  fluid={item.showcase.childImageSharp.fluid}
-                />
-              </div>
+              <Zoom>
+                <div
+                  className={styles['showcaseContainer']}
+                >
+                  <Img
+                    className={styles['showcase']}
+                    objectFit='contain'
+                    fluid={item.showcase.childImageSharp.fluid}
+                  />
+                </div>
+              </Zoom>
+              
 
               <div
                 className={styles['contentContainer']}

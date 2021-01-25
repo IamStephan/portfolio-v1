@@ -15,6 +15,7 @@ $breakpoint-two: 350;
     .showcaseContainer {
       position: relative;
       padding: #{$spacing-30}px;
+      width: 100%;
 
       .showcase {
         width: 100%;

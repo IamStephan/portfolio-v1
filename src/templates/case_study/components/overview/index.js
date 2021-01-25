@@ -9,6 +9,9 @@ import Icon from '@foundation/icons_svg'
 // Material
 import { Typography, Chip, Button } from '@material-ui/core'
 
+// Modules
+import Zoom from '@modules/image_zoom'
+
 // Organisms
 import Section from '@organisms/page_section'
 
@@ -118,15 +121,17 @@ const OverviewSection = (props) => {
             </Button>
           </div>
         </div>
-
-        <div
-          className={styles['showcaseContainer']}
-        >
-          <Img
-            fluid={showcase}
-            className={styles['showcase']}
-          />
-        </div>
+        
+        <Zoom>
+          <div
+            className={styles['showcaseContainer']}
+          >
+            <Img
+              fluid={showcase}
+              className={styles['showcase']}
+            />
+          </div>
+        </Zoom>
       </div>
     </Section>
   )
