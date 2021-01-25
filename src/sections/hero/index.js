@@ -127,6 +127,9 @@ const Hero = () => {
             color='primary'
             size='large'
             className={styles['main']}
+            component='a'
+            target='_blank'
+            href='/stephan_burger_resume.pdf'
           >
             My Resume
           </Button>

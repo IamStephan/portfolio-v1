@@ -55,6 +55,9 @@ const CTA = () => {
           variant='contained'
           color='secondary'
           size='large'
+          component='a'
+          target='_blank'
+          href='/stephan_burger_resume.pdf'
         >
           My Resume
         </Button>

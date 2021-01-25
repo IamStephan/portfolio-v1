@@ -210,6 +210,9 @@ const ContactForm = () => {
               color='secondary'
               size='large'
               className={styles['action']}
+              component='a'
+              target='_blank'
+              href='/stephan_burger_resume.pdf'
             >
               My Resume
             </Button>
