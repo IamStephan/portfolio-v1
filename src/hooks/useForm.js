@@ -13,10 +13,6 @@ export const useForm = ({
     setValues({ ...values, [name]: value })
   }
 
-  const resetForm = () => {
-    setValues(initialValues)
-  }
-
   const handleSubmit = (event) => {
     if (event) event.preventDefault()
 
@@ -25,7 +21,6 @@ export const useForm = ({
 
   return {
     values,
-    resetForm,
     handleChange,
     handleSubmit
   }

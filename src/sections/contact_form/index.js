@@ -44,7 +44,7 @@ const ContactForm = () => {
   
   const [isLoading, setIsLoading] = useState(false)
 
-  const { handleSubmit, handleChange, resetForm, values } = useForm({
+  const { handleSubmit, handleChange, values } = useForm({
     initialValues,
     onSubmit: _handleInternalSubmit
   })
