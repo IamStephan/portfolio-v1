@@ -57,7 +57,6 @@ const ContactForm = () => {
         ...values
       })
     }).then(() => {
-      resetForm()
       navigate('/success')
     }).catch(() => {
       navigate('/failed')
@@ -98,6 +97,7 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             ref={formRef}
           >
+            <input type="hidden" name="form-name" value="contact_me" />
             <Select
               className={styles['input']}
               disabled={isLoading}
