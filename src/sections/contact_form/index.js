@@ -30,6 +30,8 @@ const formFields = {
   message: 'message'
 }
 
+const FormName = 'contact_me'
+
 const ContactForm = () => {
   const formRef = useRef(null)
 
@@ -53,7 +55,7 @@ const ContactForm = () => {
       method: 'POST',
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        'form-name': 'contact-form',
+        'form-name': FormName,
         ...values
       })
     }).then(() => {
@@ -94,10 +96,11 @@ const ContactForm = () => {
             className={styles['form']}
             data-netlify='true'
             method='POST'
+            name={FormName}
             onSubmit={handleSubmit}
             ref={formRef}
           >
-            <input type="hidden" name="form-name" value="contact_me" />
+            <input type="hidden" name="form-name" value={FormName} />
             <Select
               className={styles['input']}
               disabled={isLoading}
