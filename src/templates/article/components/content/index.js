@@ -47,6 +47,7 @@ const Content = (props) => {
         <Typography
           className={styles['header']}
           variant='h2'
+          component='h1'
         >
           {frontmatter.title}
         </Typography>

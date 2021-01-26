@@ -7,17 +7,21 @@ import { Typography } from '@material-ui/core'
  * 
  * @param {import('@material-ui/core').TypographyProps} props
  */
-const Header = (variant) => (props) => {
+const Header = (variant, component) => (props) => {
   const {
     children,
     ...rest
   } = props
 
+  let propsToAdd = rest
+
+  if(component) propsToAdd.component = component
+
   return (
     <Typography
       gutterBottom
       variant={variant}
-      {...rest}
+      {...propsToAdd}
     >
       {children}
     </Typography>

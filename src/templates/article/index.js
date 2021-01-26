@@ -23,9 +23,9 @@ const components = {
   /**
    * BASIC
    */
-  h1: Header('h3'),
-  h2: Header('h4'),
-  h3: Header('h5'),
+  h1: Header('h3', 'h2'),
+  h2: Header('h4', 'h3'),
+  h3: Header('h5', 'h4'),
   // explicitly disable these headers
   h4:() => null,
   h5:() => null,
