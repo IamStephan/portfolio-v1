@@ -1,0 +1,56 @@
+{
+  "sortIndex": 4,
+  "title": "Nooti",
+  "overview": "An idea that went rogue. I created the application to learn more about push notifications but ended up creating a fully functional application. I published it to the Google Play Store to see what reaction I would gain from it.",
+  "showcase": "./assets/showcase.png",
+  "tags": ["Mobile App", "Pet-Project"],
+  "previewLink": "",
+  "repositoryLink": "",
+
+  "outline": {
+    "goal": "Intended to be a learning project but ended up becoming a fully functional published application.",
+    "scope": "Scheduling and planning were at the core of Nooti, providing multiple tools for organising and managing todos.",
+    "industry": "Nooti falls under the productivity and tools category and could be used to improve your organisation as well."
+  },
+
+  "challenges": [
+    {
+      "title": "Planning and scheduling",
+      "showcase": "./assets/challenge_one.png",
+      "content": [
+        "The user needed the ability to organise their todos in as many ways as possible. To name a few, you could: create folders, schedule the notification and have a pre-planned routine."
+      ]
+    },
+    {
+      "title": "Ease of use",
+      "showcase": "./assets/challenge_two.png",
+      "content": [
+        "Using the app needed to be simple, that's why when the app is launched the first thing the user is greeted with is a big new button. There should not have been distractions, and the app needed to be intuitive."
+      ]
+    },
+    {
+      "title": "Customisation",
+      "showcase": "./assets/challenge_three.png",
+      "content": [
+        "Since the app is mobile-driven, it needed offline capabilities. I used firebase as the source of truth, and once connectivity was established, the app starts to sync with all the other devices."
+      ]
+    }
+  ],
+
+  "stack": [
+    {
+      "showcase": "./stack/javascript.png",
+      "title": "Javascript"
+    },
+    {
+      "showcase": "./stack/rct.png",
+      "title": "React Native"
+    }
+  ],
+
+  "conclusion": [
+    "Thinking back on the creation of Nooti made me realise the mistakes I made and what could have been done better. For starters, the app was very rudimentary in its functionality. A hobbyist could consider it acceptable for a pet-project, but it offered no real value, nor did it benefit the general public in any meaningful way. There were also some design inconsistencies, and it had subpar user experience.",
+    "Ultimately Nooti was removed from the Google Play Store due to a violation of the guidelines. The violation, you ask? Nooti's splash screen logo was too big.",
+    "Keeping all this in mind, I did learn a substantial amount from this project. Looking back and seeing all the mistakes I made proves my growth as a software developer."
+  ]
+}
