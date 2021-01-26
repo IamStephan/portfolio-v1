@@ -139,7 +139,7 @@ const Content = (props) => {
                   paragraph
                   className={styles['overview']}
                 >
-                  {article.frontmatter.overview}
+                  {article.excerpt}
                 </Typography>
               </div>
             </Link>

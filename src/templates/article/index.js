@@ -67,7 +67,7 @@ const Article = (props) => {
   return (
     <Page
       title={`${frontmatter.title} | Article`}
-      description={frontmatter.overview}
+      description={frontmatter.excerpt}
       article
     >
       <MDXProvider
@@ -96,13 +96,12 @@ export const query = graphql`
     ) {
       frontmatter {
         date(formatString: "DD MMM YY")
-        overview
         tags
         title
       }
 
       timeToRead
-
+      excerpt(pruneLength: 50)
       body
     }
   }

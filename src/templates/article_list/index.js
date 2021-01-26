@@ -56,7 +56,6 @@ export const qeury = graphql`
 
         frontmatter {
           date(formatString: "DD MMM YY")
-          overview
           tags
           title
           showcase {
@@ -67,7 +66,7 @@ export const qeury = graphql`
             }
           }
         }
-  
+        excerpt(pruneLength: 200)
         timeToRead
       } 
     }

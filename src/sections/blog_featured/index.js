@@ -31,10 +31,10 @@ const query = graphql`
         }
         frontmatter {
           title
-          overview
           tags
           date(formatString: "DD MMM YY")
         }
+        excerpt(pruneLength: 125)
         timeToRead
       }
     }
@@ -128,7 +128,7 @@ const BlogPreview = () => {
               paragraph
               className={styles['summary']}
             >
-              {article.frontmatter.overview}
+              {article.excerpt}
             </Typography>
           </Link>
         ))
