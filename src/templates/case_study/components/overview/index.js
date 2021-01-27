@@ -129,6 +129,7 @@ const OverviewSection = (props) => {
             <Img
               fluid={showcase}
               className={styles['showcase']}
+              alt={title}
             />
           </div>
         </Zoom>

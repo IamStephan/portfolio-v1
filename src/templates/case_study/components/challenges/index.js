@@ -62,6 +62,7 @@ const Chanllenges = (props) => {
                     className={styles['showcase']}
                     objectFit='contain'
                     fluid={item.showcase.childImageSharp.fluid}
+                    alt={item.title}
                   />
                 </div>
               </Zoom>
