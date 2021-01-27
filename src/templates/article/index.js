@@ -4,10 +4,10 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 // Elements
-import Section from '@elements/content_section'
 import Header from '@elements/header'
 import Paragraph from '@elements/paragraph'
 import Divider from '@elements/divider'
+import Seperator from '@elements/seperator'
 import Blockquote from '@elements/blockquote'
 import { ListItem, OrderedList, UnorderedList } from '@elements/list'
 
@@ -47,7 +47,7 @@ const components = {
    * SHORTCODES
    */
   Link,
-  Section
+  Seperator
 }
 
 const Article = (props) => {
