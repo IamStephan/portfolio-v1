@@ -7,4 +7,5 @@
     - Discussion
     - Abstract Code
   featured: true
+  showcase: "./assets/placeholder.png"
 ---
