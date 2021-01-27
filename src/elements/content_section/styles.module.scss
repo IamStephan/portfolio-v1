@@ -1,0 +1,7 @@
+@import '../../foundation/spacing/spacing';
+
+.contentSection {
+  &:not(:last-child) {
+    margin-bottom: #{$spacing-60}px;
+  }
+}
