@@ -1,0 +1,8 @@
+$content-font-size: 1.15rem;
+
+// Im increasing the font size of the article's paragraphs
+// This is to increase readibily, but not change the sites overall
+// look and feel.
+.paragraph {
+  font-size: #{$content-font-size};
+}
