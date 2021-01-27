@@ -84,6 +84,7 @@ const Content = (props) => {
                 <Img
                   fluid={study.showcase.childImageSharp.fluid}
                   className={styles['showcase']}
+                  alt={study.title}
                 />
               </div>
 
