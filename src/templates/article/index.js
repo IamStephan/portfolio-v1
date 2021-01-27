@@ -100,6 +100,13 @@ export const query = graphql`
         date(formatString: "DD MMM YY")
         tags
         title
+        showcase {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
 
       timeToRead

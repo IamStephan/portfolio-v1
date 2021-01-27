@@ -2,6 +2,7 @@ import React from 'react'
 
 // Gatsby
 import { Link } from 'gatsby'
+import Img from 'gatsby-image/withIEPolyfill'
 
 // Foundation
 import Icon from '@foundation/icons_svg'
@@ -43,7 +44,6 @@ const Content = (props) => {
       <div
         className={styles['headerContainer']}
       >
-        
         <Typography
           className={styles['header']}
           variant='h2'
@@ -80,6 +80,19 @@ const Content = (props) => {
       </div>
 
       
+      <div
+        className={styles['showcaseContainer']}
+      >
+        {
+          frontmatter.showcase?.childImageSharp.fluid && (
+            <Img
+              fluid={frontmatter.showcase.childImageSharp.fluid}
+              objectFit='contain'
+              className={styles['showcase']}
+            />
+          )
+        }
+      </div>
       
       <div
         className={styles['contentContainer']}

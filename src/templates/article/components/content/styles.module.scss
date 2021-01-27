@@ -3,13 +3,15 @@
 @import '../../../../foundation/typography/typography';
 @import '../../../../foundation/borders/borders';
 
+$showcase-height: 250;
+
 $breakpoint-1: 800;
 
 .contentSection {
   .headerContainer {
     max-width: #{$clamp-sm}px;
     margin: auto;
-    margin-bottom: #{$spacing-80}px;
+    
 
     .header {
       margin-bottom: #{$spacing-30}px;
@@ -23,6 +25,17 @@ $breakpoint-1: 800;
         margin-bottom: #{$spacing-20}px;
         margin-right: #{$spacing-20}px;
       }
+    }
+  }
+
+  .showcaseContainer {
+    position: relative;
+    margin-bottom: #{$spacing-80}px;
+
+    .showcase {
+      height: #{$showcase-height}px;
+      width: auto;
+      flex: 1;
     }
   }
 
