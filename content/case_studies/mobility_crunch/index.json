@@ -2,7 +2,7 @@
   "featured": true,
   "sortIndex": 2,
   "title": "Mobility Crunch",
-  "overview": "Originating as an idea that could potentially help boost efficiency inside Gerimed Mobility during their order mayhem. Turned into a daily driver for managing requests from customers and keeping a small inventory in your pocket.",
+  "overview": "Originating as an idea that could help boost efficiency inside Gerimed Mobility during their order mayhem; turned into a daily driver to manage requests from customers and keep a small inventory in your pocket.",
   "showcase": "./assets/showcase.png",
   "tags": ["Mobile App", "Enterprise"],
   "previewLink": "",
@@ -11,7 +11,7 @@
   "outline": {
     "goal": "The goal was to increase the handling of customer requests concerning transactional documents.",
     "scope": "The app needed a way to generate and send PDF documents to clients while keeping records of all related information.",
-    "industry": "Mobility Crunch operates in the medical industry but helps with transactional documents."
+    "industry": "Mobility Crunch operates in the medical industry and helps with transactional documents."
   },
 
   "challenges": [
@@ -26,7 +26,7 @@
       "title": "Inventory and order history",
       "showcase": "./assets/challenge_two.png",
       "content": [
-        "One of the app's functionalities is that it can store information about the products the client uses. This speeds up the process of creating transactional documents and removes human-made errors.",
+        "One of the app's functionalities is that it can store information about the products the client uses inside an invontory. This speeds up the process of creating transactional documents and eliminates the possibility for errors.",
         "Mobility Crunch also keeps track of the order history and allows the client to expand on the order instead of creating a new one."
       ]
     },
@@ -34,7 +34,7 @@
       "title": "Syncing and offline capabilities",
       "showcase": "./assets/challenge_three.png",
       "content": [
-        "Since the app is mobile-driven, it needed offline capabilities. I used firebase as the source of truth, and once connectivity was established, the app starts to sync with all the other devices."
+        "Since the app is mobile-driven, it needed offline capabilities. I used Firebase as the source of truth, and once connectivity is established, the app starts to sync with all the other devices."
       ]
     }
   ],
@@ -64,6 +64,6 @@
 
   "conclusion": [
     "One of the app's significant drawbacks was that I needed an Apple device to publish it to the App Store. To overcome this, I converted the app to an Expo project and let the client use it through that.",
-    "The app has been so successful with the client that a desktop version has been requested. This would allow me to expand on its current functionality and provide it for use to other businesses."
+    "Mobility Crunch has been immensely successful, so much so that the client requested a follow-up version to expand and grow the idea behind it."
   ]
 }

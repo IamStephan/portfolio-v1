@@ -11,7 +11,7 @@
   "outline": {
     "goal": "To provide their customers with the ability to view their products and place orders online with ease.",
     "scope": "They needed an admin panel and a store-front for both customers and staff members.",
-    "industry": "Gerimed Mobility supplies its local area with all their medical needs. From hospital-beds to personal hygiene."
+    "industry": "Gerimed Mobility supplies its regional area with all their medical needs. From hospital-beds to personal hygiene products."
   },
 
   "challenges": [
@@ -73,9 +73,9 @@
   ],
 
   "conclusion": [
-    "When starting with this project, I decided to build most of the platform from the ground-up, but I ended up using Strapi for the back-end with a few custom plugins due to time constraint. However, there were a few other constraints I had to keep in mind, but the project proved itself to be quite manageable.",
+    "When starting with this project, I decided to build most of the platform from the ground-up, but I ended up using Strapi for the back-end with a few custom plugins due to time constraint. However, the project proved to be quite manageable.",
     "Since most of the back-end was complete, I mostly had to focus on architecting the front-end. I ended up trying to use the MVC architecture for the front-end; react being the View, Strapi the Model and state machines for the Controller. This allowed me to scale the platform while keeping a sound mind of where everything was and how it worked.",
-    "SEO, performance, and accessibly were aided by Gatsby's use, allowing me to focus on more thought-provoking tasks like the cart functionality and order management.",
-    "All-in-all the project broadened my knowledge on numerous aspects of such a large scale project, and it certainly expanded my ability to work on large scale projects."
+    "Gatsby provided me with various tools for; SEO, performance and accessibility. This allowed me to focus on more thought-provoking tasks, like cart functionality and order management.",
+    "All-in-all the project broadened my knowledge on numerous aspects of large scale projects, and it expanded my ability to work on said projects."
   ]
 }

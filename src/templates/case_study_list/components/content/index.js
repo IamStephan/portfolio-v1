@@ -65,7 +65,7 @@ const Content = (props) => {
                 variant='h5'
                 gutterBottom
               >
-                My past work showcasing my growth from knowing nothing to who I am today.
+                Some of the work that I found to be particularly interesting.
               </Typography>
             </div>
           )

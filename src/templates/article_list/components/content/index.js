@@ -73,7 +73,7 @@ const Content = (props) => {
                 component='p'
                 gutterBottom
               >
-                My past work showcasing my growth from knowing nothing to who I am today.
+               Just some expressions of ideas. Give them a read, and maybe we can talk about them.
               </Typography>
             </div>
           )

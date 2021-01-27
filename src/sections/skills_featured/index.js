@@ -23,7 +23,7 @@ const Domains = [
   },
   {
     domain: 'Back-End',
-    content: 'Able to build custom servers, to utilizing modern-day serverless technologies.',
+    content: 'Able to build custom servers or utilizing modern-day serverless technologies.',
     avatar: Computer
   },
   {
@@ -33,7 +33,7 @@ const Domains = [
   },
   {
     domain: 'Dev-Ops',
-    content: 'Deploy production-ready applications that real-world businesses can use.',
+    content: 'Deploying production-ready applications that real-world businesses can use.',
     avatar: Launch
   },
 ]
