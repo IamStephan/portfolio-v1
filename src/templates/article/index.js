@@ -4,6 +4,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 // Elements
+import Section from '@elements/content_section'
 import Header from '@elements/header'
 import Paragraph from '@elements/paragraph'
 import Divider from '@elements/divider'
@@ -45,7 +46,8 @@ const components = {
   /**
    * SHORTCODES
    */
-  Link
+  Link,
+  Section
 }
 
 const Article = (props) => {
