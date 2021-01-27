@@ -79,7 +79,6 @@ const Content = (props) => {
         </div>
       </div>
 
-      
       <div
         className={styles['showcaseContainer']}
       >

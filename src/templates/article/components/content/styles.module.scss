@@ -8,6 +8,7 @@ $showcase-height: 250;
 $breakpoint-1: 800;
 
 .contentSection {
+  position: relative;
   .headerContainer {
     max-width: #{$clamp-sm}px;
     margin: auto;
@@ -29,13 +30,12 @@ $breakpoint-1: 800;
   }
 
   .showcaseContainer {
-    position: relative;
     margin-bottom: #{$spacing-80}px;
+    height: #{$showcase-height}px;
 
     .showcase {
-      height: #{$showcase-height}px;
-      width: auto;
-      flex: 1;
+      width: 100%;
+      height: 100%;
     }
   }
 
