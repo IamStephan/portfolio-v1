@@ -23,9 +23,9 @@ const Footer = () => {
         <Button
           className={styles['link']}
           component={Link}
-          to='/articles'
+          to='/blog'
         >
-          Articles
+          Blog
         </Button>
 
         <Button

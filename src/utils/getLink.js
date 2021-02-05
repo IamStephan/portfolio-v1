@@ -3,7 +3,7 @@
  * @param {string} slug 
  */
 export function getArticleLink(slug) {
-  return slug ? `/article/${slug}` : ''
+  return slug ? `/blog-post/${slug}` : ''
 }
 
 /**
@@ -11,7 +11,7 @@ export function getArticleLink(slug) {
  * @param {number} page 
  */
 export function getArticlePage(page) {
-  return `/articles${page === 1 ? '' : `/page-${page}`}`
+  return `/blog${page === 1 ? '' : `/page-${page}`}`
 }
 
 /**

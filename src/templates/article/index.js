@@ -68,7 +68,7 @@ const Article = (props) => {
 
   return (
     <Page
-      title={`${frontmatter.title} | Article`}
+      title={`${frontmatter.title} | Blog Post`}
       description={frontmatter.excerpt}
       article
     >

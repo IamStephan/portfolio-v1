@@ -57,7 +57,7 @@ const BlogPreview = () => {
           gutterBottom
           className={styles['header']}
         >
-          Featured Articles
+          Featured Posts
         </Typography>
         <Typography
           variant='h6'
@@ -71,7 +71,7 @@ const BlogPreview = () => {
           variant='contained'
           color='primary'
           component={Link}
-          to='/articles'
+          to='/blog'
           className={styles['ctaAction']}
           endIcon={(
             <Icon

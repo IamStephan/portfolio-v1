@@ -3,7 +3,7 @@ const path = require(`path`)
 const { kebabCase } = require(`lodash`)
 
 const Pages = {
-  article: '/article',
+  article: '/blog-post',
   study: '/study'
 }
 
@@ -74,7 +74,7 @@ exports.createPages = ({ graphql, actions }) => {
     const numPages = Math.ceil(articles.length / pageListSize)
     Array.from({ length: numPages }).forEach((_articlesPage, i) => {
       createPage({
-        path: i === 0 ? `/articles` : `/articles/page-${i + 1}`,
+        path: i === 0 ? `/blog` : `/blog/page-${i + 1}`,
         component: ArticleListPage,
         context: {
           limit: pageListSize,

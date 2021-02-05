@@ -22,7 +22,7 @@ const ArticleList = (props) => {
 
   return (
     <Page
-      title='Articles'
+      title='Blog'
       description={`Have a look at some topics I write about.`}
     >
       <Content

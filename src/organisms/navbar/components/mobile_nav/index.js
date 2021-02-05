@@ -49,10 +49,10 @@ const MobileNav = (props) => {
 
         <MobileNavLink
           className={styles['slide']}
-          to='/articles'
-          title='Articles'
+          to='/blog'
+          title='Blog Posts'
           icon='article-line'
-          active={isLinkActive(['articles', 'article'])}
+          active={isLinkActive(['blog', 'blog-post'])}
         />
 
         <MobileNavLink

@@ -97,10 +97,10 @@ const Navbar = props => {
           />
 
           <NavLink
-            title='Articles'
+            title='Blog'
             icon='article-line'
-            to='/articles'
-            active={_isLinkActive(['articles', 'article'])}
+            to='/blog'
+            active={_isLinkActive(['blog', 'blog-post'])}
           />
 
           <NavLink
