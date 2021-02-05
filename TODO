@@ -3,17 +3,16 @@ Todo:
     ☐ Make sure the titles are in semantic order
 
   Case Studies:
-    ☐ Avvent Studio
     ☐ Portfolio
-    ☐ The Boardroom
-    ☐ Workshop Records
 
-  Articles:
-    ☐ Responsive Design Patterns
-    ☐ React and the MVC model
-    ☐ State Machines
     
 Archive:
+  ✘ Avvent Studio @cancelled(21-01-27 23:32) @project(Todo.Case Studies)
+  ✘ The Boardroom @cancelled(21-01-27 23:32) @project(Todo.Case Studies)
+  ✘ Workshop Records @cancelled(21-01-27 23:32) @project(Todo.Case Studies)
+  ✘ Responsive Design Patterns @cancelled(21-01-27 23:32) @project(Todo.Articles)
+  ✘ React and the MVC model @cancelled(21-01-27 23:32) @project(Todo.Articles)
+  ✘ State Machines @cancelled(21-01-27 23:32) @project(Todo.Articles)
   ✔ Alt tags on generated images @done(21-01-27 23:31) @project(Todo.General)
   ✔ Check for grammar and spelling errors @done(21-01-27 23:28) @project(Todo.General)
   ✔ 3 Case studies for launch @done(21-01-27 23:28) @project(Todo.General)
