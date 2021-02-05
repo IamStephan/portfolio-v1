@@ -10,13 +10,13 @@
     margin: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 400px auto;
     grid-row-gap: #{$spacing-30}px;
     row-gap: #{$spacing-30}px;
 
     .bgContainer {
-      grid-column: 1 / span 2;
+      grid-column: 1;
       grid-row: 1 / span 2;
       position: relative;
       display: flex;
@@ -24,7 +24,8 @@
       z-index: -1;
 
       .bg {
-        width: 600px;
+        width: 100%;
+        max-width: 600px;
         height: auto;
         opacity: 0.15;
         
@@ -32,20 +33,20 @@
     }
 
     .showcaseContainer {
-      grid-column: 1 / span 2;
+      grid-column: 1;
       grid-row: 1;
       position: relative;
       display: flex;
       justify-content: center;
 
       .showcase {
-        width: auto;
+        width: 100%;
         height: auto;        
       }
     }
 
     .headerContainer {
-      grid-column: 1 / span 2;
+      grid-column: 1;
       grid-row: 2;
 
       .header {
