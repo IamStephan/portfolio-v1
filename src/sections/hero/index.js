@@ -107,7 +107,7 @@ const Hero = () => {
           component='h1'
           className={styles['title']}
         >
-          I am Stephan...<br/>
+          Hi, I am Stephan...<br/>
           a <u>Software Developer</u>
         </Typography>
 
@@ -116,7 +116,7 @@ const Hero = () => {
           component='p'
           className={styles['subtitle']}
         >
-          Creating impactful software solutions that propel businesses to success.
+          Creating impactful software solutions that launch businesses to success.
         </Typography>
 
         <div
