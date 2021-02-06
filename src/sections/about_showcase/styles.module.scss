@@ -3,12 +3,12 @@
 // Utils
 @import '../../utils/mixins';
 
+$bg-clamp: 600;
 
 .aboutShowcaseSection {
   .aboutShowcaseContainer {
     max-width: #{$clamp-md}px;
     margin: auto;
-
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 400px auto;
@@ -22,13 +22,14 @@
       display: flex;
       justify-content: center;
       z-index: -1;
+      position: relative;
 
       .bg {
         width: 100%;
-        max-width: 600px;
-        height: auto;
+        max-width: #{$bg-clamp}px;
+        height: 100%;
         opacity: 0.15;
-        
+        position: absolute;
       }
     }
 
