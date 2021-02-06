@@ -112,8 +112,8 @@ const Navbar = props => {
           />
 
           <NavLink
-            title='Contact'
-            icon='door-open-line'
+            title='Contact Me'
+            icon='mail-line'
             to='/contact'
             active={_isLinkActive(['contact', 'success', 'failed'])}
           />

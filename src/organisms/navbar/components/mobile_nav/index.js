@@ -67,7 +67,7 @@ const MobileNav = (props) => {
           className={styles['slide']}
           to='/contact'
           title='Contact Me'
-          icon='door-open-line'
+          icon='mail-line'
           active={isLinkActive(['contact', 'success', 'failed'])}
         />
       </ul>

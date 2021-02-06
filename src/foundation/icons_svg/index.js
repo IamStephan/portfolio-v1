@@ -25,6 +25,9 @@ import { ReactComponent as ProjectorTwoLine } from '@svg/icons/business/projecto
 import { ReactComponent as MailSendFill } from '@svg/icons/business/mail-send-fill.svg'
 import { ReactComponent as MailSendLine } from '@svg/icons/business/mail-send-line.svg'
 
+import { ReactComponent as MailFill } from '@svg/icons/business/mail-fill.svg'
+import { ReactComponent as MailLine } from '@svg/icons/business/mail-line.svg'
+
 /**
  * =================
  *     Buildings
@@ -133,6 +136,9 @@ const icons = {
 
   'mail-send-fill': MailSendFill,
   'mail-send-line': MailSendLine,
+
+  'mail-fill': MailFill,
+  'mail-line': MailLine,
 
   /**
    * Buildings
