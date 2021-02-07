@@ -26,7 +26,7 @@
       "title": "Inventory and order history",
       "showcase": "./assets/challenge_two.png",
       "content": [
-        "One of the app's functionalities is that it can store information about the products the client uses inside an invontory. This speeds up the process of creating transactional documents and eliminates the possibility for errors.",
+        "One of the app's functionalities is that it can store information about the products the client uses inside an inventory. This speeds up the process of creating transactional documents and eliminates the possibility for errors.",
         "Mobility Crunch also keeps track of the order history and allows the client to expand on the order instead of creating a new one."
       ]
     },
